@@ -1,0 +1,30 @@
+*,
+*::before,
+::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  font-size: 0;
+}
+
+.page {
+  max-width: 1440px;
+  height: 100%;
+  .offset(0; 0 auto);
+  overflow-x: hidden;
+}
