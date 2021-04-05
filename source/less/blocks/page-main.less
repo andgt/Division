@@ -1,0 +1,85 @@
+.page-main__section {
+  .offset(0 0 40px 0; 0);
+  background-color: @lightgrey;
+}
+
+.page-main__image {
+  display: block;
+  .offset(0 0 10px 0; 0);
+}
+
+.page-main__subtitle {
+  .offset(0 0 10px 0; 0);
+  text-align: center;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.page-main__advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  .offset(0; 0);
+  list-style: none;
+}
+
+.page-main__advantages-item {
+  display: flex;
+  align-items: flex-end;
+  width: 140px;
+  height: 140px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: @white;
+}
+
+.page-main__advantages-item-generate(@n) when (@n > 0) {
+  .page-main__advantages-item--@{n} {
+    background-image: url("../img/mobile-images/card-@{n}.jpg");
+  }
+  .page-main__advantages-item-generate(@n - 1);
+}
+
+.page-main__advantages-item-generate(4);
+
+.page-main__advantages-block {
+  width: 142px;
+}
+
+.page-main__advantages-text {
+  .offset(0; 5px 10px);
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  background-color: @grey3;
+}
+
+.page-main__description {
+  .offset(0 0 10px 0; 0);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.page-main__description-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  .offset(0; 0);
+  list-style: none;
+}
+
+.page-main__description-item {
+  .offset(0 0 10px 0; 10px 10px);
+  border-radius: 10px;
+  background-color: @grey1;
+}
+
+.page-main__description-text {
+  .offset(0; 0);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: @white;
+  border-radius: 10px;
+}

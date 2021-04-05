@@ -1,6 +1,6 @@
 *,
 *::before,
-::after {
+*::after {
   box-sizing: border-box;
 }
 
@@ -25,6 +25,45 @@ a {
 .page {
   max-width: 1440px;
   height: 100%;
-  .offset(0; 0 auto);
-  overflow-x: hidden;
+  margin: 0 auto;
+  scroll-behavior: smooth;
+}
+
+.container {
+  .offset(0; 0 20px);
+
+  @media (min-width: @tablet-width) {
+    .offset(0; 0 30px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .offset(0; 0 110px);
+  }
+}
+
+.button {
+  display: block;
+  width: 100%;
+  .offset(0; 10px 25px);
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 16px;
+  color: @black;
+  border: 2px solid @black;
+  border-radius: 10px;
+  text-align: center;
+  background-color: transparent;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: @white;
+    background-color: @black;
+    transition: 0.3s;
+  }
+
+  &:active {
+    background-color: @grey2;
+    border-color: @grey2;
+  }
 }

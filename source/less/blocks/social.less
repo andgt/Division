@@ -1,0 +1,29 @@
+.social {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    .offset(0; 10px 0 0 0);
+    list-style: none;
+  }
+}
+
+.social__item {
+  @media (min-width: @tablet-width) {
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.social__footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: space-between;
+  .offset(0; 0);
+  list-style: none;
+}
