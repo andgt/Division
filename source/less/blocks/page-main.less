@@ -1,11 +1,179 @@
 .page-main__section {
-  .offset(0 0 40px 0; 0);
-  background-color: @lightgrey;
+  margin-bottom: 40px;
+  background-color: @white-grey;
+
+  @media (min-width: @tablet-width) {
+    background-color: @lightgrey;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 80px;
+  }
+}
+
+.page-main__section-inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  column-gap: 20px;
+
+  @media (min-width: @desktop-width) {
+    column-gap: 0;
+  }
+}
+
+.page-main__section-inner--promo {
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+.page-main__hockey .page-main__section-inner--promo {
+  flex-direction: row-reverse;
+}
+
+.page-main__section-inner--background {
+  column-gap: 0;
+}
+
+.page-main__section-inner--advantages {
+  grid-template-columns: 1fr;
+
+  @media (min-width: @desktop-width) {
+    padding: 50px 31px 80px 31px;
+  }
+}
+
+.page-main__promo-block {
+  .offset(0; 0);
+
+  @media (min-width: @desktop-width) {
+    height: 447px;
+  }
+}
+
+.page-main__promo-block:first-of-type {
+  @media (min-width: @desktop-width) {
+    width: 586px;
+  }
+}
+
+.page-main__promo-block:last-of-type {
+  @media (min-width: @desktop-width) {
+    width: 450px;
+  }
+}
+
+.page-main__promo-text {
+  @media (min-width: @desktop-width) {
+    padding: 80px 55px 80px 50px;
+  }
+}
+
+.page-main__promo-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  .offset(0 auto; 0);
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+    margin: 0;
+    max-width: 100%;
+    overflow: hidden;
+  }
+}
+
+.page-main__promo-inner--additional {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-main__promo-inner--main {
+  @media (min-width: @tablet-width) {
+    max-width: 100%;
+    .offset(0; 0);
+    background-image: url("../img/tablet-images/football-form.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    border-radius: 20px 20px 0 0;
+  }
+}
+
+.page-main__promo-inner--calculate {
+  @media (min-width: @tablet-width) {
+    .offset(0; 50px 350px 106px 50px);
+    background-image: url("../img/tablet-images/photo-cost-calculation.jpg");
+  }
+}
+
+.page-main__promo-inner--tracksuits {
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/tablet-images/tracksuits.jpg");
+  }
+}
+
+.page-main__inner-info {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    .offset(0; 30px 200px 50px 50px);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 50px 646px 50px 50px;
+  }
 }
 
 .page-main__image {
-  display: block;
-  .offset(0 0 10px 0; 0);
+  width: 100%;
+}
+
+.page-main__basketball-image {
+  @media (min-width: @tablet-width) {
+    width: 577px;
+    min-height: 385px;
+    object-position: 35%;
+    object-fit: cover;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 586px;
+    height: 447px;
+    border-radius: 0 0 0 20px;
+  }
+}
+
+.page-main__hockey-image {
+  @media (min-width: @tablet-width) {
+    width: 577px;
+    min-height: 385px;
+    object-position: center;
+    object-fit: cover;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 586px;
+    height: 447px;
+    border-radius: 0 20px 0 0;
+  }
+}
+
+.page-main__volleyball-image {
+  @media (min-width: @tablet-width) {
+    width: 577px;
+    min-height: 385px;
+    object-position: center;
+    object-fit: cover;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 586px;
+    height: 447px;
+  }
 }
 
 .page-main__subtitle {
@@ -13,29 +181,67 @@
   text-align: center;
   font-size: 24px;
   line-height: 28px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45px;
+    text-align: left;
+  }
+}
+
+.page-main__subtitle--advantages {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.page-main__subtitle--on-background {
+  @media (min-width: @tablet-width) {
+    color: @white;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 5px;
+  }
 }
 
 .page-main__advantages-list {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 10px;
   .offset(0; 0);
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+  }
+
+  @media (min-width: @desktop-width) {
+    column-gap: 30px;
+  }
 }
 
 .page-main__advantages-item {
   display: flex;
   align-items: flex-end;
-  width: 140px;
-  height: 140px;
+  min-height: 270px;
+  .offset(0; 0);
   background-size: cover;
   background-repeat: no-repeat;
   color: @white;
+  border-radius: 20px;
 }
 
 .page-main__advantages-item-generate(@n) when (@n > 0) {
   .page-main__advantages-item--@{n} {
-    background-image: url("../img/mobile-images/card-@{n}.jpg");
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../img/mobile-images/card-@{n}.jpg");
   }
   .page-main__advantages-item-generate(@n - 1);
 }
@@ -43,21 +249,67 @@
 .page-main__advantages-item-generate(4);
 
 .page-main__advantages-block {
-  width: 142px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 46px;
+  background-color: @grey3;
+  border-radius: 0 0 20px 20px;
+
+  @media (min-width: @desktop-width) {
+    background-color: transparent;
+  }
 }
 
 .page-main__advantages-text {
   .offset(0; 5px 10px);
-  font-size: 12px;
+  font-size: 14px;
   line-height: 18px;
-  text-align: center;
-  background-color: @grey3;
+
+  @media (min-width: @tablet-width) {
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 20px;
+    padding: 5px 20px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+  }
 }
 
 .page-main__description {
   .offset(0 0 10px 0; 0);
   font-size: 14px;
   line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+  }
+}
+
+.page-main__description--on-background {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 30px;
+    text-align: left;
+    color: @white;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 15px;
+  }
 }
 
 .page-main__description-list {
@@ -66,12 +318,55 @@
   flex-direction: column;
   .offset(0; 0);
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(157px, 1fr));
+    gap: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 25px;
+  }
+}
+
+.page-main__description-list--on-background {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 25px;
+  }
 }
 
 .page-main__description-item {
+  position: relative;
   .offset(0 0 10px 0; 10px 10px);
   border-radius: 10px;
-  background-color: @grey1;
+  background-color: @grey5;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.page-main__description-item--on-background {
+  @media (min-width: @tablet-width) {
+    margin-right: 10px;
+    background-color: @grey-opacity;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
 }
 
 .page-main__description-text {
@@ -82,4 +377,22 @@
   text-align: center;
   color: @white;
   border-radius: 10px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 12px;
+    line-height: 15px;
+    text-align: initial;
+  }
+}
+
+.page-main__button-background {
+  @media (min-width: @tablet-width) {
+    max-width: 200px;
+    background-color: @white;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 148px;
+  }
 }
