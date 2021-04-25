@@ -8,6 +8,13 @@
 .page-header__logo {
   margin-right: 55px;
   order: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 121px;
+    height: 50px;
+    margin-right: auto;
+    margin-bottom: 45px;
+  }
 }
 
 .page-header__contacts {
@@ -15,6 +22,26 @@
   flex-wrap: wrap;
   .offset(0 auto; 0);
   order: 2;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    flex-grow: 1;
+    justify-content: flex-end;
+    width: 80%;
+    margin: 0 0 45px 0;
+    order: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      left: -325px;
+      width: 1440px;
+      height: 90px;
+      background-color: @white;
+      z-index: -1;
+    }
+  }
 }
 
 .page-header__contacts-list {
@@ -22,11 +49,28 @@
   flex-wrap: wrap;
   .offset(0 0 10px 0; 0);
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    flex-shrink: 1;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
 }
 
 .page-header__contacts-item {
   display: flex;
   .offset(0 20px 0 0; 10px 0);
+
+  @media (min-width: @tablet-width) {
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.page-header__contacts-img:hover {
+  transform: scale(1.2);
+  transition: 0.3s;
 }
 
 .page-header__contacts-link-img {
@@ -47,6 +91,11 @@
   font-size: 13px;
   line-height: 16px;
   color: @black;
+
+  &:hover,
+  &:focus {
+    color: @blue1;
+  }
 }
 
 .page-header__contacts-text {
@@ -61,7 +110,8 @@
 .page-header__contacts-back-call {
   flex-grow: 1;
   align-self: center;
-  .offset(0; 15px 30px);
+  max-width: 400px;
+  .offset(0 auto; 15px 30px);
   font-weight: bold;
   font-size: 14px;
   line-height: 18px;
@@ -78,5 +128,15 @@
 
   &:active {
     background-color: @blue3;
+  }
+
+  @media (min-width: @tablet-width) {
+    flex-grow: 0;
+    margin: 0;
+    padding: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 15px 30px;
   }
 }

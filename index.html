@@ -7,33 +7,64 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   	<meta name="description" content="Производство спортивной формы оптом для различных видов спорта. Нанесение логотипов, фамилий, номеров">
   	<meta name="keywords" content="Спортивная форма на заказ, Заказать спортивную форму, спортивная форма купить, спортивная форма где купить">
+    <!-- Pixel Glass -->
+<!--<style>
+  HTML {
+    background-repeat: no-repeat;
+    background-position:  50% 0;
+    /* По умолчанию мобильный макет */
+    background-image: url( "img/index-mobile.png" );
+  }
+  /* Планшет */
+  @media ( min-width: 760px ) {
+    HTML {
+      /* Планшетный макет */
+      background-image: url( "img/index-tablet.png" );
+    }
+  }
+  /* Десктоп */
+  @media ( min-width: 1440px ) {
+    HTML {
+      /* Десктопный макет */
+      background-image: url( "img/desktop-images/index.jpg" );
+    }
+  }
+
+  BODY {
+    opacity: .9;
+  }
+</style>-->
+<!-- // Pixel Glass -->
   </head>
   <body class="page-body">
   	<header class="page-header container">
-      <img class="page-header__logo" src="img/logo.svg" width="33" height="35" alt="Логотип компании">
+      <picture>
+        <source media="(min-width: 768px)" srcset="img/tablet-images/logo_tablet.svg">
+        <img class="page-header__logo" src="img/logo.svg" width="33" height="35" alt="Логотип компании">
+      </picture>
       <div class="page-header__contacts">
         <ul class="page-header__contacts-list">
           <li class="page-header__contacts-item">
-            <a class="page-header__contacts-link-img" href="mailto:info@division-sport.ru">
-              <img class="page-header__contacts-img page-header__contacts-img--mail" src="img/icon-mail.svg" width="24" height="17" alt="Изображение конверта">
+            <a class="page-header__contacts-link-img" href="mailto:info@division-sport.ru" tabindex="2">
+              <img class="page-header__contacts-img page-header__contacts-img--mail" src="img/icon-mail.svg" width="24" height="24" alt="Изображение конверта">
             </a>
             <span class="page-header__contacts-text">Напишите нам
-              <a class="page-header__contacts-email page-header__contacts-link" href="mailto:info@division-sport.ru">info@division-sport.ru</a>
+              <a class="page-header__contacts-email page-header__contacts-link" href="mailto:info@division-sport.ru" tabindex="3">info@division-sport.ru</a>
             </span>
           </li>
           <li class="page-header__contacts-item">
-            <a class="page-header__contacts-link-img" href="#">
+            <a class="page-header__contacts-link-img" href="tel:+79773890765" tabindex="4">
               <img class="page-header__contacts-img page-header__contacts-img--phone" src="img/icon-phone.svg" width="22" height="22" alt="Изображение телефонной трубки">
             </a>
             <span class="page-header__contacts-text">Наш телефон
-              <a class="page-header__contacts-link" href="tel:+79773890765">+7 (977) 389-07-65</a>
+              <a class="page-header__contacts-link" href="tel:+79773890765" tabindex="5">+7 (977) 389-07-65</a>
             </span>
           </li>
         </ul>
-        <a class="page-header__contacts-back-call" href="#">Заказать обратный звонок</a>
+        <a class="page-header__contacts-back-call" href="#" tabindex="6">Заказать обратный звонок</a>
       </div>
       <nav class="main-nav main-nav--closed main-nav--no-js">
-        <button class="main-nav__toggle" type="button">
+        <button class="main-nav__toggle" type="button" tabindex="1">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="main-nav__list">
@@ -56,19 +87,19 @@
       </nav>
       <ul class="social">
         <li class="social__item">
-          <a class="social__link" href="#">
+          <a class="social__link" href="https://vk.com/divizionsport" target="_blank">
             <span class="visually-hidden">Ссылка на ВК</span>
             <img class="social__img" src="img/icon-vk.svg" width="24" height="24" alt="Логотип ВК">
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="#">
+          <a class="social__link" href="#" target="_blank">
             <span class="visually-hidden">Ссылка на Telegram</span>
             <img class="social__img" src="img/icon-telegram.svg" width="24" height="24" alt="Логотип Telegram">
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="#">
+          <a class="social__link" href="#" target="_blank">
             <span class="visually-hidden">Ссылка на Whatsapp</span>
             <img class="social__img" src="img/icon-whatsapp.svg" width="24" height="24" alt="Логотип Whatsapp">
           </a>
@@ -77,29 +108,35 @@
   	</header>
   	<main class="page-main">
       <h1 class="visually-hidden">Производство качественой спортивной экипировки на заказ для различных видов спорта</h1>
-      <section class="page-main__section page-main__football" id="football">
-        <div class="container">
-          <picture>
-            <img class="page-main__image page-main__football-image" src="img/mobile-images/football-form.jpg" width="280" height="270" alt="Футбольная форма">
-          </picture>
-          <h2 class="page-main__subtitle">Футбольная форма на&nbsp;заказ</h2>
-          <p class="page-main__description">Предусмотрена гибкая система скидок для футбольных команд, школ, секций</p>
-          <ul class="page-main__description-list">
-            <li class="page-main__description-item"><p class="page-main__description-text">Только качественные ткани</p></li>
-            <li class="page-main__description-item"><p class="page-main__description-text">Полная размерная сетка</p></li>
-            <li class="page-main__description-item"><p class="page-main__description-text">Индивидуальный дизайн</p></li>
-            <li class="page-main__description-item"><p class="page-main__description-text">Любой способ нанесения</p></li>
-          </ul>
-          <a class="page-main__button-football button" href="#">Оформить заказ</a>
+      <section class="page-main__section page-main__football container" id="football">
+        <div class="page-main__section-inner page-main__section-inner--background">
+          <div class="page-main__promo-inner page-main__promo-inner--additional">
+            <picture>
+              <img class="page-main__image page-main__football-image" src="img/mobile-images/football-form.jpg" width="280" height="270" alt="Футбольная форма">
+            </picture>
+          </div>
+          <div class="page-main__promo-inner page-main__promo-inner--main">
+            <div class="page-main__inner-info">
+              <h2 class="page-main__subtitle page-main__subtitle--on-background">Футбольная форма на&nbsp;заказ</h2>
+              <p class="page-main__description page-main__description--on-background">Предусмотрена гибкая система скидок для футбольных команд, школ, секций</p>
+              <ul class="page-main__description-list page-main__description-list--on-background">
+                <li class="page-main__description-item page-main__description-item--on-background"><p class="page-main__description-text">Только качественные ткани</p></li>
+                <li class="page-main__description-item page-main__description-item--on-background"><p class="page-main__description-text">Полная размерная сетка</p></li>
+                <li class="page-main__description-item page-main__description-item--on-background"><p class="page-main__description-text">Индивидуальный дизайн</p></li>
+                <li class="page-main__description-item page-main__description-item--on-background"><p class="page-main__description-text">Любой способ нанесения</p></li>
+              </ul>
+              <a class="page-main__button-background button" href="#">Оформить заказ</a>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="page-main__section page-main__advantages">
-        <div class="container">
-          <h2 class="page-main__subtitle">Производство спортивной экипировки</h2>
+      <section class="page-main__section page-main__advantages container">
+        <div class="page-main__section-inner page-main__section-inner--advantages">
+          <h2 class="page-main__subtitle page-main__subtitle--advantages">Производство спортивной экипировки</h2>
           <ul class="page-main__advantages-list">
             <li class="page-main__advantages-item page-main__advantages-item--1">
               <div class="page-main__advantages-block">
-                <p class="page-main__advantages-text">Изготовление формы от 5 рабочих дней</p>
+                <p class="page-main__advantages-text">Изготовление от 5 рабочих дней</p>
                </div>
             </li>
             <li class="page-main__advantages-item page-main__advantages-item--2">
@@ -120,77 +157,111 @@
           </ul>
         </div>
       </section>
-      <section class="page-main__section page-main__basketball" id="basketball">
-        <div class="container">
-          <picture>
-            <img class="page-main__image page-main__basketball-image" src="img/mobile-images/basketball-form.jpg" width="280" height="270" alt="Баскетбольная форма">
-          </picture>
-          <h2 class="page-main__subtitle">Баскетбольная форма на&nbsp;заказ</h2>
-          <p class="page-main__description">Предусмотрена гибкая система скидок для баскетбольных команд, школ, секций</p>
-          <ul class="page-main__description-list">
-            <li class="page-main__description-item"><p class="page-main__description-text">Только качественные ткани</p></li>
-            <li class="page-main__description-item"><p class="page-main__description-text">Полная размерная сетка</p></li>
-            <li class="page-main__description-item"><p class="page-main__description-text">Индивидуальный дизайн</p></li>
-            <li class="page-main__description-item"><p class="page-main__description-text">Любой способ нанесения</p></li>
-          </ul>
-          <a class="page-main__button-basketball button" href="#">Оформить заказ</a>
+      <section class="page-main__section page-main__basketball container" id="basketball">
+        <div class="page-main__section-inner page-main__section-inner--promo">
+          <div class="page-main__promo-inner page-main__promo-block">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/desktop-images/basketball-form.jpg">
+              <source media="(min-width: 768px)" srcset="img/tablet-images/basketball-form.jpg">
+              <img class="page-main__image page-main__basketball-image" src="img/mobile-images/basketball-form.jpg" width="280" height="270" alt="Баскетбольная форма">
+            </picture>
+          </div>
+          <div class="page-main__promo-inner page-main__promo-block">
+            <div class="page-main__promo-text">
+              <h2 class="page-main__subtitle">Баскетбольная форма на&nbsp;заказ</h2>
+              <p class="page-main__description">Предусмотрена гибкая система скидок для баскетбольных команд, школ, секций</p>
+              <ul class="page-main__description-list">
+                <li class="page-main__description-item"><p class="page-main__description-text">Только качественные ткани</p></li>
+                <li class="page-main__description-item"><p class="page-main__description-text">Полная размерная сетка</p></li>
+                <li class="page-main__description-item"><p class="page-main__description-text">Индивидуальный дизайн</p></li>
+                <li class="page-main__description-item"><p class="page-main__description-text">Любой способ нанесения</p></li>
+              </ul>
+              <a class="page-main__button-basketball button" href="#">Оформить заказ</a>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="page-main__section page-main__calculate">
-        <div class="container">
-          <picture>
-            <img src="img/mobile-images/photo-cost-calculation.jpg" width="280" height="270" alt="Фотография футболиста">
-          </picture>
-          <h2 class="page-main__subtitle">Подготовим расчет стоимости под любой бюджет</h2>
-          <a class="page-main__button-calculate button" href="#">Рассчитать стоимость</a>
+      <section class="page-main__section page-main__calculate container">
+        <div class="page-main__section-inner page-main__section-inner--background">
+          <div class="page-main__promo-inner page-main__promo-inner--additional">
+            <picture>
+              <img class="page-main__image" src="img/mobile-images/photo-cost-calculation.jpg" width="280" height="270" alt="Фотография футболиста">
+            </picture>
+          </div>
+          <div class="page-main__promo-inner page-main__promo-inner--main page-main__promo-inner--calculate">
+            <h2 class="page-main__subtitle page-main__subtitle--on-background">Подготовим расчет стоимости под любой бюджет</h2>
+            <a class="page-main__button-background button" href="#">Рассчитать стоимость</a>
+          </div>
         </div>
       </section>
-      <section class="page-main__section page-main__hockey" id="hockey">
-        <div class="container">
-          <picture>
-            <img class="page-main__image page-main__hockey-image" src="img/mobile-images/hockey-form.jpg" width="280" height="270" alt="Хоккейная форма">
-          </picture>
-          <h2 class="page-main__subtitle">Хоккейная форма на&nbsp;заказ</h2>
-          <p class="page-main__description">Предусмотрена гибкая система скидок для хоккейных команд, школ, секций</p>
-          <ul class="page-main__description-list">
-            <li class="page-main__description-item"><p class="page-main__description-text">Только качественные ткани</p></li>
-            <li class="page-main__description-item"><p class="page-main__description-text">Полная размерная сетка</p></li>
-            <li class="page-main__description-item"><p class="page-main__description-text">Индивидуальный дизайн</p></li>
-            <li class="page-main__description-item"><p class="page-main__description-text">Любой способ нанесения</p></li>
-          </ul>
-          <a class="page-main__button-hockey button" href="#">Оформить заказ</a>
+      <section class="page-main__section page-main__hockey container" id="hockey">
+        <div class="page-main__section-inner page-main__section-inner--promo">
+          <div class="page-main__promo-inner page-main__promo-block">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/desktop-images/hockey-form.jpg">
+              <source media="(min-width: 768px)" srcset="img/tablet-images/hockey-form1.jpg">
+              <img class="page-main__image page-main__hockey-image" src="img/mobile-images/hockey-form.jpg" width="280" height="270" alt="Хоккейная форма">
+            </picture>
+          </div>
+          <div class="page-main__promo-inner page-main__promo-block">
+            <div class="page-main__promo-text">
+              <h2 class="page-main__subtitle">Хоккейная форма на&nbsp;заказ</h2>
+              <p class="page-main__description">Предусмотрена гибкая система скидок для хоккейных команд, школ, секций</p>
+              <ul class="page-main__description-list">
+                <li class="page-main__description-item"><p class="page-main__description-text">Только качественные ткани</p></li>
+                <li class="page-main__description-item"><p class="page-main__description-text">Полная размерная сетка</p></li>
+                <li class="page-main__description-item"><p class="page-main__description-text">Индивидуальный дизайн</p></li>
+                <li class="page-main__description-item"><p class="page-main__description-text">Любой способ нанесения</p></li>
+              </ul>
+              <a class="page-main__button-hockey button" href="#">Оформить заказ</a>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="page-main__section page-main__tracksuits" id="tracksuits">
-        <div class="container">
-          <picture>
-            <img class="page-main__image page-main__tracksuits-image" src="img/mobile-images/tracksuits.jpg" width="280" height="270" alt="Спортивные костюмы">
-          </picture>
-          <h2 class="page-main__subtitle">Спортивные костюмы на&nbsp;заказ</h2>
-          <p class="page-main__description">Предусмотрена гибкая система скидок для любительских команд, школ, секций</p>
-          <ul class="page-main__description-list">
-            <li class="page-main__description-item"><p class="page-main__description-text">Только качественные ткани</p></li>
-            <li class="page-main__description-item"><p class="page-main__description-text">Полная размерная сетка</p></li>
-            <li class="page-main__description-item"><p class="page-main__description-text">Индивидуальный дизайн</p></li>
-            <li class="page-main__description-item"><p class="page-main__description-text">Любой способ нанесения</p></li>
-          </ul>
-          <a class="page-main__button-tracksuits button" href="#">Оформить заказ</a>
+      <section class="page-main__section page-main__tracksuits container" id="tracksuits">
+        <div class="page-main__section-inner page-main__section-inner--background">
+          <div class="page-main__promo-inner page-main__promo-inner--additional">
+            <picture>
+              <img class="page-main__image page-main__tracksuits-image" src="img/mobile-images/tracksuits.jpg" width="280" height="270" alt="Спортивные костюмы">
+            </picture>
+          </div>
+          <div class="page-main__promo-inner page-main__promo-inner--main page-main__promo-inner--tracksuits">
+            <div class="page-main__inner-info">
+              <h2 class="page-main__subtitle page-main__subtitle--on-background">Спортивные костюмы на&nbsp;заказ</h2>
+              <p class="page-main__description page-main__description--on-background">Предусмотрена гибкая система скидок для любительских команд, школ, секций</p>
+              <ul class="page-main__description-list page-main__description-list--on-background">
+                <li class="page-main__description-item page-main__description-item--on-background"><p class="page-main__description-text">Только качественные ткани</p></li>
+                <li class="page-main__description-item page-main__description-item--on-background"><p class="page-main__description-text">Полная размерная сетка</p></li>
+                <li class="page-main__description-item page-main__description-item--on-background"><p class="page-main__description-text">Индивидуальный дизайн</p></li>
+                <li class="page-main__description-item page-main__description-item--on-background"><p class="page-main__description-text">Любой способ нанесения</p></li>
+              </ul>
+              <a class="page-main__button-background button" href="#">Оформить заказ</a>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="page-main__section page-main__volleyball" id="volleyball">
-        <div class="container">
-          <picture>
-            <img class="page-main__image page-main__volleyball-image" src="img/mobile-images/volleyball-form.jpg" width="280" height="270" alt="Волейбольная форма">
-          </picture>
-          <h2 class="page-main__subtitle">Волейбольная форма на&nbsp;заказ</h2>
-          <p class="page-main__description">Предусмотрена гибкая система скидок для волейбольных команд, школ, секций</p>
-          <ul class="page-main__description-list">
-            <li class="page-main__description-item"><p class="page-main__description-text">Только качественные ткани</p></li>
-            <li class="page-main__description-item"><p class="page-main__description-text">Полная размерная сетка</p></li>
-            <li class="page-main__description-item"><p class="page-main__description-text">Индивидуальный дизайн</p></li>
-            <li class="page-main__description-item"><p class="page-main__description-text">Любой способ нанесения</p></li>
-          </ul>
-          <a class="page-main__button-volleyball button" href="#">Оформить заказ</a>
+      <section class="page-main__section page-main__volleyball container" id="volleyball">
+        <div class="page-main__section-inner page-main__section-inner--promo">
+          <div class="page-main__promo-inner page-main__promo-block">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/desktop-images/volleyball-form.jpg">
+              <source media="(min-width: 768px)" srcset="img/tablet-images/volleyball-form.jpg">
+              <img class="page-main__image page-main__volleyball-image" src="img/mobile-images/volleyball-form.jpg" width="280" height="270" alt="Волейбольная форма">
+            </picture>
+          </div>
+          <div class="page-main__promo-inner page-main__promo-block">
+            <div class="page-main__promo-text">
+              <h2 class="page-main__subtitle">Волейбольная форма на&nbsp;заказ</h2>
+              <p class="page-main__description">Предусмотрена гибкая система скидок для волейбольных команд, школ, секций</p>
+              <ul class="page-main__description-list">
+                <li class="page-main__description-item"><p class="page-main__description-text">Только качественные ткани</p></li>
+                <li class="page-main__description-item"><p class="page-main__description-text">Полная размерная сетка</p></li>
+                <li class="page-main__description-item"><p class="page-main__description-text">Индивидуальный дизайн</p></li>
+                <li class="page-main__description-item"><p class="page-main__description-text">Любой способ нанесения</p></li>
+              </ul>
+              <a class="page-main__button-volleyball button" href="#">Оформить заказ</a>
+            </div>
+          </div>
         </div>
       </section>
   	</main>
@@ -198,25 +269,35 @@
       <div class="page-footer__container container">
         <div class="page-footer__social">
           <picture>
+            <source media="(min-width: 1440px)" srcset="img/desktop-images/logo-footer-desktop.svg">
             <img class="page-footer__logo" src="img/logo-footer.svg" width="37" height="40" alt="Логотип">
           </picture>
           <ul class="social__footer">
             <li class="social__footer-item">
-              <a class="social__footer-link" href="#">
+              <a class="social__footer-link" href="https://vk.com/divizionsport" target="_blank">
                 <span class="visually-hidden">Ссылка на ВК</span>
-                <img class="social__footer-img" src="img/icon-vk.svg" width="24" height="24" alt="Логотип ВК">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/desktop-images/vk.svg">
+                  <img class="social__footer-img social__footer-img--vk" src="img/icon-vk.svg" width="24" height="24" alt="Логотип ВК">
+                </picture>
               </a>
             </li>
             <li class="social__footer-item">
-              <a class="social__footer-link" href="#">
+              <a class="social__footer-link" href="#" target="_blank">
                 <span class="visually-hidden">Ссылка на Telegram</span>
-                <img class="social__footer-img" src="img/icon-telegram.svg" width="24" height="24" alt="Логотип Telegram">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/desktop-images/telegram.svg">
+                  <img class="social__footer-img social__footer-img--tg" src="img/icon-telegram.svg" width="24" height="24" alt="Логотип Telegram">
+                </picture>
               </a>
             </li>
             <li class="social__footer-item">
-              <a class="social__footer-link" href="#">
+              <a class="social__footer-link" href="#" target="_blank">
                 <span class="visually-hidden">Ссылка на Whatsapp</span>
-                <img class="social__footer-img" src="img/icon-whatsapp.svg" width="24" height="24" alt="Логотип Whatsapp">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/desktop-images/whatsapp.svg">
+                  <img class="social__footer-img social__footer-img--whatsapp" src="img/icon-whatsapp.svg" width="24" height="24" alt="Логотип Whatsapp">
+                </picture>
               </a>
             </li>
           </ul>

@@ -5,26 +5,84 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    .offset(0; 10px 0 0 0);
+    justify-content: space-between;
+    align-items: center;
+    width: 26%;
+    max-width: 205px;
+    .offset(0; 0);
     list-style: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: normal;
+    width: 210px;
+    max-width: 100%;
   }
 }
 
 .social__item {
   @media (min-width: @tablet-width) {
-    margin-right: 20px;
+    padding: 15px;
+    background-color: @white;
+    border-radius: 15px;
 
     &:last-child {
       margin-right: 0;
     }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 15px;
+      padding: 18px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
+}
+
+.social__link {
+  display: block;
+}
+
+.social__img:hover,
+.social__footer-img:hover {
+  transform: scale(1.2);
+  transition: 0.3s;
 }
 
 .social__footer {
   display: flex;
   flex-wrap: wrap;
-  flex-grow: 1;
-  justify-content: space-between;
   .offset(0; 0);
   list-style: none;
+}
+
+.social__footer-item {
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__footer-img--vk {
+  @media (min-width: @desktop-width) {
+    width: 107px;
+    height: 28px;
+  }
+}
+
+.social__footer-img--tg {
+  @media (min-width: @desktop-width) {
+    width: 97px;
+    height: 28px;
+  }
+}
+
+.social__footer-img--whatsapp {
+  @media (min-width: @desktop-width) {
+    width: 105px;
+    height: 28px;
+  }
 }
