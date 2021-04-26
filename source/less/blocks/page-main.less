@@ -64,6 +64,13 @@
 }
 
 .page-main__promo-text {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+
   @media (min-width: @desktop-width) {
     padding: 80px 55px 80px 50px;
   }
@@ -348,8 +355,16 @@
   border-radius: 10px;
   background-color: @grey5;
 
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 56px;
+  }
+
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
+    min-height: auto;
   }
 }
 
