@@ -248,7 +248,11 @@
 
 .page-main__advantages-item-generate(@n) when (@n > 0) {
   .page-main__advantages-item--@{n} {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../img/mobile-images/card-@{n}.jpg");
+    background-image: url("../img/mobile-images/card-@{n}.jpg");
+
+    @media (min-width: @desktop-width) {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../img/mobile-images/card-@{n}.jpg");
+    }
   }
   .page-main__advantages-item-generate(@n - 1);
 }
