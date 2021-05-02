@@ -1173,6 +1173,33 @@ a {
   margin: -1px;
   font-size: 0;
 }
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 15;
+  background-color: rgba(55, 55, 55, 0.4);
+}
+@media (min-width: 768px) {
+  .modal-overlay {
+    padding: 0;
+  }
+}
+.modal-overlay__open {
+  display: block;
+}
+.modal__opened {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+}
 .modal {
   display: none;
   position: fixed;
@@ -1180,7 +1207,8 @@ a {
   right: 0;
   left: 0;
   bottom: auto;
-  width: 380px;
+  min-width: 270px;
+  max-width: 380px;
   margin: auto;
   padding: 25px 20px;
   color: #000000;
@@ -1197,16 +1225,27 @@ a {
 .modal__title {
   margin: 0;
   padding: 0;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 45px;
+  font-size: 24px;
+  line-height: 36px;
+}
+@media (min-width: 768px) {
+  .modal__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 45px;
+  }
 }
 .modal__text {
-  margin: 0 0 30px 0;
+  margin: 0 0 20px 0;
   padding: 0;
   font-size: 12px;
   line-height: 15px;
+}
+@media (min-width: 768px) {
+  .modal__text {
+    margin-bottom: 30px;
+  }
 }
 .modal__btn-close {
   position: absolute;
@@ -1255,18 +1294,43 @@ a {
 }
 .modal__form-fieldset--range {
   display: flex;
-  width: 100%;
+  min-width: 230px;
   max-width: 340px;
   justify-content: space-between;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   padding: 6px 15px;
   background-color: #e5e5e5;
   border-radius: 10px;
 }
+@media (min-width: 768px) {
+  .modal__form-fieldset--range {
+    margin-bottom: 30px;
+  }
+}
+.modal__form-fieldset--file {
+  margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .modal__form-fieldset--file {
+    margin-bottom: 50px;
+  }
+}
+.modal__legend {
+  margin: 0 0 20px 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+}
 .modal__inner {
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .modal__inner {
+    margin-bottom: 15px;
+  }
 }
 .modal__form-label {
   font-weight: 500;
@@ -1275,25 +1339,64 @@ a {
   color: #000000;
   margin-bottom: 5px;
 }
+.modal__form-label--file {
+  display: block;
+  min-width: 230px;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #34c759;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+@media (min-width: 768px) {
+  .modal__form-label--file {
+    padding: 10px 50px;
+  }
+}
+.modal__form-label--file:hover,
+.modal__form-label--file:focus {
+  background-color: #05b348;
+}
 .modal__form-input {
   margin: 0;
-  padding: 14px 10px 12px 10px;
+  padding: 10px 10px 8px 10px;
   font-family: "PT Root UI", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 23px;
+  font-size: 14px;
+  line-height: 18px;
   background-color: #e5e5e5;
   border: 0;
   border-radius: 10px;
 }
+@media (min-width: 768px) {
+  .modal__form-input {
+    padding: 14px 10px 12px 10px;
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
 .modal__form-input::-moz-placeholder {
   font-weight: 500;
-  font-size: 18px;
-  line-height: 23px;
+  font-size: 14px;
+  line-height: 18px;
 }
 .modal__form-input::placeholder {
   font-weight: 500;
-  font-size: 18px;
-  line-height: 23px;
+  font-size: 14px;
+  line-height: 18px;
+}
+@media (min-width: 768px) {
+  .modal__form-input::-moz-placeholder {
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .modal__form-input::placeholder {
+    font-size: 18px;
+    line-height: 23px;
+  }
 }
 .modal__value {
   width: 40px;
@@ -1306,7 +1409,6 @@ a {
 .modal__value::-webkit-inner-spin-button {
   -webkit-appearance: none;
           appearance: none;
-  /*-webkit-appearance: none;*/
   margin: 0;
 }
 .modal__value--button {
@@ -1316,28 +1418,44 @@ a {
   -webkit-appearance: textfield;
      -moz-appearance: textfield;
           appearance: textfield;
-  /*-moz-appearance: textfield;*/
 }
 .modal__value--number {
-  width: 140px;
+  width: 100px;
+  max-width: 140px;
   margin: 0;
   padding: 8px 10px 6px 10px;
   font-weight: bold;
-  font-size: 18px;
-  line-height: 23px;
+  font-size: 14px;
+  line-height: 18px;
   text-align: center;
+}
+@media (min-width: 768px) {
+  .modal__value--number {
+    font-size: 18px;
+    line-height: 23px;
+  }
 }
 .modal__value--number::-moz-placeholder {
   font-weight: 500;
-  font-size: 18px;
-  line-height: 23px;
+  font-size: 14px;
+  line-height: 18px;
   text-align: center;
 }
 .modal__value--number::placeholder {
   font-weight: 500;
-  font-size: 18px;
-  line-height: 23px;
+  font-size: 14px;
+  line-height: 18px;
   text-align: center;
+}
+@media (min-width: 768px) {
+  .modal__value--number::-moz-placeholder {
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .modal__value--number::placeholder {
+    font-size: 18px;
+    line-height: 23px;
+  }
 }
 .modal__button {
   width: 100%;

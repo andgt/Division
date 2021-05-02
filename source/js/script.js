@@ -29,35 +29,55 @@ window.addEventListener("keydown", function (evt) {
 
 // Модальные окна
 
-let modalsOpen = document.querySelectorAll(".js-button-open");
-let modalWindows = document.querySelectorAll(".modal");
-let modalOpenName;
-let buttonsClose = document.querySelectorAll(".js-button-close");
+let modal = function () {
+  let htmlPage = document.querySelector(".page");
+  let modalsOpen = document.querySelectorAll(".js-button-open");
+  let modalWindows = document.querySelectorAll(".modal");
+  let modalOverlay = document.querySelector(".modal-overlay");
+  let buttonsClose = document.querySelectorAll(".js-button-close");
+  let modalOpenName;
+  let scrollPosition;
 
-for (let modalOpen of modalsOpen) {
-  modalOpen.onclick = function (evt) {
-    evt.preventDefault();
-    modalOpenName = this.getAttribute("data-modal-window");
+  let closesWindows = function () {
     for (let modalWindow of modalWindows) {
-      if (modalWindow.classList.contains(modalOpenName)) {
-        modalWindow.classList.add("modal__show");
+      htmlPage.classList.remove("modal__opened");
+      modalWindow.classList.remove("modal__show");
+      modalOverlay.classList.remove("modal-overlay__open");
+      htmlPage.style.scrollBehavior = "auto";
+      window.scrollTo(0, scrollPosition);
+      htmlPage.style.scrollBehavior = "";
+      htmlPage.style.top = "";
+    }
+  };
+
+  for (let modalOpen of modalsOpen) {
+    modalOpen.onclick = function (evt) {
+      evt.preventDefault();
+      scrollPosition = pageYOffset;
+      modalOpenName = this.getAttribute("data-modal-window");
+      for (let modalWindow of modalWindows) {
+        if (modalWindow.classList.contains(modalOpenName)) {
+          htmlPage.classList.add("modal__opened");
+          htmlPage.style.top = -scrollPosition + "px";
+          modalOverlay.classList.add("modal-overlay__open");
+          modalWindow.classList.add("modal__show");
+        }
       }
     }
-  }
+  };
+
+  for (let buttonClose of buttonsClose) {
+    buttonClose.onclick = function (evt) {
+      evt.preventDefault();
+      closesWindows();
+    }
+  };
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      closesWindows();
+    }
+  });
 };
 
-for (let buttonClose of buttonsClose) {
-  buttonClose.onclick = function () {
-    for (let modalWindow of modalWindows) {
-      modalWindow.classList.remove("modal__show");
-    }
-  }
-}
-
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    for (let modalWindow of modalWindows) {
-      modalWindow.classList.remove("modal__show");
-    }
-  }
-});
+modal();

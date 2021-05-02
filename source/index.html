@@ -281,57 +281,64 @@
         </div>
       </div>
   	</footer>
-    <div class="modal js-back-call">
-      <h2 class="modal__title">Обратный звонок</h2>
-      <p class="modal__text">Оставьте свой телефон, и мы свяжемся с вами</p>
-      <button class="modal__btn-close js-button-close" type="button">
-        <span class="visually-hidden">Закрыть окно</span>
-      </button>
-      <form class="modal__form" method="post" action="">
-        <fieldset class="modal__form-fieldset">
-          <legend class="visually-hidden">Контактная информация</legend>
-          <div class="modal__inner">
-            <label class="modal__form-label" for="name-back-call">Ваше имя</label>
-            <input class="modal__form-input" type="text" name="back-call" id="name-back-call" placeholder="Александр">
-          </div>
-          <div class="modal__inner">
-            <label class="modal__form-label" for="phone-number-back-call">Номер телефона</label>
-            <input class="modal__form-input" type="tel" name="back-call" id="phone-number-back-call" pattern="2[0-9]{3}-[0-9]{3}" placeholder="+79160568324">
-          </div>
-        </fieldset>
-      </form>
-      <button class="modal__button button" type="submit">Заказать обратный звонок</button>
-    </div>
-    <div class="modal js-calculate">
-      <h2 class="modal__title">Расчет стоимости</h2>
-      <p class="modal__text">Мы поможем вам расcчитать стоимость заказа</p>
-      <button class="modal__btn-close js-button-close" type="button">
-        <span class="visually-hidden">Закрыть окно</span>
-      </button>
-      <form class="modal__form" method="post" action="">
-        <fieldset class="modal__form-fieldset">
-          <legend class="visually-hidden">Контактная информация</legend>
-          <div class="modal__inner">
-            <label class="modal__form-label" for="name-calculate">Ваше имя</label>
-            <input class="modal__form-input" type="text" name="back-call" id="name-calculate" placeholder="Александр">
-          </div>
-          <div class="modal__inner">
-            <label class="modal__form-label" for="phone-number-calculate">Номер телефона</label>
-            <input class="modal__form-input" type="tel" name="back-call" id="phone-number-calculate" pattern="2[0-9]{3}-[0-9]{3}" placeholder="+79160568324">
-          </div>
-          <div class="modal__inner">
-            <label class="modal__form-label" for="email">Почта</label>
-            <input class="modal__form-input" type="email" name="mail" id="email" placeholder="ivanov@gmail.com">
-          </div>
-        </fieldset>
-        <fieldset class="modal__form-fieldset modal__form-fieldset--range">
-          <legend class="visually-hidden">Счетчик количества комплектов</legend>
-          <button class="modal__value modal__value--min modal__value--button" type="button">—</button>
-          <input class="modal__value modal__value--number" type="number" placeholder="35">
-          <button class="modal__value modal__value--max modal__value--button" type="button">+</button>
-        </fieldset>
-      </form>
-      <button class="modal__button button" type="submit">Рассчитать</button>
+    <div class="modal-overlay">
+      <div class="modal js-back-call">
+        <h2 class="modal__title">Обратный звонок</h2>
+        <p class="modal__text">Оставьте свой телефон, и мы свяжемся с вами</p>
+        <button class="modal__btn-close js-button-close" type="button">
+          <span class="visually-hidden">Закрыть окно</span>
+        </button>
+        <form class="modal__form" method="post" action="">
+          <fieldset class="modal__form-fieldset">
+            <legend class="visually-hidden">Контактная информация</legend>
+            <div class="modal__inner">
+              <label class="modal__form-label" for="name-back-call">Ваше имя</label>
+              <input class="modal__form-input" type="text" name="back-call" id="name-back-call" placeholder="Александр">
+            </div>
+            <div class="modal__inner">
+              <label class="modal__form-label" for="phone-number-back-call">Номер телефона</label>
+              <input class="modal__form-input" type="tel" name="back-call" id="phone-number-back-call" pattern="2[0-9]{3}-[0-9]{3}" placeholder="+79160568324">
+            </div>
+          </fieldset>
+        </form>
+        <button class="modal__button button" type="submit">Заказать обратный звонок</button>
+      </div>
+      <div class="modal js-calculate">
+        <h2 class="modal__title">Расчет стоимости</h2>
+        <p class="modal__text">Мы поможем расcчитать стоимость заказа</p>
+        <button class="modal__btn-close js-button-close" type="button">
+          <span class="visually-hidden">Закрыть окно</span>
+        </button>
+        <form class="modal__form" method="post" action="">
+          <fieldset class="modal__form-fieldset">
+            <legend class="visually-hidden">Контактная информация</legend>
+            <div class="modal__inner">
+              <label class="modal__form-label" for="name-calculate">Ваше имя</label>
+              <input class="modal__form-input" type="text" name="back-call" id="name-calculate" placeholder="Александр">
+            </div>
+            <div class="modal__inner">
+              <label class="modal__form-label" for="phone-number-calculate">Номер телефона</label>
+              <input class="modal__form-input" type="tel" name="back-call" id="phone-number-calculate" pattern="2[0-9]{3}-[0-9]{3}" placeholder="+79160568324">
+            </div>
+            <div class="modal__inner">
+              <label class="modal__form-label" for="email">Почта</label>
+              <input class="modal__form-input" type="email" name="mail" id="email" placeholder="ivanov@gmail.com">
+            </div>
+          </fieldset>
+          <fieldset class="modal__form-fieldset modal__form-fieldset--range">
+            <legend class="visually-hidden">Счетчик количества комплектов</legend>
+            <button class="modal__value modal__value--min modal__value--button" type="button">—</button>
+            <input class="modal__value modal__value--number" type="number" placeholder="35">
+            <button class="modal__value modal__value--max modal__value--button" type="button">+</button>
+          </fieldset>
+          <fieldset class="modal__form-fieldset modal__form-fieldset--file">
+            <legend class="modal__legend">Вы можете загрузить одно или несколько изображений желаемой формы</legend>
+            <label class="modal__form-label modal__form-label--file" for="file" tabindex="0">Отправить файлы<br> (.jpg, .png, .cdr, .ai, .svg, .psd)</label>
+            <input class="visually-hidden" type="file" id="file" name="file" multiple accept="image/*, image/svg+xml, .cdr, .ai, .psd">
+          </fieldset>
+        </form>
+        <button class="modal__button button" type="submit">Рассчитать</button>
+      </div>
     </div>
     <script src="js/script.js"></script>
   </body>
