@@ -1192,6 +1192,7 @@ a {
 }
 .modal-overlay__open {
   display: block;
+  z-index: 15;
 }
 .modal__opened {
   position: fixed;
