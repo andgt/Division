@@ -78,6 +78,12 @@ let modal = function () {
       closesWindows();
     }
   });
+
+  htmlPage.addEventListener("click", function (evt) {
+    if (evt.target.classList.contains("modal-overlay")) {
+      closesWindows();
+    }
+  });
 };
 
 modal();
