@@ -24,6 +24,13 @@ a {
   margin: 0 auto;
   scroll-behavior: smooth;
 }
+.page__modal-opened {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+}
 .container {
   margin: 0 20px;
   padding: 0;
@@ -891,7 +898,7 @@ a {
 }
 .main-nav__toggle {
   position: absolute;
-  top: -40px;
+  top: -47px;
   right: 0;
   width: 26px;
   height: 26px;
@@ -1180,9 +1187,12 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
   margin: 0;
   padding: 0;
-  z-index: 15;
+  z-index: 20;
   background-color: rgba(55, 55, 55, 0.4);
 }
 @media (min-width: 768px) {
@@ -1192,18 +1202,10 @@ a {
 }
 .modal-overlay__open {
   display: block;
-  z-index: 15;
-}
-.modal__opened {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  overflow: hidden;
 }
 .modal {
   display: none;
-  position: fixed;
+  position: relative;
   top: 100px;
   right: 0;
   left: 0;
