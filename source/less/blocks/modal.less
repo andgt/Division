@@ -14,8 +14,11 @@
   right: 0;
   bottom: 0;
   left: 0;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
   .offset(0; 0);
-  z-index: 15;
+  z-index: 20;
   background-color: @grey-opacity;
 
   @media (min-width: @tablet-width) {
@@ -25,20 +28,11 @@
 
 .modal-overlay__open {
   display: block;
-  z-index: 15;
-}
-
-.modal__opened {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  overflow: hidden;
 }
 
 .modal {
   display: none;
-  position: fixed;
+  position: relative;
   top: 100px;
   right: 0;
   left: 0;

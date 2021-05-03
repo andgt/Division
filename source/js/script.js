@@ -40,7 +40,7 @@ let modal = function () {
 
   let closesWindows = function () {
     for (let modalWindow of modalWindows) {
-      htmlPage.classList.remove("modal__opened");
+      htmlPage.classList.remove("page__modal-opened");
       modalWindow.classList.remove("modal__show");
       modalOverlay.classList.remove("modal-overlay__open");
       htmlPage.style.scrollBehavior = "auto";
@@ -57,7 +57,7 @@ let modal = function () {
       modalOpenName = this.getAttribute("data-modal-window");
       for (let modalWindow of modalWindows) {
         if (modalWindow.classList.contains(modalOpenName)) {
-          htmlPage.classList.add("modal__opened");
+          htmlPage.classList.add("page__modal-opened");
           htmlPage.style.top = -scrollPosition + "px";
           modalOverlay.classList.add("modal-overlay__open");
           modalWindow.classList.add("modal__show");
