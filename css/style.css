@@ -1438,28 +1438,6 @@ a {
     line-height: 23px;
   }
 }
-.modal__value--number::-moz-placeholder {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
-  text-align: center;
-}
-.modal__value--number::placeholder {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
-  text-align: center;
-}
-@media (min-width: 768px) {
-  .modal__value--number::-moz-placeholder {
-    font-size: 18px;
-    line-height: 23px;
-  }
-  .modal__value--number::placeholder {
-    font-size: 18px;
-    line-height: 23px;
-  }
-}
 .modal__button {
   width: 100%;
   max-width: 340px;

@@ -84,6 +84,29 @@ let modal = function () {
       closesWindows();
     }
   });
+
+  let modalCount = function () {
+    let leftButton = document.querySelector(".modal__value--min");
+    let rightButton = document.querySelector(".modal__value--max");
+    let inputValueNumber = document.querySelector(".modal__value--number");
+
+    leftButton.onclick = function () {
+      inputValueNumber.value--;
+      if (inputValueNumber.value <= 5) {
+        leftButton.disabled = true;
+      }
+    };
+
+    rightButton.onclick = function () {
+      inputValueNumber.value++;
+      if (inputValueNumber.value > 5) {
+        leftButton.disabled = false;
+      }
+    };
+  };
+
+  modalCount();
 };
 
 modal();
+
