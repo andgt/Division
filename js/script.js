@@ -35,8 +35,16 @@ let modal = function () {
   let modalWindows = document.querySelectorAll(".modal");
   let modalOverlay = document.querySelector(".modal-overlay");
   let buttonsClose = document.querySelectorAll(".js-button-close");
+  let modalTitles = document.querySelectorAll(".modal__title");
   let modalOpenName;
   let scrollPosition;
+  let modalName;
+
+  let dynamicTitles = function () {
+    for (let modalTitle of modalTitles) {
+      modalTitle.textContent = modalName;
+    };
+  };
 
   let closesWindows = function () {
     for (let modalWindow of modalWindows) {
@@ -55,8 +63,10 @@ let modal = function () {
       evt.preventDefault();
       scrollPosition = pageYOffset;
       modalOpenName = this.getAttribute("data-modal-window");
+      modalName = this.getAttribute("data-modal-name");
       for (let modalWindow of modalWindows) {
         if (modalWindow.classList.contains(modalOpenName)) {
+          dynamicTitles();
           htmlPage.classList.add("page__modal-opened");
           htmlPage.style.top = -scrollPosition + "px";
           modalOverlay.classList.add("modal-overlay__open");
