@@ -53,6 +53,7 @@
   background-color: @blue-opacity;
   box-shadow: 0 2px 6px @grey-opacity;
   cursor: pointer;
+  transition: 0.3s linear;
 
   @media (min-width: @tablet-width) {
     bottom: 15px;
@@ -64,6 +65,11 @@
     right: 50px;
     bottom: 30px;
   }
+}
+
+.button__scroll-up:hover {
+  background-color: @blue-opacity1;
+  transition: 0.3s linear;
 }
 
 .button__scroll-up--showed {

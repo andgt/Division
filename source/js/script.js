@@ -41,11 +41,15 @@ let modal = function () {
   let scrollPosition;
   let modalName;
 
+  // Заголовки для окон
+
   let dynamicTitles = function () {
     for (let modalTitle of modalTitles) {
       modalTitle.textContent = modalName;
     };
   };
+
+  // Закрытие окна
 
   let closesWindows = function () {
     for (let modalWindow of modalWindows) {
@@ -58,6 +62,8 @@ let modal = function () {
       htmlPage.style.top = "";
     }
   };
+
+  // Открытие окна
 
   for (let modalOpen of modalsOpen) {
     modalOpen.onclick = function (evt) {
@@ -77,6 +83,8 @@ let modal = function () {
     }
   };
 
+  // Закрытие окна по кнопке
+
   for (let buttonClose of buttonsClose) {
     buttonClose.onclick = function (evt) {
       evt.preventDefault();
@@ -84,17 +92,23 @@ let modal = function () {
     }
   };
 
+  // Закрытие окна по esc
+
   window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
       closesWindows();
     }
   });
 
+  // Закрытие по клику вне окна
+
   htmlPage.addEventListener("click", function (evt) {
     if (evt.target.classList.contains("modal-overlay")) {
       closesWindows();
     }
   });
+
+  // Кнопки в форме
 
   let modalCount = function () {
     let leftButton = document.querySelector(".modal__value--min");
@@ -122,7 +136,15 @@ let modal = function () {
 modal();
 
 
-//Кнопка наверх
+// Количество выбранных файлов в label
+
+let inputFile = document.getElementById("file");
+let labelFile = document.querySelector(".modal__form-label--file");
+inputFile.onchange = function () {
+  labelFile.textContent = "Выбрано файлов: " + inputFile.files.length;
+};
+
+// Кнопка наверх
 
 let scrollUp = document.querySelector(".button__scroll-up");
 
@@ -130,7 +152,7 @@ window.onscroll = function () {
   if (window.pageYOffset > 100) {
     scrollUp.classList.add("button__scroll-up--showed");
   } else {
-    scrollUp.classList.remove("button__scroll-up--showed")
+    scrollUp.classList.remove("button__scroll-up--showed");
   }
 };
 
