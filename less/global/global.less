@@ -27,6 +27,7 @@ a {
   height: 100%;
   margin: 0 auto;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .page__modal-opened {
@@ -46,43 +47,5 @@ a {
 
   @media (min-width: @desktop-width) {
     .offset(0 202px; 0);
-  }
-}
-
-.button {
-  display: block;
-  width: 100%;
-  .offset(0; 10px 25px);
-  font-family: "PT Root UI", "Arial", sans-serif;
-  font-weight: bold;
-  font-size: 13px;
-  line-height: 16px;
-  color: @black;
-  border: 2px solid @black;
-  border-radius: 10px;
-  text-align: center;
-  background-color: transparent;
-  outline: none;
-  transition: background-color 0.5s linear;
-
-  &:hover,
-  &:focus {
-    color: @white;
-    background-color: @black;
-    transition: 0.3s;
-  }
-
-  &:active {
-    background-color: @grey2;
-    border-color: @grey2;
-  }
-
-  @media (min-width: @tablet-width) {
-    max-width: 350px;
-  }
-
-  @media (min-width: @desktop-width) {
-    max-width: 148px;
-    padding: 8px 23px;
   }
 }

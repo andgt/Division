@@ -27,6 +27,7 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
+
 // Модальные окна
 
 let modal = function () {
@@ -119,4 +120,21 @@ let modal = function () {
 };
 
 modal();
+
+
+//Кнопка наверх
+
+let scrollUp = document.querySelector(".button__scroll-up");
+
+window.onscroll = function () {
+  if (window.pageYOffset > 100) {
+    scrollUp.classList.add("button__scroll-up--showed");
+  } else {
+    scrollUp.classList.remove("button__scroll-up--showed")
+  }
+};
+
+scrollUp.onclick = function () {
+  window.scrollTo(0, 0);
+};
 
