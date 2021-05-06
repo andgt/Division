@@ -23,6 +23,7 @@ a {
   height: 100%;
   margin: 0 auto;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 .page__modal-opened {
   position: fixed;
@@ -45,44 +46,6 @@ a {
   .container {
     margin: 0 202px;
     padding: 0;
-  }
-}
-.button {
-  display: block;
-  width: 100%;
-  margin: 0;
-  padding: 10px 25px;
-  font-family: "PT Root UI", "Arial", sans-serif;
-  font-weight: bold;
-  font-size: 13px;
-  line-height: 16px;
-  color: #000000;
-  border: 2px solid #000000;
-  border-radius: 10px;
-  text-align: center;
-  background-color: transparent;
-  outline: none;
-  transition: background-color 0.5s linear;
-}
-.button:hover,
-.button:focus {
-  color: #ffffff;
-  background-color: #000000;
-  transition: 0.3s;
-}
-.button:active {
-  background-color: #333333;
-  border-color: #333333;
-}
-@media (min-width: 768px) {
-  .button {
-    max-width: 350px;
-  }
-}
-@media (min-width: 1440px) {
-  .button {
-    max-width: 148px;
-    padding: 8px 23px;
   }
 }
 @font-face {
@@ -183,6 +146,97 @@ a {
   80% {
     transform: translateX(10px);
   }
+}
+@-webkit-keyframes btn-showing {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes btn-showing {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.button {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 10px 25px;
+  font-family: "PT Root UI", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  text-align: center;
+  background-color: transparent;
+  outline: none;
+  transition: background-color 0.5s linear;
+}
+.button:hover,
+.button:focus {
+  color: #ffffff;
+  background-color: #000000;
+  transition: 0.3s;
+}
+.button:active {
+  background-color: #333333;
+  border-color: #333333;
+}
+@media (min-width: 768px) {
+  .button {
+    max-width: 350px;
+  }
+}
+@media (min-width: 1440px) {
+  .button {
+    max-width: 148px;
+    padding: 8px 23px;
+  }
+}
+.button__scroll-up {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-image: url("data:image/svg+xml,%3Csvg role='img' xmlns='http://www.w3.org/2000/svg' width='48px' height='48px' viewBox='0 0 24 24' aria-labelledby='chevronUpIconTitle' stroke='%23ffffff' stroke-width='1.5' stroke-linecap='square' stroke-linejoin='miter' fill='none' color='%23ffffff'%3E%3Ctitle id='chevronUpIconTitle'%3EChevron Up%3C/title%3E%3Cpolyline points='6 14 12 8 18 14 18 14'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+  background-position: center center;
+  background-color: rgba(16, 158, 230, 0.68);
+  box-shadow: 0 2px 6px rgba(55, 55, 55, 0.4);
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .button__scroll-up {
+    bottom: 15px;
+  }
+}
+@media (min-width: 1440px) {
+  .button__scroll-up {
+    width: 60px;
+    height: 60px;
+    right: 50px;
+    bottom: 30px;
+  }
+}
+.button__scroll-up--showed {
+  display: block;
+  -webkit-animation: 0.3s linear btn-showing;
+          animation: 0.3s linear btn-showing;
 }
 .page-header {
   display: flex;
