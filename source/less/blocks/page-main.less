@@ -102,24 +102,36 @@
   @media (min-width: @tablet-width) {
     max-width: 100%;
     .offset(0; 0);
-    background-image: url("../img/tablet-images/football-form.jpg");
+    background-image: url("../img/tablet-images/football-form-min.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
     border-radius: 20px 20px 0 0;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/tablet-images/football-form@2x-min.jpg");
   }
 }
 
 .page-main__promo-inner--calculate {
   @media (min-width: @tablet-width) {
     .offset(0; 50px 350px 106px 50px);
-    background-image: url("../img/tablet-images/photo-cost-calculation.jpg");
+    background-image: url("../img/tablet-images/photo-cost-calculation-min.jpg");
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/tablet-images/photo-cost-calculation@2x-min.jpg");
   }
 }
 
 .page-main__promo-inner--tracksuits {
   @media (min-width: @tablet-width) {
-    background-image: url("../img/tablet-images/tracksuits.jpg");
+    background-image: url("../img/tablet-images/tracksuits-min.jpg");
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/tablet-images/tracksuits@2x-min.jpg");
   }
 }
 
@@ -212,6 +224,7 @@
   @media (min-width: @tablet-width) {
     color: @white;
     text-align: left;
+    margin-bottom: 10px;
   }
 
   @media (min-width: @desktop-width) {
@@ -254,10 +267,10 @@
 
 .page-main__advantages-item-generate(@n) when (@n > 0) {
   .page-main__advantages-item--@{n} {
-    background-image: url("../img/mobile-images/card-@{n}.jpg");
+    background-image: url("../img/mobile-images/card-@{n}-min.jpg");
 
     @media (min-width: @desktop-width) {
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../img/mobile-images/card-@{n}.jpg");
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../img/mobile-images/card-@{n}-min.jpg");
     }
   }
   .page-main__advantages-item-generate(@n - 1);

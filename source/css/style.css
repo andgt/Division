@@ -502,23 +502,38 @@ a {
     max-width: 100%;
     margin: 0;
     padding: 0;
-    background-image: url("../img/tablet-images/football-form.jpg");
+    background-image: url("../img/tablet-images/football-form-min.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
     border-radius: 20px 20px 0 0;
   }
 }
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .page-main__promo-inner--main {
+    background-image: url("../img/tablet-images/football-form@2x-min.jpg");
+  }
+}
 @media (min-width: 768px) {
   .page-main__promo-inner--calculate {
     margin: 0;
     padding: 50px 350px 106px 50px;
-    background-image: url("../img/tablet-images/photo-cost-calculation.jpg");
+    background-image: url("../img/tablet-images/photo-cost-calculation-min.jpg");
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .page-main__promo-inner--calculate {
+    background-image: url("../img/tablet-images/photo-cost-calculation@2x-min.jpg");
   }
 }
 @media (min-width: 768px) {
   .page-main__promo-inner--tracksuits {
-    background-image: url("../img/tablet-images/tracksuits.jpg");
+    background-image: url("../img/tablet-images/tracksuits-min.jpg");
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .page-main__promo-inner--tracksuits {
+    background-image: url("../img/tablet-images/tracksuits@2x-min.jpg");
   }
 }
 @media (min-width: 768px) {
@@ -617,6 +632,7 @@ a {
   .page-main__subtitle--on-background {
     color: #ffffff;
     text-align: left;
+    margin-bottom: 10px;
   }
 }
 @media (min-width: 1440px) {
@@ -660,35 +676,35 @@ a {
   border-radius: 20px;
 }
 .page-main__advantages-item--4 {
-  background-image: url("../img/mobile-images/card-4.jpg");
+  background-image: url("../img/mobile-images/card-4-min.jpg");
 }
 @media (min-width: 1440px) {
   .page-main__advantages-item--4 {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../img/mobile-images/card-4.jpg");
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../img/mobile-images/card-4-min.jpg");
   }
 }
 .page-main__advantages-item--3 {
-  background-image: url("../img/mobile-images/card-3.jpg");
+  background-image: url("../img/mobile-images/card-3-min.jpg");
 }
 @media (min-width: 1440px) {
   .page-main__advantages-item--3 {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../img/mobile-images/card-3.jpg");
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../img/mobile-images/card-3-min.jpg");
   }
 }
 .page-main__advantages-item--2 {
-  background-image: url("../img/mobile-images/card-2.jpg");
+  background-image: url("../img/mobile-images/card-2-min.jpg");
 }
 @media (min-width: 1440px) {
   .page-main__advantages-item--2 {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../img/mobile-images/card-2.jpg");
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../img/mobile-images/card-2-min.jpg");
   }
 }
 .page-main__advantages-item--1 {
-  background-image: url("../img/mobile-images/card-1.jpg");
+  background-image: url("../img/mobile-images/card-1-min.jpg");
 }
 @media (min-width: 1440px) {
   .page-main__advantages-item--1 {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../img/mobile-images/card-1.jpg");
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../img/mobile-images/card-1-min.jpg");
   }
 }
 .page-main__advantages-block {
