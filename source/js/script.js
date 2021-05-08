@@ -37,6 +37,7 @@ let modal = function () {
   let modalOverlay = document.querySelector(".modal-overlay");
   let buttonsClose = document.querySelectorAll(".js-button-close");
   let modalTitles = document.querySelectorAll(".modal__title");
+  let modalUsernames = document.querySelectorAll(".modal__form-input--username");
   let modalOpenName;
   let scrollPosition;
   let modalName;
@@ -49,17 +50,11 @@ let modal = function () {
     };
   };
 
-  // Закрытие окна
+  // Автофокус
 
-  let closesWindows = function () {
-    for (let modalWindow of modalWindows) {
-      htmlPage.classList.remove("page__modal-opened");
-      modalWindow.classList.remove("modal__show");
-      modalOverlay.classList.remove("modal-overlay__open");
-      htmlPage.style.scrollBehavior = "auto";
-      window.scrollTo(0, scrollPosition);
-      htmlPage.style.scrollBehavior = "";
-      htmlPage.style.top = "";
+  let autofocus = function () {
+    for (let modalUsername of modalUsernames) {
+      modalUsername.focus();
     }
   };
 
@@ -78,8 +73,23 @@ let modal = function () {
           htmlPage.style.top = -scrollPosition + "px";
           modalOverlay.classList.add("modal-overlay__open");
           modalWindow.classList.add("modal__show");
+          autofocus();
         }
       }
+    }
+  };
+
+  // Закрытие окна
+
+  let closesWindows = function () {
+    for (let modalWindow of modalWindows) {
+      htmlPage.classList.remove("page__modal-opened");
+      modalWindow.classList.remove("modal__show");
+      modalOverlay.classList.remove("modal-overlay__open");
+      htmlPage.style.scrollBehavior = "auto";
+      window.scrollTo(0, scrollPosition);
+      htmlPage.style.scrollBehavior = "";
+      htmlPage.style.top = "";
     }
   };
 
@@ -131,18 +141,17 @@ let modal = function () {
   };
 
   modalCount();
+
+  // Количество выбранных файлов в label
+
+  let inputFile = document.getElementById("file");
+  let labelFile = document.querySelector(".modal__form-label--file");
+  inputFile.onchange = function () {
+    labelFile.textContent = "Выбрано файлов: " + inputFile.files.length;
+  };
 };
 
 modal();
-
-
-// Количество выбранных файлов в label
-
-let inputFile = document.getElementById("file");
-let labelFile = document.querySelector(".modal__form-label--file");
-inputFile.onchange = function () {
-  labelFile.textContent = "Выбрано файлов: " + inputFile.files.length;
-};
 
 // Кнопка наверх
 

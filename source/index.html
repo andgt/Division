@@ -292,20 +292,20 @@
         <button class="modal__btn-close js-button-close" type="button">
           <span class="visually-hidden">Закрыть окно</span>
         </button>
-        <form class="modal__form" method="post" action="#">
+        <form class="modal__form" method="post" action="https://echo.htmlacademy.ru/">
           <fieldset class="modal__form-fieldset">
             <legend class="visually-hidden">Контактная информация</legend>
             <div class="modal__inner">
               <label class="modal__form-label" for="name-back-call">Ваше имя</label>
-              <input class="modal__form-input" type="text" name="back-call" id="name-back-call" placeholder="Александр">
+              <input class="modal__form-input modal__form-input--username" type="text" name="back-call" id="name-back-call" placeholder="Александр" required>
             </div>
             <div class="modal__inner">
               <label class="modal__form-label" for="phone-number-back-call">Номер телефона</label>
-              <input class="modal__form-input" type="tel" name="back-call" id="phone-number-back-call" pattern="2[0-9]{3}-[0-9]{3}" placeholder="+79160568324">
+              <input class="modal__form-input" type="tel" name="back-call" id="phone-number-back-call" placeholder="+79160568324" required>
             </div>
           </fieldset>
+          <button class="modal__button button" type="submit">Заказать обратный звонок</button>
         </form>
-        <button class="modal__button button" type="submit">Заказать обратный звонок</button>
       </div>
       <div class="modal js-calculate">
         <h2 class="modal__title">Расчет стоимости</h2>
@@ -313,16 +313,16 @@
         <button class="modal__btn-close js-button-close" type="button">
           <span class="visually-hidden">Закрыть окно</span>
         </button>
-        <form class="modal__form" method="post" action="#">
+        <form class="modal__form" method="post" action="https://echo.htmlacademy.ru/">
           <fieldset class="modal__form-fieldset">
             <legend class="visually-hidden">Контактная информация</legend>
             <div class="modal__inner">
               <label class="modal__form-label" for="name-calculate">Ваше имя</label>
-              <input class="modal__form-input" type="text" name="back-call" id="name-calculate" placeholder="Александр">
+              <input class="modal__form-input modal__form-input--username" type="text" name="calculate" id="name-calculate" placeholder="Александр" required>
             </div>
             <div class="modal__inner">
               <label class="modal__form-label" for="phone-number-calculate">Номер телефона</label>
-              <input class="modal__form-input" type="tel" name="back-call" id="phone-number-calculate" pattern="2[0-9]{3}-[0-9]{3}" placeholder="+79160568324">
+              <input class="modal__form-input" type="tel" name="calculate" id="phone-number-calculate" placeholder="+79160568324" required>
             </div>
             <div class="modal__inner">
               <label class="modal__form-label" for="email">Почта</label>
@@ -332,16 +332,16 @@
           <fieldset class="modal__form-fieldset modal__form-fieldset--range">
             <legend class="visually-hidden">Счетчик количества комплектов</legend>
             <button class="modal__value modal__value--min modal__value--button" type="button">—</button>
-            <input class="modal__value modal__value--number" type="number" value="10" min="5" max="10000">
+            <input class="modal__value modal__value--number" type="number" name="number-of-sets" id="number-of-sets" value="10" min="5" max="10000">
             <button class="modal__value modal__value--max modal__value--button" type="button">+</button>
           </fieldset>
           <fieldset class="modal__form-fieldset modal__form-fieldset--file">
             <legend class="modal__legend">Вы можете загрузить одно или несколько изображений желаемой формы</legend>
-            <label class="modal__form-label modal__form-label--file" for="file" tabindex="0">Отправить файлы<br> (-min.jpg, .png, .cdr, .ai, .svg, .psd)</label>
+            <label class="modal__form-label modal__form-label--file" for="file" tabindex="0">Отправить файлы<br> (.jpg, .png, .cdr, .ai, .svg, .psd)</label>
             <input class="visually-hidden" type="file" id="file" name="file" multiple accept="image/*, image/svg+xml, .cdr, .ai, .psd">
           </fieldset>
+          <button class="modal__button button" type="submit">Отправить</button>
         </form>
-        <button class="modal__button button" type="submit">Рассчитать</button>
       </div>
     </div>
     <script src="js/script.js"></script>
