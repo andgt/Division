@@ -177,7 +177,6 @@ a {
   border-radius: 10px;
   text-align: center;
   background-color: transparent;
-  outline: none;
   transition: background-color 0.5s linear;
 }
 .button:hover,
@@ -642,6 +641,7 @@ a {
 }
 @media (min-width: 1440px) {
   .page-main__subtitle--calculate {
+    max-width: 318px;
     margin-bottom: 20px;
   }
 }
@@ -1515,6 +1515,10 @@ a {
     font-size: 18px;
     line-height: 23px;
   }
+}
+.modal-error {
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
 }
 .modal__button {
   width: 100%;
