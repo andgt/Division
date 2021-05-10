@@ -297,14 +297,15 @@
             <legend class="visually-hidden">Контактная информация</legend>
             <div class="modal__inner">
               <label class="modal__form-label" for="name-back-call">Ваше имя</label>
-              <input class="modal__form-input modal__form-input--username" type="text" name="back-call" id="name-back-call" placeholder="Александр" required>
+              <input class="modal__form-input modal__form-input--username" type="text" name="username" id="name-back-call" placeholder="Александр" required>
             </div>
             <div class="modal__inner">
               <label class="modal__form-label" for="phone-number-back-call">Номер телефона</label>
-              <input class="modal__form-input" type="tel" name="back-call" id="phone-number-back-call" placeholder="+79160568324" required>
+              <input class="modal__form-input modal__form-input--phone" type="tel" name="tel" id="phone-number-back-call" placeholder="+79160568324" pattern="(\+?\d[- .]*){7,13}" required>
             </div>
+            <label class="visually-hidden" for="submit-btn">Отправить данные для входа</label>
+            <input class="modal__button button" type="submit" name="submit" id="submit-btn" value="Заказать обратный звонок">
           </fieldset>
-          <button class="modal__button button" type="submit">Заказать обратный звонок</button>
         </form>
       </div>
       <div class="modal js-calculate">
@@ -318,11 +319,11 @@
             <legend class="visually-hidden">Контактная информация</legend>
             <div class="modal__inner">
               <label class="modal__form-label" for="name-calculate">Ваше имя</label>
-              <input class="modal__form-input modal__form-input--username" type="text" name="calculate" id="name-calculate" placeholder="Александр" required>
+              <input class="modal__form-input modal__form-input--username" type="text" name="name-calculate" id="name-calculate" placeholder="Александр" required>
             </div>
             <div class="modal__inner">
               <label class="modal__form-label" for="phone-number-calculate">Номер телефона</label>
-              <input class="modal__form-input" type="tel" name="calculate" id="phone-number-calculate" placeholder="+79160568324" required>
+              <input class="modal__form-input modal__form-input--phone" type="tel" name="phone-calculate" id="phone-number-calculate" placeholder="+79160568324" pattern="(\+?\d[- .]*){7,13}" required>
             </div>
             <div class="modal__inner">
               <label class="modal__form-label" for="email">Почта</label>

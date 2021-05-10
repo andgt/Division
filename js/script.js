@@ -38,6 +38,14 @@ let modal = function () {
   let buttonsClose = document.querySelectorAll(".js-button-close");
   let modalTitles = document.querySelectorAll(".modal__title");
   let modalUsernames = document.querySelectorAll(".modal__form-input--username");
+
+
+  let modalForm = document.querySelector(".modal__form");
+  let modalBackCall = document.querySelector(".modal");
+  let inputPhone = document.querySelector(".modal__form-input--phone");
+  let username = document.querySelector(".modal__form-input--username");
+  let modalButtons = document.querySelectorAll(".modal__button");
+
   let modalOpenName;
   let scrollPosition;
   let modalName;
@@ -74,6 +82,23 @@ let modal = function () {
           modalOverlay.classList.add("modal-overlay__open");
           modalWindow.classList.add("modal__show");
           autofocus();
+          modalCheckAnimaton();
+        }
+      }
+    }
+  };
+
+  // Анимация при проверке формы
+
+  let modalCheckAnimaton = function () {
+    for (let modalButton of modalButtons) {
+      modalButton.onclick = function () {
+        for (let modalWindow of modalWindows) {
+          if (!username.value || !inputPhone.value) {
+            modalWindow.classList.remove("modal-error");
+            modalWindow.offsetWidth;
+            modalWindow.classList.add("modal-error");
+          }
         }
       }
     }
