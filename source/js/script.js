@@ -27,6 +27,19 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
+let mDown = function () {
+  document.addEventListener("mousedown", function (evt) {
+    !evt.target.classList.contains("modal-overlay");
+    console.log(evt);
+  });
+};
+
+let mUp = function () {
+  document.addEventListener("mouseup", function (evtUp) {
+    evtUp.target.classList.contains("modal-overlay");
+    console.log(evtUp);
+  });
+};
 
 // Модальные окна
 
@@ -83,6 +96,7 @@ let modal = function () {
           modalWindow.classList.add("modal__show");
           autofocus();
           modalCheckAnimaton();
+
         }
       }
     }
@@ -110,6 +124,7 @@ let modal = function () {
     for (let modalWindow of modalWindows) {
       htmlPage.classList.remove("page__modal-opened");
       modalWindow.classList.remove("modal__show");
+      modalWindow.classList.remove("modal-error");
       modalOverlay.classList.remove("modal-overlay__open");
       htmlPage.style.scrollBehavior = "auto";
       window.scrollTo(0, scrollPosition);
