@@ -32,7 +32,9 @@
 }
 
 .page-main__section-inner--background {
-  column-gap: 0;
+  @media (min-width: @tablet-width) {
+    column-gap: 0;
+  }
 }
 
 .page-main__section-inner--advantages {

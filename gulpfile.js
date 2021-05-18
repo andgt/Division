@@ -7,11 +7,6 @@ const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
-const htmlmin = require("gulp-htmlmin");
-const uglify = require("gulp-uglify");
-const rename = require("gulp-rename");
-const webp = require("gulp-webp");
-const del = require("del");
 
 // Styles
 
@@ -57,7 +52,7 @@ const reload = done => {
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/index.html").on("change", sync.reload);
 }
 
 exports.default = gulp.series(
@@ -71,3 +66,4 @@ function deploy(cb) {
 }
 
 exports.deploy = deploy;
+
