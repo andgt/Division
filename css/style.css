@@ -434,9 +434,11 @@ a {
 .page-main__hockey .page-main__section-inner--promo {
   flex-direction: row-reverse;
 }
-.page-main__section-inner--background {
-  -moz-column-gap: 0;
-       column-gap: 0;
+@media (min-width: 768px) {
+  .page-main__section-inner--background {
+    -moz-column-gap: 0;
+         column-gap: 0;
+  }
 }
 .page-main__section-inner--advantages {
   grid-template-columns: 1fr;
