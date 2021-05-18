@@ -27,19 +27,7 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
-let mDown = function () {
-  document.addEventListener("mousedown", function (evt) {
-    !evt.target.classList.contains("modal-overlay");
-    console.log(evt);
-  });
-};
-
-let mUp = function () {
-  document.addEventListener("mouseup", function (evtUp) {
-    evtUp.target.classList.contains("modal-overlay");
-    console.log(evtUp);
-  });
-};
+let modalForm = document.querySelector(".modal__form");
 
 // Модальные окна
 
@@ -52,8 +40,6 @@ let modal = function () {
   let modalTitles = document.querySelectorAll(".modal__title");
   let modalUsernames = document.querySelectorAll(".modal__form-input--username");
 
-
-  let modalForm = document.querySelector(".modal__form");
   let modalBackCall = document.querySelector(".modal");
   let inputPhone = document.querySelector(".modal__form-input--phone");
   let username = document.querySelector(".modal__form-input--username");
@@ -205,7 +191,28 @@ window.onscroll = function () {
   }
 };
 
-scrollUp.onclick = function () {
+scrollUp.onclick = function (evt) {
   window.scrollTo(0, 0);
+};
+
+// Отправка формы
+
+modalForm.addEventListener("submit", formSend);
+
+async function formSend (evt) {
+  evt.preventDefault();
+  let formData = new FormData(modalForm);
+  console.log(formData);
+  let response = await fetch("../sendform.php", {
+    method: "POST",
+    body: formData
+  });
+  if (response.ok) {
+    let result = await response.json();
+    alert(result.message);
+    form.reset();
+  } else {
+    alert("Error");
+  }
 };
 
