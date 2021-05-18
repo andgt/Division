@@ -1622,18 +1622,5 @@ a {
     line-height: 24px;
   }
 }
-.not-found__header {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-.not-found__link {
-  min-width: 280px;
-  margin: 0;
-  padding: 20px 50px;
-  color: #ffffff;
-  text-align: center;
-  text-decoration: underline;
-}
 
 /*# sourceMappingURL=style.css.map */
