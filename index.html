@@ -22,7 +22,7 @@
               <img class="page-header__contacts-img page-header__contacts-img--mail" src="img/icon-mail.svg" width="24" height="24" alt="Изображение конверта">
             </a>
             <span class="page-header__contacts-text">Напишите нам
-              <a class="page-header__contacts-email page-header__contacts-link" href="mailto:info@division-sport.ru" tabindex="3">info@division-sport.ru</a>
+              <a class="page-header__contacts-email page-header__contacts-link" href="mailto:info@division-sport.ru" tabindex="3">info@divizionsport.ru</a>
             </span>
           </li>
           <li class="page-header__contacts-item">
@@ -66,13 +66,13 @@
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="#" target="_blank">
+          <a class="social__link" href="https://t.me/divizionsport" target="_blank">
             <span class="visually-hidden">Ссылка на Telegram</span>
             <img class="social__img" src="img/icon-telegram.svg" width="24" height="24" alt="Логотип Telegram">
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="#" target="_blank">
+          <a class="social__link" href="https://wa.me/79773890765" target="_blank">
             <span class="visually-hidden">Ссылка на Whatsapp</span>
             <img class="social__img" src="img/icon-whatsapp.svg" width="24" height="24" alt="Логотип Whatsapp">
           </a>
@@ -256,7 +256,7 @@
               </a>
             </li>
             <li class="social__footer-item">
-              <a class="social__footer-link" href="#" target="_blank">
+              <a class="social__footer-link" href="https://t.me/divizionsport" target="_blank">
                 <span class="visually-hidden">Ссылка на Telegram</span>
                 <picture>
                   <source media="(min-width: 1440px)" srcset="img/desktop-images/telegram.svg">
@@ -265,7 +265,7 @@
               </a>
             </li>
             <li class="social__footer-item">
-              <a class="social__footer-link" href="#" target="_blank">
+              <a class="social__footer-link" href="https://wa.me/79773890765" target="_blank">
                 <span class="visually-hidden">Ссылка на Whatsapp</span>
                 <picture>
                   <source media="(min-width: 1440px)" srcset="img/desktop-images/whatsapp.svg">
@@ -292,7 +292,7 @@
         <button class="modal__btn-close js-button-close" type="button">
           <span class="visually-hidden">Закрыть окно</span>
         </button>
-        <form class="modal__form" method="post" action="sendform.php">
+        <form class="modal__form modal__form--backcall" method="post" action="backcall.php">
           <fieldset class="modal__form-fieldset">
             <legend class="visually-hidden">Контактная информация</legend>
             <div class="modal__inner">
@@ -315,37 +315,37 @@
         </form>
       </div>
       <div class="modal js-calculate">
-        <h2 class="modal__title">Расчет стоимости</h2>
-        <p class="modal__text">Мы поможем расcчитать стоимость заказа</p>
         <button class="modal__btn-close js-button-close" type="button">
           <span class="visually-hidden">Закрыть окно</span>
         </button>
-        <form class="modal__form" method="post" action="https://echo.htmlacademy.ru/" enctype="multipart/form-data">
+        <form class="modal__form modal__form--calc" method="post" action="calculate.php" enctype="multipart/form-data">
           <fieldset class="modal__form-fieldset">
+            <h2 class="modal__title" name="formtitle">Расчет стоимости</h2>
+            <p class="modal__text">Мы поможем расcчитать стоимость заказа</p>
             <legend class="visually-hidden">Контактная информация</legend>
             <div class="modal__inner">
               <label class="modal__form-label" for="name-calculate">Ваше имя</label>
-              <input class="modal__form-input modal__form-input--username" type="text" name="name-calculate" id="name-calculate" placeholder="Александр" required>
+              <input class="modal__form-input modal__form-input--username" type="text" name="namecalculate" id="name-calculate" placeholder="Александр" required>
             </div>
             <div class="modal__inner">
               <label class="modal__form-label" for="phone-number-calculate">Номер телефона</label>
-              <input class="modal__form-input modal__form-input--phone" type="tel" name="phone-calculate" id="phone-number-calculate" placeholder="+79160568324" pattern="(\+?\d[- .]*){7,13}" required>
+              <input class="modal__form-input modal__form-input--phone" type="tel" name="phonecalculate" id="phone-number-calculate" placeholder="+79160568324" pattern="(\+?\d[- .]*){7,13}" required>
             </div>
             <div class="modal__inner">
               <label class="modal__form-label" for="email">Почта</label>
-              <input class="modal__form-input" type="email" name="mail" id="email" placeholder="ivanov@gmail.com">
+              <input class="modal__form-input" type="email" name="mailcalculate" id="email" placeholder="ivanov@gmail.com">
             </div>
           </fieldset>
           <fieldset class="modal__form-fieldset modal__form-fieldset--range">
             <legend class="visually-hidden">Счетчик количества комплектов</legend>
             <button class="modal__value modal__value--min modal__value--button" type="button">—</button>
-            <input class="modal__value modal__value--number" type="number" name="number-of-sets" id="number-of-sets" value="10" min="5" max="10000">
+            <input class="modal__value modal__value--number" type="number" name="numberofsetscalc" id="number-of-sets" value="10" min="5" max="10000">
             <button class="modal__value modal__value--max modal__value--button" type="button">+</button>
           </fieldset>
           <fieldset class="modal__form-fieldset modal__form-fieldset--file">
             <legend class="modal__legend">Вы можете загрузить одно или несколько изображений желаемой формы</legend>
             <label class="modal__form-label modal__form-label--file" for="file" tabindex="0">Отправить файлы<br> (.jpg, .png, .cdr, .ai, .svg, .psd)</label>
-            <input class="visually-hidden" type="file" id="file" name="file" multiple accept="image/*, image/svg+xml, .cdr, .ai, .psd">
+            <input class="visually-hidden" type="file" id="file" name="file[]" multiple accept="image/*, image/svg+xml, .cdr, .ai, .psd">
           </fieldset>
           <div class="modal__inner--policy">
             <label for="policy-check">
@@ -353,7 +353,7 @@
             </label>
             <input class="modal__input-policy" type="checkbox" name="policy" id="policy-check" required>
           </div>
-          <button class="modal__button button" type="submit">Отправить</button>
+          <input class="modal__button button" type="submit" value="Отправить">
         </form>
       </div>
     </div>
