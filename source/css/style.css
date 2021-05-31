@@ -514,7 +514,7 @@ a {
     border-radius: 20px 20px 0 0;
   }
 }
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
   .page-main__promo-inner--main {
     background-image: url("../img/tablet-images/football-form@2x-min.jpg");
   }
@@ -526,7 +526,7 @@ a {
     background-image: url("../img/tablet-images/photo-cost-calculation-min.jpg");
   }
 }
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
   .page-main__promo-inner--calculate {
     background-image: url("../img/tablet-images/photo-cost-calculation@2x-min.jpg");
   }
@@ -536,7 +536,7 @@ a {
     background-image: url("../img/tablet-images/tracksuits-min.jpg");
   }
 }
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
   .page-main__promo-inner--tracksuits {
     background-image: url("../img/tablet-images/tracksuits@2x-min.jpg");
   }
@@ -957,14 +957,13 @@ a {
 .main-nav {
   position: relative;
   width: 100%;
-  margin: 10px 0 0 0;
-  padding: 0 20px;
+  margin: 10px 0 20px 0;
+  padding: 0;
   order: 1;
 }
 @media (min-width: 768px) {
   .main-nav {
     width: 73%;
-    max-width: 505px;
     margin: 0 auto 0 0;
     padding: 0;
     order: 2;
@@ -1037,7 +1036,7 @@ a {
 }
 .main-nav--opened .main-nav__toggle:active::before,
 .main-nav--opened .main-nav__toggle:active::after {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #000000;
 }
 .main-nav--no-js .main-nav__toggle {
   display: none;
@@ -1049,6 +1048,7 @@ a {
   margin: 0;
   padding: 0 10px;
   list-style: none;
+  height: auto;
 }
 @media (min-width: 768px) {
   .main-nav__list {
@@ -1064,17 +1064,14 @@ a {
     justify-content: normal;
   }
 }
-@media (max-width: 767px) {
-  .main-nav--closed .main-nav__list {
-    display: none;
-  }
-  .main-nav--no-js .main-nav__list {
-    display: block;
-  }
+.main-nav--no-js .main-nav__list {
+  display: block;
 }
 .main-nav__item {
+  flex-grow: 1;
   margin: 0;
   padding: 0;
+  transition: 0.6s ease;
 }
 @media (min-width: 768px) {
   .main-nav__item {
@@ -1142,6 +1139,7 @@ a {
   height: 100%;
   z-index: -1;
   border-radius: 10px;
+  filter: drop-shadow(1px 1px 5px grey);
 }
 @media (min-width: 768px) {
   .main-nav__link:hover::before,
@@ -1170,6 +1168,26 @@ a {
 .main-nav__link--volleyball:hover::before,
 .main-nav__link--volleyball:focus::before {
   background-color: #af52de;
+}
+@media (max-width: 767px) {
+  .main-nav--closed .main-nav__item {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    transform: translateX(-120px);
+  }
+  .main-nav--opened .main-nav__item:first-child {
+    transition: 0.3s ease;
+    transform: translateX(0);
+  }
+  .main-nav--opened .main-nav__item {
+    transform: translateX(0);
+    transition: 0.6s ease;
+  }
+  .main-nav--opened .main-nav__item:last-child {
+    transition: 0.8s ease;
+  }
 }
 .social {
   display: none;

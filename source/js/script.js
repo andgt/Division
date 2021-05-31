@@ -27,7 +27,6 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
-let modalForm = document.querySelector(".modal__form");
 
 // Модальные окна
 
@@ -36,6 +35,8 @@ let modal = function () {
   let modalsOpen = document.querySelectorAll(".js-button-open");
   let modalWindows = document.querySelectorAll(".modal");
   let modalOverlay = document.querySelector(".modal-overlay");
+  let modalFormBack = document.querySelector(".modal__form--backcall");
+  let modalFormCalc = document.querySelector(".modal__form--calc");
   let buttonsClose = document.querySelectorAll(".js-button-close");
   let modalTitles = document.querySelectorAll(".modal__title");
   let modalUsernames = document.querySelectorAll(".modal__form-input--username");
@@ -81,24 +82,6 @@ let modal = function () {
           modalOverlay.classList.add("modal-overlay__open");
           modalWindow.classList.add("modal__show");
           autofocus();
-          modalCheckAnimaton();
-
-        }
-      }
-    }
-  };
-
-  // Анимация при проверке формы
-
-  let modalCheckAnimaton = function () {
-    for (let modalButton of modalButtons) {
-      modalButton.onclick = function () {
-        for (let modalWindow of modalWindows) {
-          if (!username.value || !inputPhone.value) {
-            modalWindow.classList.remove("modal-error");
-            modalWindow.offsetWidth;
-            modalWindow.classList.add("modal-error");
-          }
         }
       }
     }
@@ -175,6 +158,48 @@ let modal = function () {
   inputFile.onchange = function () {
     labelFile.textContent = "Выбрано файлов: " + inputFile.files.length;
   };
+
+  // Отправка формы
+
+  modalFormBack.addEventListener("submit", formSendCalc);
+
+  async function formSendCalc (evt) {
+    evt.preventDefault();
+    let formData = new FormData(modalFormBack);
+    let response = await fetch("../backcall.php", {
+      method: "POST",
+      body: formData
+    });
+    if (response.ok) {
+      let result = await response.json();
+      alert(result.message);
+      modalFormBack.reset();
+      closesWindows();
+    } else {
+      alert("Error");
+      closesWindows();
+    }
+  };
+
+  modalFormCalc.addEventListener("submit", formSendBack);
+
+  async function formSendBack (evt) {
+    evt.preventDefault();
+    let formData = new FormData(modalFormCalc);
+    let response = await fetch("../calculate.php", {
+      method: "POST",
+      body: formData
+    });
+    if (response.ok) {
+      let result = await response.json();
+      alert(result.message);
+      modalFormCalc.reset();
+      closesWindows();
+    } else {
+      alert("Error");
+      closesWindows();
+    }
+  };
 };
 
 modal();
@@ -193,26 +218,5 @@ window.onscroll = function () {
 
 scrollUp.onclick = function (evt) {
   window.scrollTo(0, 0);
-};
-
-// Отправка формы
-
-modalForm.addEventListener("submit", formSend);
-
-async function formSend (evt) {
-  evt.preventDefault();
-  let formData = new FormData(modalForm);
-  console.log(formData);
-  let response = await fetch("../sendform.php", {
-    method: "POST",
-    body: formData
-  });
-  if (response.ok) {
-    let result = await response.json();
-    alert(result.message);
-    form.reset();
-  } else {
-    alert("Error");
-  }
 };
 
