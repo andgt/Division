@@ -1407,20 +1407,22 @@ a {
   padding: 0;
   border: 0;
 }
+.modal__count-wrapper {
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .modal__count-wrapper {
+    margin-bottom: 30px;
+  }
+}
 .modal__form-fieldset--range {
   display: flex;
   min-width: 230px;
   max-width: 340px;
   justify-content: space-between;
-  margin-bottom: 20px;
   padding: 6px 13px;
   background-color: #e5e5e5;
   border-radius: 10px;
-}
-@media (min-width: 768px) {
-  .modal__form-fieldset--range {
-    margin-bottom: 30px;
-  }
 }
 .modal__form-fieldset--file {
   margin-bottom: 20px;
@@ -1492,7 +1494,7 @@ a {
   font-size: 14px;
   line-height: 18px;
   color: #000000;
-  margin-bottom: 5px;
+  margin: 0 0 5px 0;
 }
 .modal__form-label--file {
   display: flex;
@@ -1568,6 +1570,9 @@ a {
   -webkit-appearance: none;
           appearance: none;
   margin: 0;
+}
+.modal__count {
+  margin-bottom: 20px;
 }
 .modal__value--button {
   cursor: pointer;
@@ -1678,17 +1683,38 @@ a {
   height: 40px;
   background-color: rgba(55, 55, 55, 0.4);
   border-radius: 20%;
-  background-image: url("data:image/svg+xml,%3Csvg role='img' xmlns='http://www.w3.org/2000/svg' width='28px' height='28px' viewBox='0 0 24 24' aria-labelledby='chevronUpIconTitle' stroke='%23ffffff' stroke-width='1.5' stroke-linecap='square' stroke-linejoin='miter' fill='none' color='%23ffffff'%3E%3Ctitle id='chevronUpIconTitle'%3EChevron Up%3C/title%3E%3Cpolyline points='6 14 12 8 18 14 18 14'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: center center;
-  transform: rotate(90deg);
+  transition: 0.5s ease;
 }
 .swiper-gallery .swiper-button-prev {
-  transform: rotate(-90deg);
+  transform: translateX(-60px);
+}
+.swiper-gallery .swiper-button-next {
+  transform: translateX(60px);
+}
+.swiper-gallery:hover .swiper-button-prev {
+  transform: translateX(20px);
+}
+.swiper-gallery:hover .swiper-button-next {
+  transform: translateX(-20px);
 }
 .swiper-gallery .swiper-button-next::after,
 .swiper-gallery .swiper-button-prev::after {
   display: none;
+}
+.swiper-gallery .swiper-button-next::before,
+.swiper-gallery .swiper-button-prev::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3C!-- Creator: CorelDRAW 2020 (64-Bit) --%3E%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' width='20px' height='16px' version='1.1' style='shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd'%0AviewBox='0 0 0.34 0.28' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:xodm='http://www.corel.com/coreldraw/odm/2003'%3E%3Cdefs%3E%3Cstyle type='text/css'%3E%3C!%5BCDATA%5B .fil0 %7Bfill:white;fill-rule:nonzero%7D %5D%5D%3E%3C/style%3E%3C/defs%3E%3Cg id='Слой_x0020_1'%3E%3Cmetadata id='CorelCorpID_0Corel-Layer'/%3E%3Cg id='_653192_arrows.eps'%3E%3Cpath class='fil0' d='M0.1 0.06l0 -0.06 -0.1 0.1 0.1 0.1 0 -0.06c0.11,0 0.21,0.06 0.23,0.14 0.01,-0.01 0.01,-0.02 0.01,-0.03 0,-0.1 -0.11,-0.18 -0.24,-0.19z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.swiper-gallery .swiper-button-next::before {
+  transform: scale(-1, 1);
 }
 
 /*# sourceMappingURL=style.css.map */

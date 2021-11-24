@@ -7,6 +7,7 @@ let gallerySlider = function () {
     spaceBetween: 15,
     effect: "slide",
     loop: true,
+    grabCursor: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
