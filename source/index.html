@@ -392,12 +392,15 @@
               <input class="modal__form-input" type="email" name="mailcalculate" id="email" placeholder="ivanov@gmail.com">
             </div>
           </fieldset>
-          <fieldset class="modal__form-fieldset modal__form-fieldset--range">
+          <div class="modal__count-wrapper">
+            <h3 class="modal__form-label">Укажите количество комплектов</h3>
+            <fieldset class="modal__form-fieldset modal__form-fieldset--range">
             <legend class="visually-hidden">Счетчик количества комплектов</legend>
             <button class="modal__value modal__value--min modal__value--button" type="button">—</button>
             <input class="modal__value modal__value--number" type="number" name="numberofsetscalc" id="number-of-sets" value="10" min="5" max="10000">
             <button class="modal__value modal__value--max modal__value--button" type="button">+</button>
-          </fieldset>
+            </fieldset>
+          </div>
           <fieldset class="modal__form-fieldset modal__form-fieldset--file">
             <legend class="modal__legend">Вы можете загрузить одно или несколько изображений желаемой формы</legend>
             <label class="modal__form-label modal__form-label--file" for="file">Отправить файлы<br> (.jpg, .png, .cdr, .ai, .svg, .psd)</label>
