@@ -1,33 +1,5 @@
 'use strict'
 
-// Главное меню
-
-let mainNav = document.querySelector(".main-nav");
-let menuToggle = document.querySelector(".main-nav__toggle");
-
-mainNav.classList.remove("main-nav--no-js");
-
-menuToggle.addEventListener("click", function () {
-  if (mainNav.classList.contains("main-nav--closed")) {
-    mainNav.classList.remove("main-nav--closed");
-    mainNav.classList.add("main-nav--opened");
-  } else {
-    mainNav.classList.add("main-nav--closed");
-    mainNav.classList.remove("main-nav--opened");
-  }
-});
-
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    if (mainNav.classList.contains("main-nav--opened")) {
-      evt.preventDefault();
-      mainNav.classList.remove("main-nav--opened");
-      mainNav.classList.add("main-nav--closed");
-    }
-  }
-});
-
-
 // Модальные окна
 
 let modal = function () {
@@ -41,11 +13,6 @@ let modal = function () {
   let modalTitles = document.querySelectorAll(".modal__title");
   let modalUsernames = document.querySelectorAll(".modal__form-input--username");
 
-  let modalBackCall = document.querySelector(".modal");
-  let inputPhone = document.querySelector(".modal__form-input--phone");
-  let username = document.querySelector(".modal__form-input--username");
-  let modalButtons = document.querySelectorAll(".modal__button");
-
   let modalOpenName;
   let scrollPosition;
   let modalName;
@@ -55,7 +22,7 @@ let modal = function () {
   let dynamicTitles = function () {
     for (let modalTitle of modalTitles) {
       modalTitle.textContent = modalName;
-    };
+    }
   };
 
   // Автофокус
@@ -202,21 +169,4 @@ let modal = function () {
   };
 };
 
-modal();
-
-// Кнопка наверх
-
-let scrollUp = document.querySelector(".button__scroll-up");
-
-window.onscroll = function () {
-  if (window.pageYOffset > 100) {
-    scrollUp.classList.add("button__scroll-up--showed");
-  } else {
-    scrollUp.classList.remove("button__scroll-up--showed");
-  }
-};
-
-scrollUp.onclick = function (evt) {
-  window.scrollTo(0, 0);
-};
-
+export default modal()
