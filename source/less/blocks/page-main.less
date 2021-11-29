@@ -111,15 +111,24 @@
 .page-main__promo-inner--main {
   @media (min-width: @tablet-width) {
     max-width: 100%;
+    min-height: 500px;
     .offset(0; 0);
-    background-image: url("../img/tablet-images/football-form-min.jpg");
+    background-image: url("../img/tablet-images/football-tablet-min.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
     border-radius: 20px 20px 0 0;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/tablet-images/football-form@2x-min.jpg");
+      background-image: url("../img/tablet-images/football-tablet@2x-min.jpg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/desktop-images/football-desktop-min.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/desktop-images/football-desktop@2x-min.jpg");
     }
   }
 }

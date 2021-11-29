@@ -512,9 +512,10 @@ a {
 @media (min-width: 768px) {
   .page-main__promo-inner--main {
     max-width: 100%;
+    min-height: 500px;
     margin: 0;
     padding: 0;
-    background-image: url("../img/tablet-images/football-form-min.jpg");
+    background-image: url("../img/tablet-images/football-tablet-min.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
@@ -523,7 +524,17 @@ a {
 }
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
   .page-main__promo-inner--main {
-    background-image: url("../img/tablet-images/football-form@2x-min.jpg");
+    background-image: url("../img/tablet-images/football-tablet@2x-min.jpg");
+  }
+}
+@media (min-width: 1440px) {
+  .page-main__promo-inner--main {
+    background-image: url("../img/desktop-images/football-desktop-min.jpg");
+  }
+}
+@media (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1440px) and (min-resolution: 2dppx) {
+  .page-main__promo-inner--main {
+    background-image: url("../img/desktop-images/football-desktop@2x-min.jpg");
   }
 }
 @media (min-width: 768px) {
