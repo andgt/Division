@@ -18,4 +18,6 @@ let buttonUp = function() {
   }
 };
 
+buttonUp();
+
 export default buttonUp
