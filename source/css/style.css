@@ -546,13 +546,22 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    width: 40%;
+    width: 80%;
+    max-width: 718px;
     height: 100%;
-    background-color: rgba(55, 55, 55, 0.4);
-    transition: 0.7s ease;
+    transition: 0.8s ease;
+    border: 1px solid rgba(113, 120, 130, 0.18);
+    background-color: rgba(113, 120, 130, 0.1);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
   }
   .page-main__promo-inner--football:hover::before {
-    transform: translateX(-100%);
+    width: 0;
+  }
+}
+@media (min-width: 1440px) {
+  .page-main__promo-inner--football::before {
+    width: 40%;
   }
 }
 @media (min-width: 768px) {
@@ -886,7 +895,7 @@ a {
 @media (min-width: 768px) {
   .page-main__description-item--on-background {
     margin-right: 10px;
-    background: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.3);
     -webkit-backdrop-filter: blur(1.5px);
             backdrop-filter: blur(1.5px);
@@ -901,13 +910,6 @@ a {
   .page-main__description-item--on-background {
     margin-right: 0;
     margin-bottom: 0;
-  }
-}
-@-moz-document url-prefix("") {
-  @media (min-width: 768px) {
-    .page-main__description-item--on-background {
-      background: rgba(55, 55, 55, 0.4);
-    }
   }
 }
 .page-main__description-text {
@@ -945,6 +947,18 @@ a {
 @media (min-width: 1440px) {
   .page-main__button-background--calculate {
     max-width: 182px;
+  }
+}
+@-moz-document url-prefix("") {
+  @media (min-width: 768px) {
+    .page-main__description-item--on-background {
+      background: rgba(55, 55, 55, 0.4);
+    }
+  }
+  @media (min-width: 768px) {
+    .page-main__promo-inner--football::before {
+      background-color: rgba(113, 120, 130, 0.7);
+    }
   }
 }
 .page-footer {
