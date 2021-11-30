@@ -216,7 +216,7 @@ a {
   background-size: 35px 35px;
   background-position: center center;
   background-color: rgba(16, 158, 230, 0.6);
-  box-shadow: 0 2px 6px rgba(55, 55, 55, 0.6);
+  box-shadow: 0 2px 6px rgba(55, 55, 55, 0.4);
   cursor: pointer;
   transition: 0.3s linear;
   z-index: 500;
@@ -535,6 +535,24 @@ a {
 @media (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1440px) and (min-resolution: 2dppx) {
   .page-main__promo-inner--main {
     background-image: url("../img/desktop-images/football-desktop@2x-min.jpg");
+  }
+}
+.page-main__promo-inner--football {
+  position: relative;
+}
+@media (min-width: 768px) {
+  .page-main__promo-inner--football::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100%;
+    background-color: rgba(55, 55, 55, 0.4);
+    transition: 0.7s ease;
+  }
+  .page-main__promo-inner--football:hover::before {
+    transform: translateX(-100%);
   }
 }
 @media (min-width: 768px) {
@@ -888,7 +906,7 @@ a {
 @-moz-document url-prefix("") {
   @media (min-width: 768px) {
     .page-main__description-item--on-background {
-      background: rgba(55, 55, 55, 0.6);
+      background: rgba(55, 55, 55, 0.4);
     }
   }
 }
@@ -908,6 +926,9 @@ a {
     line-height: 15px;
     text-align: initial;
   }
+}
+.page-main__button-background {
+  z-index: 10;
 }
 @media (min-width: 768px) {
   .page-main__button-background {
@@ -1335,7 +1356,7 @@ a {
   margin: 0;
   padding: 0;
   z-index: 20;
-  background-color: rgba(55, 55, 55, 0.6);
+  background-color: rgba(55, 55, 55, 0.4);
 }
 @media (min-width: 768px) {
   .modal-overlay {
@@ -1714,7 +1735,7 @@ a {
 .swiper-gallery .swiper-button-prev {
   width: 40px;
   height: 40px;
-  background-color: rgba(55, 55, 55, 0.6);
+  background-color: rgba(55, 55, 55, 0.4);
   border-radius: 20%;
   transition: 0.5s ease;
 }

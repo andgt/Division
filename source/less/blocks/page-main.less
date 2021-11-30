@@ -133,6 +133,29 @@
   }
 }
 
+.page-main__promo-inner--football {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40%;
+      height: 100%;
+      background-color: @grey-opacity;
+      transition: 0.7s ease;
+    }
+
+    &:hover {
+      &::before {
+        transform: translateX(-100%);
+      }
+    }
+  }
+}
+
 .page-main__promo-inner--calculate {
   @media (min-width: @tablet-width) {
     .offset(0; 50px 350px 106px 50px);
@@ -473,6 +496,8 @@
 }
 
 .page-main__button-background {
+  z-index: 10;
+
   @media (min-width: @tablet-width) {
     max-width: 200px;
     background-color: @white;
