@@ -274,9 +274,30 @@
 }
 
 .page-main__subtitle--advantages {
+  position: relative;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 30px;
   }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      content: attr(data-content);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 22%;
+      height: 100%;
+      color: @white;
+      white-space: nowrap;
+      overflow: hidden;
+      transition: 0.8s ease;
+    }
+  }
+}
+
+.page-main__advantages:hover .page-main__subtitle--advantages::before {
+  width: 100%;
 }
 
 .page-main__subtitle--on-background {
@@ -295,6 +316,35 @@
   @media (min-width: @desktop-width) {
     max-width: 318px;
     margin-bottom: 20px;
+  }
+}
+
+.page-main__advantages {
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    background-color: unset;
+  }
+}
+
+.page-main__advantages::before {
+  @media (min-width: @desktop-width) {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: @blue-opacity;
+    clip-path: ellipse(140px 140px at 10% 20%);
+    z-index: -1;
+    transition: 0.8s ease;
+  }
+}
+
+.page-main__advantages:hover.page-main__advantages::before {
+  @media (min-width: @desktop-width) {
+    clip-path: ellipse(88% 90% at 90% 20%);
   }
 }
 
@@ -323,6 +373,41 @@
   background-repeat: no-repeat;
   color: @white;
   border-radius: 20px;
+  transition: 0.7s ease;
+
+  @media (min-width: @desktop-width) {
+    box-shadow: 0 0 27px 0 @blue5;
+  }
+}
+
+.page-main__advantages-item--1 {
+  @media (min-width: @desktop-width) {
+    transform: translateY(40px) translateX(180px) skew(20deg, 10deg) rotate(15deg);
+  }
+}
+
+.page-main__advantages-item--2 {
+  @media (min-width: @desktop-width) {
+    transform: translateY(40px) translateX(100px) skew(20deg, 10deg) rotate(15deg);
+  }
+}
+
+.page-main__advantages-item--3 {
+  @media (min-width: @desktop-width) {
+    transform: translateY(40px) translateX(0) skew(20deg, 10deg) rotate(15deg);
+  }
+}
+
+.page-main__advantages-item--4 {
+  @media (min-width: @desktop-width) {
+    transform: translateY(40px) translateX(-100px) skew(20deg, 10deg) rotate(15deg);
+  }
+}
+
+.page-main__advantages-list:hover .page-main__advantages-item {
+  @media (min-width: @desktop-width) {
+    transform: translateY(0) translateX(0) skew(0deg, 0deg) rotate(0deg);
+  }
 }
 
 .page-main__advantages-item-generate(@n) when (@n > 0) {
