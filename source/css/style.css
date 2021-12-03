@@ -864,7 +864,7 @@ a {
 }
 @media (min-width: 1440px) {
   .page-main__advantages-item {
-    box-shadow: 0px 0px 27px 0px #83B9C4;
+    box-shadow: 0 0 27px 0 #83b9c4;
   }
 }
 @media (min-width: 1440px) {
