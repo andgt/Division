@@ -48,6 +48,10 @@
 .page-main__section-inner--advantages {
   grid-template-columns: 1fr;
 
+  @media (min-width: @tablet-width) {
+    padding: 50px 8px 80px 8px;
+  }
+
   @media (min-width: @desktop-width) {
     padding: 50px 31px 80px 31px;
   }
@@ -278,20 +282,28 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 30px;
-  }
+    padding-left: 31px;
 
-  @media (min-width: @desktop-width) {
     &::before {
       content: attr(data-content);
       position: absolute;
       top: 0;
-      left: 0;
-      width: 22%;
+      left: 31px;
+      width: 163px;
       height: 100%;
       color: @white;
       white-space: nowrap;
       overflow: hidden;
       transition: 0.8s ease;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+
+    &::before {
+      left: 0;
+      width: 22%;
     }
   }
 }
@@ -322,28 +334,33 @@
 .page-main__advantages {
   position: relative;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     background-color: unset;
   }
 }
 
 .page-main__advantages::before {
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 620px;
     height: 100%;
     background-color: @blue-opacity;
     clip-path: ellipse(140px 140px at 10% 20%);
     z-index: -1;
     transition: 0.8s ease;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
 }
 
 .page-main__advantages:hover.page-main__advantages::before {
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
+    width: 100%;
     clip-path: ellipse(88% 90% at 90% 20%);
   }
 }
@@ -375,37 +392,37 @@
   border-radius: 20px;
   transition: 0.7s ease;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     box-shadow: 0 0 27px 0 @blue5;
   }
 }
 
 .page-main__advantages-item--1 {
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     transform: translateY(40px) translateX(180px) skew(20deg, 10deg) rotate(15deg);
   }
 }
 
 .page-main__advantages-item--2 {
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     transform: translateY(40px) translateX(100px) skew(20deg, 10deg) rotate(15deg);
   }
 }
 
 .page-main__advantages-item--3 {
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     transform: translateY(40px) translateX(0) skew(20deg, 10deg) rotate(15deg);
   }
 }
 
 .page-main__advantages-item--4 {
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     transform: translateY(40px) translateX(-100px) skew(20deg, 10deg) rotate(15deg);
   }
 }
 
 .page-main__advantages-list:hover .page-main__advantages-item {
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     transform: translateY(0) translateX(0) skew(0deg, 0deg) rotate(0deg);
   }
 }
