@@ -1238,6 +1238,12 @@ a {
   position: absolute;
   top: -47px;
   right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 6px;
   width: 26px;
   height: 26px;
   margin: 0;
@@ -1246,55 +1252,47 @@ a {
   border: none;
   background-color: transparent;
   z-index: 2;
-}
-.main-nav__toggle:hover,
-.main-nav__toggle:focus {
-  opacity: 0.7;
-  outline: 1px dotted #808080;
-}
-.main-nav__toggle:active {
-  opacity: 0.5;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .main-nav__toggle {
     display: none;
   }
 }
-.main-nav--closed .main-nav__toggle::before {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 1px;
-  width: 24px;
+.main-nav__toggle:hover .main-nav__toggle-line,
+.main-nav__toggle:focus .main-nav__toggle-line {
+  opacity: 0.7;
+}
+.main-nav__toggle:active .main-nav__toggle-line {
+  opacity: 0.5;
+}
+.main-nav__toggle-line {
+  width: 26px;
   height: 2px;
-  background-color: #000000;
-  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
-  transition: 0.3s;
+  background-color: #007aff;
+  transition: 0.5s ease;
+}
+.main-nav__toggle-line:first-of-type {
+  width: 20px;
+  transition-delay: 0.1s;
+}
+.main-nav__toggle-line:last-of-type {
+  width: 15px;
+  transition-delay: 0.2s;
+}
+.main-nav--opened .main-nav__toggle-line {
+  transform: translateX(26px);
+}
+.main-nav--opened .main-nav__toggle-line:first-of-type {
+  width: 26px;
+  transform: translateY(8px) translateX(0) rotate(45deg);
+}
+.main-nav--opened .main-nav__toggle-line:last-of-type {
+  width: 26px;
+  transform: translateY(-8px) translateX(0) rotate(315deg);
 }
 .main-nav--opened .main-nav__toggle {
   right: 0;
-}
-.main-nav--opened .main-nav__toggle::before,
-.main-nav--opened .main-nav__toggle::after {
-  content: "";
-  position: absolute;
-  top: 12px;
-  left: 0;
-  width: 26px;
-  height: 2px;
-  background-color: #000000;
-  transition: 0.3s;
-}
-.main-nav--opened .main-nav__toggle::before {
-  transform: rotate(45deg);
-  box-shadow: none;
-}
-.main-nav--opened .main-nav__toggle::after {
-  transform: rotate(-45deg);
-}
-.main-nav--opened .main-nav__toggle:active::before,
-.main-nav--opened .main-nav__toggle:active::after {
-  background-color: #000000;
 }
 .main-nav--no-js .main-nav__toggle {
   display: none;
