@@ -90,6 +90,57 @@
   }
 }
 
+.page-main__wrapper {
+  display: grid;
+  overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    max-width: 100%;
+    min-height: 500px;
+    .offset(0; 0);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top 25%;
+    border-radius: 20px 20px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 600px;
+  }
+}
+
+.page-main__wrapper--football {
+  min-height: 700px;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/desktop-images/football-desktop-min.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/desktop-images/football-desktop@2x-min.jpg");
+    }
+  }
+}
+
+.page-main__wrapper--calculate {
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/desktop-images/photo-cost-calculation-min.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/desktop-images/photo-cost-calculation@2x-min.jpg");
+    }
+  }
+}
+
+.page-main__wrapper--tracksuits {
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/tablet-images/tracksuits-min.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/tablet-images/tracksuits@2x-min.jpg");
+    }
+  }
+}
+
 .page-main__promo-inner {
   display: flex;
   flex-direction: column;
@@ -102,6 +153,7 @@
     justify-content: space-between;
     margin: 0;
     max-width: 100%;
+    height: 100%;
     overflow: hidden;
   }
 }
@@ -112,33 +164,13 @@
   }
 }
 
-.page-main__promo-inner--main {
-  @media (min-width: @tablet-width) {
-    max-width: 100%;
-    min-height: 500px;
-    .offset(0; 0);
-    background-image: url("../img/tablet-images/football-tablet-min.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom;
-    border-radius: 20px 20px 0 0;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/tablet-images/football-tablet@2x-min.jpg");
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    background-image: url("../img/desktop-images/football-desktop-min.jpg");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/desktop-images/football-desktop@2x-min.jpg");
-    }
-  }
-}
-
-.page-main__promo-inner--football {
+.page-main__promo-inner--bg {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
   position: relative;
+  transition: 0.8s ease;
 
   @media (min-width: @tablet-width) {
     &::before {
@@ -149,44 +181,26 @@
       width: 80%;
       max-width: 718px;
       height: 100%;
-      transition: 0.8s ease;
-      border: 1px solid @blue-opacity4;
-      background-color: @blue-opacity3;
-      backdrop-filter: blur(5px);
-    }
-
-    &:hover {
-      &::before {
-        width: 0;
-      }
+      background-color: @black-opacity;
     }
   }
 
   @media (min-width: @desktop-width) {
     &::before {
-      width: 40%;
+      width: 50%;
     }
+  }
+}
+
+.page-main__wrapper:hover .page-main__promo-inner--bg {
+  @media (hover: hover) and (min-width: @tablet-width) {
+    opacity: 0;
   }
 }
 
 .page-main__promo-inner--calculate {
   @media (min-width: @tablet-width) {
     .offset(0; 50px 350px 106px 50px);
-    background-image: url("../img/tablet-images/photo-cost-calculation-min.jpg");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/tablet-images/photo-cost-calculation@2x-min.jpg");
-    }
-  }
-}
-
-.page-main__promo-inner--tracksuits {
-  @media (min-width: @tablet-width) {
-    background-image: url("../img/tablet-images/tracksuits-min.jpg");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/tablet-images/tracksuits@2x-min.jpg");
-    }
   }
 }
 
@@ -198,7 +212,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 50px 646px 50px 50px;
+    padding: 100px 646px 50px 50px;
   }
 }
 
@@ -325,8 +339,11 @@
 }
 
 .page-main__subtitle--calculate {
+  @media (min-width: @tablet-width) {
+    max-width: 418px;
+  }
+
   @media (min-width: @desktop-width) {
-    max-width: 318px;
     margin-bottom: 20px;
   }
 }
@@ -390,41 +407,6 @@
   background-repeat: no-repeat;
   color: @white;
   border-radius: 20px;
-  transition: 0.7s ease;
-
-  @media (min-width: @tablet-width) {
-    box-shadow: 0 0 27px 0 @blue5;
-  }
-}
-
-.page-main__advantages-item--1 {
-  @media (min-width: @tablet-width) {
-    transform: translateY(40px) translateX(180px) skew(20deg, 10deg) rotate(15deg);
-  }
-}
-
-.page-main__advantages-item--2 {
-  @media (min-width: @tablet-width) {
-    transform: translateY(40px) translateX(100px) skew(20deg, 10deg) rotate(15deg);
-  }
-}
-
-.page-main__advantages-item--3 {
-  @media (min-width: @tablet-width) {
-    transform: translateY(40px) translateX(0) skew(20deg, 10deg) rotate(15deg);
-  }
-}
-
-.page-main__advantages-item--4 {
-  @media (min-width: @tablet-width) {
-    transform: translateY(40px) translateX(-100px) skew(20deg, 10deg) rotate(15deg);
-  }
-}
-
-.page-main__advantages-list:hover .page-main__advantages-item {
-  @media (min-width: @tablet-width) {
-    transform: translateY(0) translateX(0) skew(0deg, 0deg) rotate(0deg);
-  }
 }
 
 .page-main__advantages-item-generate(@n) when (@n > 0) {
@@ -567,7 +549,6 @@
     margin-right: 10px;
     background-color: @white-opacity;
     box-shadow: 0 8px 32px 0 @blue-opacity2;
-    backdrop-filter: blur(1.5px);
     border-radius: 10px;
     border: 0;
 
@@ -612,24 +593,12 @@
   }
 }
 
-.page-main__button-background--calculate {
-  @media (min-width: @desktop-width) {
-    max-width: 182px;
-  }
-}
-
-@-moz-document url-prefix("") {
-  .page-main__description-item--on-background {
-    @media (min-width: @tablet-width) {
-      background: @grey-opacity;
-    }
-  }
-
-  .page-main__promo-inner--football {
-    @media (min-width: @tablet-width) {
-      &::before {
-        background-color: @blue-opacity-moz;
-      }
-    }
+.page-main__button-promo {
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin: auto 0 100px 50px;
   }
 }

@@ -573,6 +573,60 @@ a {
     padding: 80px 55px 80px 50px;
   }
 }
+.page-main__wrapper {
+  display: grid;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .page-main__wrapper {
+    max-width: 100%;
+    min-height: 500px;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top 25%;
+    border-radius: 20px 20px 0 0;
+  }
+}
+@media (min-width: 1440px) {
+  .page-main__wrapper {
+    min-height: 600px;
+  }
+}
+.page-main__wrapper--football {
+  min-height: 700px;
+}
+@media (min-width: 768px) {
+  .page-main__wrapper--football {
+    background-image: url("../img/desktop-images/football-desktop-min.jpg");
+  }
+}
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+  .page-main__wrapper--football {
+    background-image: url("../img/desktop-images/football-desktop@2x-min.jpg");
+  }
+}
+@media (min-width: 768px) {
+  .page-main__wrapper--calculate {
+    background-image: url("../img/desktop-images/photo-cost-calculation-min.jpg");
+  }
+}
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+  .page-main__wrapper--calculate {
+    background-image: url("../img/desktop-images/photo-cost-calculation@2x-min.jpg");
+  }
+}
+@media (min-width: 768px) {
+  .page-main__wrapper--tracksuits {
+    background-image: url("../img/tablet-images/tracksuits-min.jpg");
+  }
+}
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+  .page-main__wrapper--tracksuits {
+    background-image: url("../img/tablet-images/tracksuits@2x-min.jpg");
+  }
+}
 .page-main__promo-inner {
   display: flex;
   flex-direction: column;
@@ -587,6 +641,7 @@ a {
     justify-content: space-between;
     margin: 0;
     max-width: 100%;
+    height: 100%;
     overflow: hidden;
   }
 }
@@ -595,39 +650,16 @@ a {
     display: none;
   }
 }
-@media (min-width: 768px) {
-  .page-main__promo-inner--main {
-    max-width: 100%;
-    min-height: 500px;
-    margin: 0;
-    padding: 0;
-    background-image: url("../img/tablet-images/football-tablet-min.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom;
-    border-radius: 20px 20px 0 0;
-  }
-}
-@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
-  .page-main__promo-inner--main {
-    background-image: url("../img/tablet-images/football-tablet@2x-min.jpg");
-  }
-}
-@media (min-width: 1440px) {
-  .page-main__promo-inner--main {
-    background-image: url("../img/desktop-images/football-desktop-min.jpg");
-  }
-}
-@media (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1440px) and (min-resolution: 2dppx) {
-  .page-main__promo-inner--main {
-    background-image: url("../img/desktop-images/football-desktop@2x-min.jpg");
-  }
-}
-.page-main__promo-inner--football {
+.page-main__promo-inner--bg {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
   position: relative;
+  transition: 0.8s ease;
 }
 @media (min-width: 768px) {
-  .page-main__promo-inner--football::before {
+  .page-main__promo-inner--bg::before {
     content: "";
     position: absolute;
     top: 0;
@@ -635,41 +667,23 @@ a {
     width: 80%;
     max-width: 718px;
     height: 100%;
-    transition: 0.8s ease;
-    border: 1px solid rgba(113, 120, 130, 0.18);
-    background-color: rgba(113, 120, 130, 0.1);
-    -webkit-backdrop-filter: blur(5px);
-            backdrop-filter: blur(5px);
-  }
-  .page-main__promo-inner--football:hover::before {
-    width: 0;
+    background-color: rgba(0, 0, 0, 0.6);
   }
 }
 @media (min-width: 1440px) {
-  .page-main__promo-inner--football::before {
-    width: 40%;
+  .page-main__promo-inner--bg::before {
+    width: 50%;
+  }
+}
+@media (hover: hover) and (min-width: 768px) {
+  .page-main__wrapper:hover .page-main__promo-inner--bg {
+    opacity: 0;
   }
 }
 @media (min-width: 768px) {
   .page-main__promo-inner--calculate {
     margin: 0;
     padding: 50px 350px 106px 50px;
-    background-image: url("../img/tablet-images/photo-cost-calculation-min.jpg");
-  }
-}
-@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
-  .page-main__promo-inner--calculate {
-    background-image: url("../img/tablet-images/photo-cost-calculation@2x-min.jpg");
-  }
-}
-@media (min-width: 768px) {
-  .page-main__promo-inner--tracksuits {
-    background-image: url("../img/tablet-images/tracksuits-min.jpg");
-  }
-}
-@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
-  .page-main__promo-inner--tracksuits {
-    background-image: url("../img/tablet-images/tracksuits@2x-min.jpg");
   }
 }
 @media (min-width: 768px) {
@@ -682,7 +696,7 @@ a {
 }
 @media (min-width: 1440px) {
   .page-main__inner-info {
-    padding: 50px 646px 50px 50px;
+    padding: 100px 646px 50px 50px;
   }
 }
 .page-main__image {
@@ -809,9 +823,13 @@ a {
     margin-bottom: 5px;
   }
 }
+@media (min-width: 768px) {
+  .page-main__subtitle--calculate {
+    max-width: 418px;
+  }
+}
 @media (min-width: 1440px) {
   .page-main__subtitle--calculate {
-    max-width: 318px;
     margin-bottom: 20px;
   }
 }
@@ -879,37 +897,6 @@ a {
   background-repeat: no-repeat;
   color: #ffffff;
   border-radius: 20px;
-  transition: 0.7s ease;
-}
-@media (min-width: 768px) {
-  .page-main__advantages-item {
-    box-shadow: 0 0 27px 0 #83b9c4;
-  }
-}
-@media (min-width: 768px) {
-  .page-main__advantages-item--1 {
-    transform: translateY(40px) translateX(180px) skew(20deg, 10deg) rotate(15deg);
-  }
-}
-@media (min-width: 768px) {
-  .page-main__advantages-item--2 {
-    transform: translateY(40px) translateX(100px) skew(20deg, 10deg) rotate(15deg);
-  }
-}
-@media (min-width: 768px) {
-  .page-main__advantages-item--3 {
-    transform: translateY(40px) translateX(0) skew(20deg, 10deg) rotate(15deg);
-  }
-}
-@media (min-width: 768px) {
-  .page-main__advantages-item--4 {
-    transform: translateY(40px) translateX(-100px) skew(20deg, 10deg) rotate(15deg);
-  }
-}
-@media (min-width: 768px) {
-  .page-main__advantages-list:hover .page-main__advantages-item {
-    transform: translateY(0) translateX(0) skew(0deg, 0deg) rotate(0deg);
-  }
 }
 .page-main__advantages-item--4 {
   background-image: url("../img/mobile-images/card-4-min.jpg");
@@ -1077,8 +1064,6 @@ a {
     margin-right: 10px;
     background-color: rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.3);
-    -webkit-backdrop-filter: blur(1.5px);
-            backdrop-filter: blur(1.5px);
     border-radius: 10px;
     border: 0;
   }
@@ -1124,21 +1109,13 @@ a {
     max-width: 148px;
   }
 }
-@media (min-width: 1440px) {
-  .page-main__button-background--calculate {
-    max-width: 182px;
-  }
-}
-@-moz-document url-prefix("") {
-  @media (min-width: 768px) {
-    .page-main__description-item--on-background {
-      background: rgba(55, 55, 55, 0.4);
-    }
-  }
-  @media (min-width: 768px) {
-    .page-main__promo-inner--football::before {
-      background-color: rgba(113, 120, 130, 0.7);
-    }
+@media (min-width: 768px) {
+  .page-main__button-promo {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin: auto 0 100px 50px;
   }
 }
 .page-footer {
