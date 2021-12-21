@@ -619,12 +619,12 @@ a {
 }
 @media (min-width: 768px) {
   .page-main__wrapper--tracksuits {
-    background-image: url("../img/tablet-images/tracksuits-min.jpg");
+    background-image: url("../img/desktop-images/tracksuits-min.jpg");
   }
 }
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
   .page-main__wrapper--tracksuits {
-    background-image: url("../img/tablet-images/tracksuits@2x-min.jpg");
+    background-image: url("../img/desktop-images/tracksuits@2x-min.jpg");
   }
 }
 .page-main__promo-inner {
