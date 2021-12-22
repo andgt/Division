@@ -2,7 +2,7 @@
 
 let gallerySlider = function () {
   const swiperGallery = new Swiper(".swiper-gallery", {
-    speed: 800,
+    speed: 1000,
     slidesPerView: "auto",
     spaceBetween: 15,
     effect: "slide",
@@ -21,7 +21,22 @@ let gallerySlider = function () {
         slidesPerView: 3,
         spaceBetween: 15,
       },
-    }
+    },
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    on: {
+      init() {
+        this.el.addEventListener("mouseenter", () => {
+          this.autoplay.stop();
+        });
+
+        this.el.addEventListener("mouseleave", () => {
+          this.autoplay.start();
+        });
+      }
+    },
   });
 };
 

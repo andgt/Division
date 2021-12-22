@@ -342,6 +342,11 @@ a {
     margin-bottom: 45px;
   }
 }
+@media (min-width: 1440px) {
+  .page-header__logo {
+    margin-bottom: auto;
+  }
+}
 .page-header__contacts {
   display: flex;
   flex-wrap: wrap;
@@ -485,6 +490,12 @@ a {
 .page-main {
   min-width: 0;
 }
+/*.page-main__football {
+  @media (min-width: @desktop-width) {
+    height: calc(100vh - 204px);
+    min-height: 600px;
+  }
+}*/
 .page-main__section {
   margin-bottom: 40px;
   background-color: #f2f2f7;
@@ -580,41 +591,33 @@ a {
 @media (min-width: 768px) {
   .page-main__wrapper {
     max-width: 100%;
-    min-height: 500px;
+    min-height: 600px;
     margin: 0;
     padding: 0;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center top 25%;
+    background-position: center center;
     border-radius: 20px 20px 0 0;
   }
 }
-@media (min-width: 1440px) {
-  .page-main__wrapper {
-    min-height: 600px;
-  }
-}
-.page-main__wrapper--football {
-  min-height: 700px;
-}
 @media (min-width: 768px) {
   .page-main__wrapper--football {
-    background-image: url("../img/desktop-images/football-desktop-min.jpg");
+    background-image: url("../img/tablet-images/football-desktop-min.jpg");
   }
 }
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
   .page-main__wrapper--football {
-    background-image: url("../img/desktop-images/football-desktop@2x-min.jpg");
+    background-image: url("../img/tablet-images/football-desktop@2x-min.jpg");
   }
 }
 @media (min-width: 768px) {
   .page-main__wrapper--calculate {
-    background-image: url("../img/desktop-images/photo-cost-calculation-min.jpg");
+    background-image: url("../img/tablet-images/photo-cost-calculation-min.jpg");
   }
 }
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
   .page-main__wrapper--calculate {
-    background-image: url("../img/desktop-images/photo-cost-calculation@2x-min.jpg");
+    background-image: url("../img/tablet-images/photo-cost-calculation@2x-min.jpg");
   }
 }
 @media (min-width: 768px) {
@@ -691,7 +694,7 @@ a {
     display: flex;
     flex-direction: column;
     margin: 0;
-    padding: 30px 200px 50px 50px;
+    padding: 80px 200px 50px 50px;
   }
 }
 @media (min-width: 1440px) {
