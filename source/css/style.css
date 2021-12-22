@@ -490,12 +490,6 @@ a {
 .page-main {
   min-width: 0;
 }
-/*.page-main__football {
-  @media (min-width: @desktop-width) {
-    height: calc(100vh - 204px);
-    min-height: 600px;
-  }
-}*/
 .page-main__section {
   margin-bottom: 40px;
   background-color: #f2f2f7;
