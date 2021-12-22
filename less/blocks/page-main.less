@@ -2,6 +2,13 @@
   min-width: 0;
 }
 
+/*.page-main__football {
+  @media (min-width: @desktop-width) {
+    height: calc(100vh - 204px);
+    min-height: 600px;
+  }
+}*/
+
 .page-main__section {
   margin-bottom: 40px;
   background-color: @white-grey;
@@ -96,37 +103,31 @@
 
   @media (min-width: @tablet-width) {
     max-width: 100%;
-    min-height: 500px;
+    min-height: 600px;
     .offset(0; 0);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center top 25%;
+    background-position: center center;
     border-radius: 20px 20px 0 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    min-height: 600px;
   }
 }
 
 .page-main__wrapper--football {
-  min-height: 700px;
-
   @media (min-width: @tablet-width) {
-    background-image: url("../img/desktop-images/football-desktop-min.jpg");
+    background-image: url("../img/tablet-images/football-desktop-min.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/desktop-images/football-desktop@2x-min.jpg");
+      background-image: url("../img/tablet-images/football-desktop@2x-min.jpg");
     }
   }
 }
 
 .page-main__wrapper--calculate {
   @media (min-width: @tablet-width) {
-    background-image: url("../img/desktop-images/photo-cost-calculation-min.jpg");
+    background-image: url("../img/tablet-images/photo-cost-calculation-min.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/desktop-images/photo-cost-calculation@2x-min.jpg");
+      background-image: url("../img/tablet-images/photo-cost-calculation@2x-min.jpg");
     }
   }
 }
@@ -208,7 +209,7 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
-    .offset(0; 30px 200px 50px 50px);
+    .offset(0; 80px 200px 50px 50px);
   }
 
   @media (min-width: @desktop-width) {

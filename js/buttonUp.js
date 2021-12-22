@@ -10,7 +10,7 @@ let buttonUp = function() {
       scrollUp.classList.add("button__scroll-up--showed");
     } else {
       scrollUp.classList.remove("button__scroll-up--showed");
-    }
+    };
   }
 
   scrollUp.onclick = function () {
@@ -20,4 +20,4 @@ let buttonUp = function() {
 
 buttonUp();
 
-export default buttonUp
+export default buttonUp()

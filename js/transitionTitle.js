@@ -31,4 +31,4 @@ let transitionTitle = function() {
 
 transitionTitle();
 
-export default transitionTitle
+export default transitionTitle()
