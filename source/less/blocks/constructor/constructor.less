@@ -1,3 +1,41 @@
-.constructor {
-	.offset(0; 0);
+.constructor__link-wrapper {
+	max-width: 280px;
+	width: 100%;
+	.offset(0 auto; 0);
+
+	@media (min-width: @tablet-width) {
+		max-width: 200px;
+		margin: 0;
+	}
+}
+
+.constructor__link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	.offset(0; 15px 30px);
+	background-color: @blue1;
+	border-radius: 10px;
+	transition: 0.3s ease;
+
+	&:hover,
+	&:focus {
+		background-color: @blue2;
+	}
+
+	@media (min-width: @tablet-width) {
+		padding: 15px 10px;
+	}
+}
+
+.constructor__text {
+	font-weight: 700;
+	.typography(14px; 18px);
+	color: @white-opacity1;
+	transition: 0.3s ease;
+
+	&:hover,
+	&:focus {
+		color: @white;
+	}
 }

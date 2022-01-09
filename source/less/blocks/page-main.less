@@ -67,13 +67,15 @@
 
 .page-main__promo-block:first-of-type {
   @media (min-width: @desktop-width) {
-    width: 586px;
+    /*width: 586px;*/
+    width: 60%;
   }
 }
 
 .page-main__promo-block:last-of-type {
   @media (min-width: @desktop-width) {
-    width: 450px;
+    /*width: 450px;*/
+    width: 40%;
   }
 }
 
@@ -96,7 +98,7 @@
 
   @media (min-width: @tablet-width) {
     max-width: 100%;
-    min-height: 600px;
+    min-height: 750px;
     .offset(0; 0);
     background-repeat: no-repeat;
     background-size: cover;
@@ -181,7 +183,7 @@
 
   @media (min-width: @desktop-width) {
     &::before {
-      width: 50%;
+      width: 55%;
     }
   }
 }
@@ -212,49 +214,30 @@
 
 .page-main__image {
   width: 100%;
-}
 
-.page-main__basketball-image {
   @media (min-width: @tablet-width) {
     width: 577px;
     min-height: 385px;
-    object-position: 35%;
     object-fit: cover;
+    object-position: center;
   }
 
   @media (min-width: @desktop-width) {
-    width: 586px;
-    height: 447px;
+    width: 100%;
+    height: 600px;
     border-radius: 0 0 0 20px;
   }
 }
 
-.page-main__hockey-image {
+.page-main__basketball-image {
   @media (min-width: @tablet-width) {
-    width: 577px;
-    min-height: 385px;
-    object-position: center;
-    object-fit: cover;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 586px;
-    height: 447px;
-    border-radius: 0 20px 0 0;
+    object-position: 35%;
   }
 }
 
 .page-main__volleyball-image {
-  @media (min-width: @tablet-width) {
-    width: 577px;
-    min-height: 385px;
-    object-position: center;
-    object-fit: cover;
-  }
-
   @media (min-width: @desktop-width) {
-    width: 586px;
-    height: 447px;
+    border-radius: 0;
   }
 }
 
@@ -311,7 +294,7 @@
 
     &::before {
       left: 0;
-      width: 22%;
+      width: 18%;
     }
   }
 }
@@ -583,7 +566,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 148px;
+    max-width: 200px;
+    padding: 15px 10px;
+    text-transform: uppercase;
   }
 }
 
