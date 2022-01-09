@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+  	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<title>Расчет стоимости онлайн</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.css">
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="preload" as="font">
+  	<meta name="description" content="Производство спортивной формы оптом для различных видов спорта. Нанесение логотипов, фамилий, номеров">
+  	<meta name="keywords" content="Спортивная форма на заказ, Заказать спортивную форму, спортивная форма купить, спортивная форма где купить">
+  </head>
+  <body class="page-body">
+    <div class="preloader">
+      <div class="preloader__row">
+        <div class="preloader__item"></div>
+        <div class="preloader__item"></div>
+      </div>
+    </div>
+  	<header class="page-header">
+      <div class="page-header__container">
+        <a class="page-header__home" href="index.html">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/tablet-images/logo_tablet.svg">
+            <img class="page-header__logo" src="img/logo.svg" width="33" height="35" alt="Логотип компании">
+          </picture>
+        </a>
+        <div class="page-header__contacts">
+          <ul class="page-header__contacts-list">
+            <li class="page-header__contacts-item">
+              <a class="page-header__contacts-link-img" href="mailto:info@division-sport.ru">
+                <img class="page-header__contacts-img page-header__contacts-img--mail" src="img/icon-mail.svg" width="24" height="24" alt="Изображение конверта">
+              </a>
+              <span class="page-header__contacts-text">Напишите нам
+                <a class="page-header__contacts-email page-header__contacts-link" href="mailto:info@division-sport.ru">info@divizionsport.ru</a>
+              </span>
+            </li>
+            <li class="page-header__contacts-item">
+              <a class="page-header__contacts-link-img" href="tel:+79773890765">
+                <img class="page-header__contacts-img page-header__contacts-img--phone" src="img/icon-phone.svg" width="22" height="22" alt="Изображение телефонной трубки">
+              </a>
+              <span class="page-header__contacts-text">Наш телефон
+                <a class="page-header__contacts-link" href="tel:+79773890765">+7 (977) 389-07-65</a>
+              </span>
+            </li>
+          </ul>
+          <a class="page-header__contacts-back-call js-button-open" href="#" data-modal-window="js-back-call" data-modal-name="Обратный звонок">Заказать обратный звонок</a>
+        </div>
+        <nav class="main-nav main-nav--closed main-nav--no-js">
+          <button class="main-nav__toggle" type="button" aria-label="Кнопка меню">
+            <span class="main-nav__toggle-line"></span>
+            <span class="main-nav__toggle-line"></span>
+            <span class="main-nav__toggle-line"></span>
+          </button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--football" href="#football">футбол</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--basketball" href="#basketball">баскетбол</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--tracksuit" href="#tracksuits">спортивные костюмы</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--hockey" href="#hockey">хоккей</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--volleyball" href="#volleyball">волейбол</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="social">
+          <li class="social__item">
+            <a class="social__link" href="https://vk.com/divizionsport" target="_blank" rel="noopener">
+              <span class="visually-hidden">Ссылка на ВК</span>
+              <img class="social__img" src="img/icon-vk.svg" width="24" height="24" alt="Логотип ВК">
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://t.me/divizionsport" target="_blank" rel="noopener">
+              <span class="visually-hidden">Ссылка на Telegram</span>
+              <img class="social__img" src="img/icon-telegram.svg" width="24" height="24" alt="Логотип Telegram">
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://wa.me/79773890765" target="_blank" rel="noopener">
+              <span class="visually-hidden">Ссылка на Whatsapp</span>
+              <img class="social__img" src="img/icon-whatsapp.svg" width="24" height="24" alt="Логотип Whatsapp">
+            </a>
+          </li>
+        </ul>
+      </div>
+  	</header>
+  	<main class="page-main">
+      <section class="page-main__section constructor">
+        <h2 class="page-main__subtitle">Конструктор спортивной формы</h2>
+        <div class="page-main__section-inner">
+          <div class="viewer">
+            <div class="viewer__wrapper">
+              <h2>Предварительный просмотр</h2>
+              <picture>
+                <img src="img/desktop-images/basketball-form-min.jpg">
+              </picture>
+            </div>
+          </div>
+          <div class="options">
+            <div class="tabs"></div>
+            <div class="options__list">
+              <div class="main-options">
+                <h2>Опции выбора</h2>
+                <div class="main-options__wrapper">
+                  <form action="#" method="">
+                    <fieldset>
+                      <label>Вид спорта</label>
+                      <select>
+                        <option>Выберите вид спорта</option>
+                        <option>Футбол</option>
+                        <option>Баскетбол</option>
+                        <option>Волейбол</option>
+                        <option>Хоккей</option>
+                      </select>
+                    </fieldset>
+                    <fieldset>
+                      <label>Модель формы</label>
+                      <select>
+                        <option>Выберите модель формы</option>
+                        <option>Юпитер</option>
+                        <option>Сатурн</option>
+                        <option>Венера</option>
+                        <option>Меркурий</option>
+                      </select>
+                    </fieldset>
+                    <fieldset>
+                      <label>Футболка</label>
+                      <input type="checkbox" name="">
+                      <label>Щорты</label>
+                      <input type="checkbox" name="">
+                      <label>Гетры</label>
+                      <input type="checkbox" name="">
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page-main__section page-main__section--gallery gallery container">
+        <h2 class="page-main__subtitle page-main__subtitle--gallery">Фотогалерея</h2>
+        <div class="gallery__wrapper">
+          <div class="swiper swiper-gallery">
+            <div class="swiper-wrapper gallery__inner">
+              <div class="swiper-slide gallery__item">
+                <div class="gallery__img-wrapper">
+                  <picture>
+                    <img class="gallery__img" src="img/mobile-images/gallery/football-mobile-1.jpg" srcset="img/mobile-images/gallery/football-mobile-1@2x.jpg 2x" width="688" height="420" alt="Футбольная форма">
+                  </picture>
+                </div>
+              </div>
+              <div class="swiper-slide gallery__item">
+                <div class="gallery__img-wrapper">
+                  <picture>
+                    <img class="gallery__img" src="img/mobile-images/gallery/football-mobile-2.jpg" srcset="img/mobile-images/gallery/football-mobile-2@2x.jpg 2x" width="688" height="420" alt="Футбольная форма">
+                  </picture>
+                </div>
+              </div>
+              <div class="swiper-slide gallery__item">
+                <div class="gallery__img-wrapper">
+                  <picture>
+                    <img class="gallery__img" src="img/mobile-images/gallery/football-mobile-3.jpg" srcset="img/mobile-images/gallery/football-mobile-3@2x.jpg 2x" width="688" height="420" alt="Футбольная форма">
+                  </picture>
+                </div>
+              </div>
+              <div class="swiper-slide gallery__item">
+                <div class="gallery__img-wrapper">
+                  <picture>
+                    <img class="gallery__img" src="img/mobile-images/gallery/football-mobile-4.jpg" srcset="img/mobile-images/gallery/football-mobile-4@2x.jpg 2x" width="688" height="420" alt="Футбольная форма">
+                  </picture>
+                </div>
+              </div>
+              <div class="swiper-slide gallery__item">
+                <div class="gallery__img-wrapper">
+                  <picture>
+                    <img class="gallery__img" src="img/mobile-images/gallery/football-mobile-5.jpg" srcset="img/mobile-images/gallery/football-mobile-5@2x.jpg 2x" width="688" height="420" alt="Футбольная форма">
+                  </picture>
+                </div>
+              </div>
+              <div class="swiper-slide gallery__item">
+                <div class="gallery__img-wrapper">
+                  <picture>
+                    <img class="gallery__img" src="img/mobile-images/gallery/football-mobile-6.jpg" srcset="img/mobile-images/gallery/football-mobile-6@2x.jpg 2x" width="688" height="420" alt="Футбольная форма">
+                  </picture>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+  	</main>
+  	<footer class="page-footer">
+      <div class="page-footer__container container">
+        <div class="page-footer__social">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/desktop-images/logo-footer-desktop.svg">
+            <img class="page-footer__logo" src="img/logo-footer.svg" width="37" height="40" alt="Логотип">
+          </picture>
+          <ul class="social__footer">
+            <li class="social__footer-item">
+              <a class="social__footer-link" href="https://vk.com/divizionsport" target="_blank" rel="noopener">
+                <span class="visually-hidden">Ссылка на ВК</span>
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/desktop-images/vk.svg">
+                  <img class="social__footer-img social__footer-img--vk" src="img/icon-vk.svg" width="24" height="24" alt="Логотип ВК">
+                </picture>
+              </a>
+            </li>
+            <li class="social__footer-item">
+              <a class="social__footer-link" href="https://t.me/divizionsport" target="_blank" rel="noopener">
+                <span class="visually-hidden">Ссылка на Telegram</span>
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/desktop-images/telegram.svg">
+                  <img class="social__footer-img social__footer-img--tg" src="img/icon-telegram.svg" width="24" height="24" alt="Логотип Telegram">
+                </picture>
+              </a>
+            </li>
+            <li class="social__footer-item">
+              <a class="social__footer-link" href="https://wa.me/79773890765" target="_blank" rel="noopener">
+                <span class="visually-hidden">Ссылка на Whatsapp</span>
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/desktop-images/whatsapp.svg">
+                  <img class="social__footer-img social__footer-img--whatsapp" src="img/icon-whatsapp.svg" width="24" height="24" alt="Логотип Whatsapp">
+                </picture>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright">
+          <p class="page-footer__copyright-text">Copyright &#169; 2020 Divizion Sport</p>
+          <p class="page-footer__copyright-text">All rights reserved</p>
+          <p class="page-footer__copyright-text">2021 — Russia Divizion-Sport</p>
+        </div>
+      </div>
+      <button class="button__scroll-up" type="button">
+        <span class="visually-hidden">В начало страницы</span>
+      </button>
+  	</footer>
+    <div class="modal-overlay">
+      <div class="modal js-back-call">
+        <h2 class="modal__title">Обратный звонок</h2>
+        <p class="modal__text">Оставьте свой телефон, и мы свяжемся с вами</p>
+        <button class="modal__btn-close js-button-close" type="button">
+          <span class="visually-hidden">Закрыть окно</span>
+        </button>
+        <form class="modal__form modal__form--backcall" method="post" action="backcall.php">
+          <fieldset class="modal__form-fieldset">
+            <legend class="visually-hidden">Контактная информация</legend>
+            <div class="modal__inner">
+              <label class="modal__form-label" for="name-back-call">Ваше имя</label>
+              <input class="modal__form-input modal__form-input--username" type="text" name="username" id="name-back-call" placeholder="Александр" required>
+            </div>
+            <div class="modal__inner">
+              <label class="modal__form-label" for="phone-number-back-call">Номер телефона</label>
+              <input class="modal__form-input modal__form-input--phone" type="tel" name="tel" id="phone-number-back-call" placeholder="+79160568324" pattern="(\+?\d[- .]*){7,13}" required>
+            </div>
+            <div class="modal__inner--policy">
+              <label for="policy-check">
+                <a class="modal__policy-link" href="policy.html" target="_blank" rel="noopener">Согласие на обработку персональных данных</a>
+              </label>
+              <input class="modal__input-policy" type="checkbox" name="policy" id="policy-check" required>
+            </div>
+            <label class="visually-hidden" for="submit-btn">Отправить данные для входа</label>
+            <input class="modal__button button" type="submit" name="submit" id="submit-btn" value="Заказать обратный звонок">
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <script src="js/swiper-bundle.js"></script>
+    <script src="js/calculate.js" type="module"></script>
+    <script src="js/swiper.js"></script>
+  </body>
+</html>
