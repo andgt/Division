@@ -94,38 +94,6 @@ let modal = function () {
     }
   });
 
-  // Кнопки в форме
-
-  let modalCount = function () {
-    let leftButton = document.querySelector(".modal__value--min");
-    let rightButton = document.querySelector(".modal__value--max");
-    let inputValueNumber = document.querySelector(".modal__value--number");
-
-    leftButton.onclick = function () {
-      inputValueNumber.value--;
-      if (inputValueNumber.value <= 5) {
-        leftButton.disabled = true;
-      }
-    };
-
-    rightButton.onclick = function () {
-      inputValueNumber.value++;
-      if (inputValueNumber.value > 5) {
-        leftButton.disabled = false;
-      }
-    };
-  };
-
-  modalCount();
-
-  // Количество выбранных файлов в label
-
-  let inputFile = document.getElementById("file");
-  let labelFile = document.querySelector(".modal__form-label--file");
-  inputFile.onchange = function () {
-    labelFile.textContent = "Выбрано файлов: " + inputFile.files.length;
-  };
-
   // Отправка формы
 
   modalFormBack.addEventListener("submit", formSendCalc);
@@ -141,26 +109,6 @@ let modal = function () {
       let result = await response.json();
       alert(result.message);
       modalFormBack.reset();
-      closesWindows();
-    } else {
-      alert("Error");
-      closesWindows();
-    }
-  };
-
-  modalFormCalc.addEventListener("submit", formSendBack);
-
-  async function formSendBack (evt) {
-    evt.preventDefault();
-    let formData = new FormData(modalFormCalc);
-    let response = await fetch("../calculate.php", {
-      method: "POST",
-      body: formData
-    });
-    if (response.ok) {
-      let result = await response.json();
-      alert(result.message);
-      modalFormCalc.reset();
       closesWindows();
     } else {
       alert("Error");

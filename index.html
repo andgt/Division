@@ -18,76 +18,85 @@
         <div class="preloader__item"></div>
       </div>
     </div>
-  	<header class="page-header container">
-      <picture>
-        <source media="(min-width: 768px)" srcset="img/tablet-images/logo_tablet.svg">
-        <img class="page-header__logo" src="img/logo.svg" width="33" height="35" alt="Логотип компании">
-      </picture>
-      <div class="page-header__contacts">
-        <ul class="page-header__contacts-list">
-          <li class="page-header__contacts-item">
-            <a class="page-header__contacts-link-img" href="mailto:info@division-sport.ru">
-              <img class="page-header__contacts-img page-header__contacts-img--mail" src="img/icon-mail.svg" width="24" height="24" alt="Изображение конверта">
+  	<header class="page-header">
+      <div class="page-header__container container">
+        <div class="page-header__home">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/tablet-images/logo_tablet.svg">
+            <img class="page-header__logo" src="img/logo.svg" width="33" height="35" alt="Логотип компании">
+          </picture>
+        </div>
+        <div class="page-header__info">
+          <ul class="page-header__info-list">
+            <li class="page-header__info-item">
+              <a class="page-header__info-link-img" href="mailto:info@division-sport.ru">
+                <img class="page-header__info-img page-header__info-img--mail" src="img/icon-mail.svg" width="24" height="24" alt="Изображение конверта">
+              </a>
+              <span class="page-header__info-text">Напишите нам
+                <a class="page-header__info-email page-header__info-link" href="mailto:info@division-sport.ru">info@divizionsport.ru</a>
+              </span>
+            </li>
+            <li class="page-header__info-item">
+              <a class="page-header__info-link-img" href="tel:+79773890765">
+                <img class="page-header__info-img page-header__info-img--phone" src="img/icon-phone.svg" width="22" height="22" alt="Изображение телефонной трубки">
+              </a>
+              <span class="page-header__info-text">Наш телефон
+                <a class="page-header__info-link" href="tel:+79773890765">+7 (977) 389-07-65</a>
+              </span>
+            </li>
+          </ul>
+          <div class="constructor__link-wrapper">
+            <a class="constructor__link" href="constructor.html" target="_blank" rel="noopener">
+              <span class="constructor__text">Конструктор формы</span>
             </a>
-            <span class="page-header__contacts-text">Напишите нам
-              <a class="page-header__contacts-email page-header__contacts-link" href="mailto:info@division-sport.ru">info@divizionsport.ru</a>
-            </span>
+          </div>
+          <a class="page-header__info-back-call js-button-open" href="#" data-modal-window="js-back-call" data-modal-name="Обратный звонок">Заказать обратный звонок</a>
+        </div>
+        <nav class="main-nav main-nav--closed main-nav--no-js">
+          <button class="main-nav__toggle" type="button" aria-label="Кнопка меню">
+            <span class="main-nav__toggle-line"></span>
+            <span class="main-nav__toggle-line"></span>
+            <span class="main-nav__toggle-line"></span>
+          </button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--football" href="#football">футбол</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--basketball" href="#basketball">баскетбол</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--tracksuit" href="#tracksuits">спортивные костюмы</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--hockey" href="#hockey">хоккей</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--volleyball" href="#volleyball">волейбол</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="social">
+          <li class="social__item">
+            <a class="social__link" href="https://vk.com/divizionsport" target="_blank" rel="noopener">
+              <span class="visually-hidden">Ссылка на ВК</span>
+              <img class="social__img" src="img/icon-vk.svg" width="24" height="24" alt="Логотип ВК">
+            </a>
           </li>
-          <li class="page-header__contacts-item">
-            <a class="page-header__contacts-link-img" href="tel:+79773890765">
-              <img class="page-header__contacts-img page-header__contacts-img--phone" src="img/icon-phone.svg" width="22" height="22" alt="Изображение телефонной трубки">
+          <li class="social__item">
+            <a class="social__link" href="https://t.me/divizionsport" target="_blank" rel="noopener">
+              <span class="visually-hidden">Ссылка на Telegram</span>
+              <img class="social__img" src="img/icon-telegram.svg" width="24" height="24" alt="Логотип Telegram">
             </a>
-            <span class="page-header__contacts-text">Наш телефон
-              <a class="page-header__contacts-link" href="tel:+79773890765">+7 (977) 389-07-65</a>
-            </span>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://wa.me/79773890765" target="_blank" rel="noopener">
+              <span class="visually-hidden">Ссылка на Whatsapp</span>
+              <img class="social__img" src="img/icon-whatsapp.svg" width="24" height="24" alt="Логотип Whatsapp">
+            </a>
           </li>
         </ul>
-        <a class="page-header__contacts-back-call js-button-open" href="#" data-modal-window="js-back-call" data-modal-name="Обратный звонок">Заказать обратный звонок</a>
       </div>
-      <nav class="main-nav main-nav--closed main-nav--no-js">
-        <button class="main-nav__toggle" type="button" aria-label="Кнопка меню">
-          <span class="main-nav__toggle-line"></span>
-          <span class="main-nav__toggle-line"></span>
-          <span class="main-nav__toggle-line"></span>
-        </button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--football" href="#football">футбол</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--basketball" href="#basketball">баскетбол</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--tracksuit" href="#tracksuits">спортивные костюмы</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--hockey" href="#hockey">хоккей</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--volleyball" href="#volleyball">волейбол</a>
-          </li>
-        </ul>
-      </nav>
-      <ul class="social">
-        <li class="social__item">
-          <a class="social__link" href="https://vk.com/divizionsport" target="_blank" rel="noopener">
-            <span class="visually-hidden">Ссылка на ВК</span>
-            <img class="social__img" src="img/icon-vk.svg" width="24" height="24" alt="Логотип ВК">
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href="https://t.me/divizionsport" target="_blank" rel="noopener">
-            <span class="visually-hidden">Ссылка на Telegram</span>
-            <img class="social__img" src="img/icon-telegram.svg" width="24" height="24" alt="Логотип Telegram">
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href="https://wa.me/79773890765" target="_blank" rel="noopener">
-            <span class="visually-hidden">Ссылка на Whatsapp</span>
-            <img class="social__img" src="img/icon-whatsapp.svg" width="24" height="24" alt="Логотип Whatsapp">
-          </a>
-        </li>
-      </ul>
   	</header>
   	<main class="page-main">
       <h1 class="visually-hidden">Производство качественой спортивной экипировки на заказ для различных видов спорта</h1>
@@ -189,7 +198,7 @@
             <picture>
               <source media="(min-width: 1440px)" srcset="img/desktop-images/hockey-form-min.jpg, img/desktop-images/hockey-form@2x-min.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/tablet-images/hockey-form-min.jpg, img/tablet-images/hockey-form@2x-min.jpg 2x">
-              <img class="page-main__image page-main__hockey-image" src="img/mobile-images/hockey-form-min.jpg" srcset="img/mobile-images/hockey-form@2x-min.jpg 2x" width="280" height="270" alt="Хоккейная форма">
+              <img class="page-main__image" src="img/mobile-images/hockey-form-min.jpg" srcset="img/mobile-images/hockey-form@2x-min.jpg 2x" width="280" height="270" alt="Хоккейная форма">
             </picture>
           </div>
           <div class="page-main__promo-inner page-main__promo-block">
@@ -227,7 +236,7 @@
                 </ul>
               </div>
             </div>
-            <a class="page-main__button-background page-main__button-promo button js-button-open" href="#" data-modal-window="js-calculate" data-modal-name="Футбольная форма">Узнать стоимость</a>
+            <a class="page-main__button-background page-main__button-promo button js-button-open" href="#" data-modal-window="js-calculate" data-modal-name="Спортивные костюмы">Узнать стоимость</a>
           </div>
         </div>
       </section>
