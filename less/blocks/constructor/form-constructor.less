@@ -1,0 +1,321 @@
+.form-constructor {
+	display: grid;
+	row-gap: 60px;
+}
+
+.form-constructor__fieldset-wrapper {
+	position: relative;
+	visibility: hidden;
+	grid-column-start: 1;
+	grid-column-end: 1;
+	grid-row-start: 1;
+	grid-row-end: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	height: 0;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	opacity: 0;
+	z-index: -1;
+	transition: 0.3s ease;
+}
+
+.form-constructor__fieldset-wrapper--active {
+	visibility: visible;
+	opacity: 1;
+	z-index: 1;
+	height: 100%;
+}
+
+.form-constructor__fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.form-constructor__fieldset--select {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.form-constructor__fieldset--team {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.form-constructor__fieldset--checkbox {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+
+	@media (min-width: @tablet-width) {
+		gap: 20px;
+	}
+}
+
+.form-constructor__fieldset--file {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100px;
+	padding: 15px;
+	border: 1px dashed @black;
+	border-radius: 12px;
+	cursor: pointer;
+}
+
+.form-constructor__model-wrapper {
+	display: grid;
+	width: 100%;
+}
+
+.form-constructor__inner {
+	display: none;
+	grid-column-start: 1;
+	grid-column-end: 1;
+	grid-row-start: 1;
+	grid-row-end: 1;
+}
+
+.form-constructor__inner-checkbox {
+	display: flex;
+	align-items: center;
+	gap: 7px;
+
+	@media (min-width: @tablet-width) {
+		gap: 10px;
+	}
+}
+
+.form-constructor__inner--active {
+	display: block;
+}
+
+.form-constructor__subtitle {
+	margin: 0 0 20px 0;
+	font-weight: 500;
+	font-size: 16px;
+
+	@media (min-width: @tablet-width) {
+		font-size: 18px;
+	}
+}
+
+.form-constructor__wrapper-menu {
+	display: grid;
+	grid-template-columns: 350px 300px;
+	gap: 40px 40px;
+}
+
+.form-constructor__wrapper-menu--team {
+	grid-template-columns: 1fr;
+}
+
+.form-constructor__wrapper-menu--team-top {
+	margin-bottom: 80px;
+}
+
+.form-constructor__team-inner {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.form-constructor__team-layout {
+	position: relative;
+	display: flex;
+	gap: 20px;
+}
+
+.form-constructor__delete-player {
+	position: absolute;
+	top: 55%;
+	right: -10px;
+	width: 15px;
+	height: 15px;
+	padding: 0;
+	transform: translateY(55%);
+	background-color: transparent;
+	border: 0;
+	border-radius: 10px;
+	cursor: pointer;
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		width: 2px;
+		height: 100%;
+		background-color: @red;
+	}
+
+	&::before {
+		left: 5px;
+		transform: rotate(45deg);
+	}
+
+	&::after {
+		right: 8px;
+		transform: rotate(-45deg);
+	}
+}
+
+.form-constructor__player-count {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.form-constructor__select {
+	appearance: none;
+	width: 100%;
+	min-width: 230px;
+	max-width: 350px;
+	padding: 12px;
+	font-size: 16px;
+	background-color: white;
+	background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='30' height='30' rx='4' fill='%23F6F6F6'/%3E%3Cpath d='M18 12L11 12L14.5 18L18 12Z' fill='%23808080'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: 95% 7px;
+	border: 1px solid @grey1;
+	cursor: pointer;
+}
+
+.form-constructor__select--team {
+	min-width: auto;
+	max-width: 120px;
+}
+
+.form-constructor__option {
+	padding: 0;
+}
+
+.form-constructor__label {
+	font-weight: 500;
+	font-size: 14px;
+	user-select: none;
+	text-align: center;
+
+	@media (min-width: @tablet-width) {
+		font-size: 16px;
+	}
+}
+
+.form-constructor__label--select {
+	min-width: 130px;
+	text-align: left;
+}
+
+.form-constructor__label--file {
+	cursor: pointer;
+}
+
+.form-constructor__input {
+	margin: 0;
+	padding: 8px 12px;
+	font-size: 16px;
+	line-height: 1.2;
+}
+
+.form-constructor__input--checkbox {
+	appearance: none;
+	position: relative;
+	width: 23px;
+	height: 23px;
+	transition: 0.3s ease;
+}
+
+.form-constructor__input--checkbox::after {	
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3C!-- Creator: CorelDRAW 2020 (64-Bit) --%3E%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' width='23px' height='23px' version='1.1' style='shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd'%0AviewBox='0 0 23.01 23.01' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:xodm='http://www.corel.com/coreldraw/odm/2003'%3E%3Cdefs%3E%3Cstyle type='text/css'%3E%3C!%5BCDATA%5B .str0 %7Bstroke:black;stroke-width:1.21;stroke-linecap:square;stroke-miterlimit:22.9256%7D .fil0 %7Bfill:none%7D %5D%5D%3E%3C/style%3E%3C/defs%3E%3Cg id='Слой_x0020_1'%3E%3Cmetadata id='CorelCorpID_0Corel-Layer'/%3E%3Cpath class='fil0 str0' d='M22.41 1.82l0 19.36c0,0.68 -0.55,1.23 -1.23,1.23l-19.36 0c-0.67,0 -1.21,-0.55 -1.21,-1.23l0 -19.36c0,-0.67 0.54,-1.21 1.21,-1.21l19.36 0c0.68,0 1.23,0.54 1.23,1.21z'/%3E%3C/g%3E%3C/svg%3E%0A");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-color: @white;
+
+}
+
+.form-constructor__input--checkbox:checked::after {
+	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3C!-- Creator: CorelDRAW 2020 (64-Bit) --%3E%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' width='23px' height='23px' version='1.1' style='shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd'%0AviewBox='0 0 7.49 7.49' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:xodm='http://www.corel.com/coreldraw/odm/2003'%3E%3Cdefs%3E%3Cstyle type='text/css'%3E%3C!%5BCDATA%5B .str0 %7Bstroke:black;stroke-width:0.33;stroke-linecap:square;stroke-miterlimit:22.9256%7D .fil0 %7Bfill:none%7D %5D%5D%3E%3C/style%3E%3C/defs%3E%3Cg id='Слой_x0020_1'%3E%3Cmetadata id='CorelCorpID_0Corel-Layer'/%3E%3Cg id='_2178951070464'%3E%3Cpath class='fil0 str0' d='M7.32 0.56l0 6.36c0,0.22 -0.18,0.4 -0.4,0.4l-6.36 0c-0.22,0 -0.4,-0.18 -0.4,-0.4l0 -6.36c0,-0.22 0.18,-0.4 0.4,-0.4l6.36 0c0.22,0 0.4,0.18 0.4,0.4z'/%3E%3Cpolyline class='fil0 str0' points='1.62,3.88 2.95,5.2 5.86,2.28 '/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-color: @white;
+}
+
+.form-constructor__input--file {
+	display: none;
+}
+
+.form-constructor__input--number {
+	appearance: textfield;
+
+	&:hover,
+	&:focus {
+		appearance: number-inut;
+	}
+}
+
+.form-constructor__input--team {
+	min-height: 44px;
+}
+
+.form-constructor__input--surname {
+	width: 190px;
+}
+
+.form-constructor__input--number::-webkit-outer-spin-button,
+.form-constructor__input--number::-webkit-inner-spin-button {
+	appearance: none;
+	margin: 0;
+}
+
+.form-constructor__textarea {
+	width: 100%;
+	max-width: 650px;
+	min-height: 100px;
+	padding: 10px;
+	font-size: 14px;
+	border: 1px solid @black;
+	border-radius: 12px;
+	resize: none;
+
+	@media (min-width: @tablet-width) {
+		font-size: 16px;
+	}
+}
+
+.form-constructor__add-player {
+	&:hover,
+	&:focus {
+		background-color: @orange;
+		outline: none;
+		border-color: @orange;
+		cursor: pointer;
+	}
+}
+
+.form-constructor__footer {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.form-constructor__result {
+	font-size: 18px;
+}
+
+.form-constructor__note {
+	color: @grey1;
+}

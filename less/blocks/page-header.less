@@ -1,3 +1,11 @@
+.page-header--constructor {
+  margin-bottom: 20px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 40px;
+  }
+}
+
 .page-header__container {
   display: flex;
   flex-wrap: wrap;
@@ -12,12 +20,12 @@
 }
 
 .page-header__home {
+  width: 121px;
+  height: 51px;
   margin-right: 55px;
   order: 0;
 
   @media (min-width: @tablet-width) {
-    width: 121px;
-    height: 50px;
     margin-right: auto;
     margin-bottom: 45px;
   }
