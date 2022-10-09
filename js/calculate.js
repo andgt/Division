@@ -9,3 +9,4 @@ import constructorForm from "./constructor.js";
 import calculateTabs from "./calculateTabs.js";
 import addPlayer from "./addPlayer.js";
 import deletePlayer from "./deletePlayer.js";
+import addLogo from "./addLogo.js";
