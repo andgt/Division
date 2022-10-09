@@ -39,11 +39,21 @@ let modal = function () {
     modalOpen.onclick = function (evt) {
       evt.preventDefault();
       scrollPosition = pageYOffset;
+
+      let innerWidth = window.innerWidth;
+      let htmlWidth = htmlPage.clientWidth;
+      let scrollSize = innerWidth - htmlWidth;
+
       modalOpenName = this.getAttribute("data-modal-window");
       modalName = this.getAttribute("data-modal-name");
       for (let modalWindow of modalWindows) {
         if (modalWindow.classList.contains(modalOpenName)) {
           dynamicTitles();
+          
+          if (scrollSize) {
+            htmlPage.style.marginRight = scrollSize + "px";
+          };
+
           htmlPage.classList.add("page__modal-opened");
           htmlPage.style.top = -scrollPosition + "px";
           modalOverlay.classList.add("modal-overlay__open");
@@ -62,6 +72,7 @@ let modal = function () {
       modalWindow.classList.remove("modal__show");
       modalWindow.classList.remove("modal-error");
       modalOverlay.classList.remove("modal-overlay__open");
+      htmlPage.style.marginRight = "";
       htmlPage.style.scrollBehavior = "auto";
       window.scrollTo(0, scrollPosition);
       htmlPage.style.scrollBehavior = "";
