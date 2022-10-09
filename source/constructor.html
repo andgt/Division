@@ -163,84 +163,86 @@
               </div>
               <form class="form-constructor" action="#" method="get">
                 <fieldset class="form-constructor__fieldset-wrapper form-constructor__fieldset-wrapper--active js-main-options">
-                  <fieldset class="form-constructor__fieldset form-constructor__fieldset--select">
-                    <label class="form-constructor__label form-constructor__label--select">Вид спорта:</label>
-                    <select class="form-constructor__select js-select-sport">
-                      <option class="form-constructor__option">Выберите вид спорта</option>
-                      <option class="form-constructor__option js-kind-of-sport" name="вид-спорта" value="football">Футбол</option>
-                      <option class="form-constructor__option js-kind-of-sport" name="вид-спорта" value="basketball">Баскетбол</option>
-                      <option class="form-constructor__option js-kind-of-sport" name="вид-спорта" value="volleyball">Волейбол</option>
-                      <option class="form-constructor__option js-kind-of-sport" name="вид-спорта" value="hockey">Хоккей</option>
-                    </select>
-                  </fieldset>
-                  <fieldset class="form-constructor__fieldset form-constructor__fieldset--select">
-                    <label class="form-constructor__label form-constructor__label--select">Модель формы:</label>
-                    <div class="form-constructor__model-wrapper">
-                      <div class="form-constructor__inner form-constructor__inner--active js-football">
-                        <select class="form-constructor__select">
-                          <option class="form-constructor__option">Выберите модель</option>
-                          <option class="form-constructor__option" name="model" value="Юпитер-футбол">Юпитер-футбол</option>
-                          <option class="form-constructor__option" name="model" value="Сатурн-футбол">Сатурн-футбол</option>
-                          <option class="form-constructor__option" name="model" value="Венера-футбол">Венера-футбол</option>
-                          <option class="form-constructor__option" name="model" value="Меркурий-футбол">Меркурий-футбол</option>
-                        </select>
+                  <div class="form-constructor__wrapper-menu">
+                    <fieldset class="form-constructor__fieldset form-constructor__fieldset--select">
+                      <label class="form-constructor__label form-constructor__label--select">Вид спорта:</label>
+                      <select class="form-constructor__select js-select-sport">
+                        <option class="form-constructor__option">Выберите вид спорта</option>
+                        <option class="form-constructor__option js-kind-of-sport" name="вид-спорта" value="football">Футбол</option>
+                        <option class="form-constructor__option js-kind-of-sport" name="вид-спорта" value="basketball">Баскетбол</option>
+                        <option class="form-constructor__option js-kind-of-sport" name="вид-спорта" value="volleyball">Волейбол</option>
+                        <option class="form-constructor__option js-kind-of-sport" name="вид-спорта" value="hockey">Хоккей</option>
+                      </select>
+                    </fieldset>
+                    <fieldset class="form-constructor__fieldset form-constructor__fieldset--select">
+                      <label class="form-constructor__label form-constructor__label--select">Модель формы:</label>
+                      <div class="form-constructor__model-wrapper">
+                        <div class="form-constructor__inner form-constructor__inner--active js-football">
+                          <select class="form-constructor__select">
+                            <option class="form-constructor__option">Выберите модель</option>
+                            <option class="form-constructor__option" name="model" value="Юпитер-футбол">Юпитер-футбол</option>
+                            <option class="form-constructor__option" name="model" value="Сатурн-футбол">Сатурн-футбол</option>
+                            <option class="form-constructor__option" name="model" value="Венера-футбол">Венера-футбол</option>
+                            <option class="form-constructor__option" name="model" value="Меркурий-футбол">Меркурий-футбол</option>
+                          </select>
+                        </div>
+                        <div class="form-constructor__inner js-volleyball">
+                          <select class="form-constructor__select">
+                            <option class="form-constructor__option">Выберите модель формы</option>
+                            <option class="form-constructor__option" name="model" value="Юпитер">Юпитер-волейбол</option>
+                            <option class="form-constructor__option" name="model" value="Сатурн">Сатурн-волейбол</option>
+                            <option class="form-constructor__option" name="model" value="Венера">Венера-волейбол</option>
+                            <option class="form-constructor__option" name="model" value="Меркурий">Меркурий-волейбол</option>
+                          </select>
+                        </div>
+                        <div class="form-constructor__inner js-basketball">
+                          <select class="form-constructor__select">
+                            <option class="form-constructor__option">Выберите модель формы</option>
+                            <option class="form-constructor__option" name="model" value="Юпитер">Юпитер-баскетбол</option>
+                            <option class="form-constructor__option" name="model" value="Сатурн">Сатурн-баскетбол</option>
+                            <option class="form-constructor__option" name="model" value="Венера">Венера-баскетбол</option>
+                            <option class="form-constructor__option" name="model" value="Меркурий">Меркурий-баскетбол</option>
+                          </select>
+                        </div>
+                        <div class="form-constructor__inner js-hockey">
+                          <select class="form-constructor__select">
+                            <option class="form-constructor__option">Выберите модель формы</option>
+                            <option class="form-constructor__option" name="model" value="Юпитер">Юпитер-хоккей</option>
+                            <option class="form-constructor__option" name="model" value="Сатурн">Сатурн-хоккей</option>
+                            <option class="form-constructor__option" name="model" value="Венера">Венера-хоккей</option>
+                            <option class="form-constructor__option" name="model" value="Меркурий">Меркурий-хоккей</option>
+                          </select>
+                        </div>
                       </div>
-                      <div class="form-constructor__inner js-volleyball">
-                        <select class="form-constructor__select">
-                          <option class="form-constructor__option">Выберите модель формы</option>
-                          <option class="form-constructor__option" name="model" value="Юпитер">Юпитер-волейбол</option>
-                          <option class="form-constructor__option" name="model" value="Сатурн">Сатурн-волейбол</option>
-                          <option class="form-constructor__option" name="model" value="Венера">Венера-волейбол</option>
-                          <option class="form-constructor__option" name="model" value="Меркурий">Меркурий-волейбол</option>
-                        </select>
+                    </fieldset>
+                    <fieldset class="form-constructor__fieldset form-constructor__fieldset--checkbox">
+                      <div class="form-constructor__inner-checkbox">
+                        <label class="form-constructor__label" for="t-shirt">Футболка</label>
+                        <input class="form-constructor__input form-constructor__input--checkbox" type="checkbox" name="t-shirt" id="t-shirt" checked="true">
                       </div>
-                      <div class="form-constructor__inner js-basketball">
-                        <select class="form-constructor__select">
-                          <option class="form-constructor__option">Выберите модель формы</option>
-                          <option class="form-constructor__option" name="model" value="Юпитер">Юпитер-баскетбол</option>
-                          <option class="form-constructor__option" name="model" value="Сатурн">Сатурн-баскетбол</option>
-                          <option class="form-constructor__option" name="model" value="Венера">Венера-баскетбол</option>
-                          <option class="form-constructor__option" name="model" value="Меркурий">Меркурий-баскетбол</option>
-                        </select>
+                      <div class="form-constructor__inner-checkbox">
+                        <label class="form-constructor__label" for="shorts">Шорты</label>
+                        <input class="form-constructor__input form-constructor__input--checkbox" type="checkbox" name="shorts" id="shorts" checked="true">
                       </div>
-                      <div class="form-constructor__inner js-hockey">
-                        <select class="form-constructor__select">
-                          <option class="form-constructor__option">Выберите модель формы</option>
-                          <option class="form-constructor__option" name="model" value="Юпитер">Юпитер-хоккей</option>
-                          <option class="form-constructor__option" name="model" value="Сатурн">Сатурн-хоккей</option>
-                          <option class="form-constructor__option" name="model" value="Венера">Венера-хоккей</option>
-                          <option class="form-constructor__option" name="model" value="Меркурий">Меркурий-хоккей</option>
-                        </select>
+                      <div class="form-constructor__inner-checkbox">
+                        <label class="form-constructor__label" for="gaiters">Гетры</label>
+                        <input class="form-constructor__input form-constructor__input--checkbox" type="checkbox" name="gaiters" id="gaiters" checked="true">
                       </div>
-                    </div>
-                  </fieldset>
-                  <fieldset class="form-constructor__fieldset form-constructor__fieldset--checkbox">
-                    <div class="form-constructor__inner-checkbox">
-                      <label class="form-constructor__label" for="t-shirt">Футболка</label>
-                      <input class="form-constructor__input form-constructor__input--checkbox" type="checkbox" name="t-shirt" id="t-shirt" checked="true">
-                    </div>
-                    <div class="form-constructor__inner-checkbox">
-                      <label class="form-constructor__label" for="shorts">Шорты</label>
-                      <input class="form-constructor__input form-constructor__input--checkbox" type="checkbox" name="shorts" id="shorts" checked="true">
-                    </div>
-                    <div class="form-constructor__inner-checkbox">
-                      <label class="form-constructor__label" for="gaiters">Гетры</label>
-                      <input class="form-constructor__input form-constructor__input--checkbox" type="checkbox" name="gaiters" id="gaiters" checked="true">
-                    </div>
-                  </fieldset>
-                  <fieldset class="form-constructor__fieldset form-constructor__fieldset--select">
-                    <label class="form-constructor__label form-constructor__label--select">Шрифт для надписей и номеров:</label>
-                    <select class="form-constructor__select">
-                      <option class="form-constructor__option">Выберите шрифт</option>
-                      <option class="form-constructor__option" name="шрифт" value="">Roboto</option>
-                      <option class="form-constructor__option" name="шрифт" value="">Arial</option>
-                      <option class="form-constructor__option" name="шрифт" value="">Calibri</option>
-                      <option class="form-constructor__option" name="шрифт" value="">Impact</option>
-                    </select>
-                  </fieldset>
-                  <fieldset class="form-constructor__fieldset">
-                    <textarea class="form-constructor__textarea" placeholder="Укажите дополнительные пожелания к дизайну"></textarea>
-                  </fieldset>
+                    </fieldset>
+                    <fieldset class="form-constructor__fieldset form-constructor__fieldset--select">
+                      <label class="form-constructor__label form-constructor__label--select">Шрифт для надписей и номеров:</label>
+                      <select class="form-constructor__select">
+                        <option class="form-constructor__option">Выберите шрифт</option>
+                        <option class="form-constructor__option" name="шрифт" value="">Roboto</option>
+                        <option class="form-constructor__option" name="шрифт" value="">Arial</option>
+                        <option class="form-constructor__option" name="шрифт" value="">Calibri</option>
+                        <option class="form-constructor__option" name="шрифт" value="">Impact</option>
+                      </select>
+                    </fieldset>
+                    <fieldset class="form-constructor__fieldset">
+                      <textarea class="form-constructor__textarea" placeholder="Укажите дополнительные пожелания к дизайну"></textarea>
+                    </fieldset>
+                  </div>
                 </fieldset>
                 <fieldset class="form-constructor__fieldset-wrapper js-t-shirt">
                   <fieldset class="form-constructor__fieldset">
