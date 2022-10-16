@@ -12,18 +12,18 @@ let viewerCheckbox = () => {
 			let elTshirt = document.querySelector('.js-t-shirts');
 			let viewerCheckboxData = el.getAttribute('data-viewer');
 
-			if (viewerCheckboxData === 't-shirt' && el.checked === false) {
+			if (viewerCheckboxData === 't-shirt' && elTshirt.checked === false) {
 				elShorts.setAttribute('disabled', true);
 				elShorts.classList.add('form-constructor__input--disabled');
-			} else {
+			} else if (viewerCheckboxData === 't-shirt' && elTshirt.checked === true) {
 				elShorts.removeAttribute('disabled');
 				elShorts.classList.remove('form-constructor__input--disabled');
 			}
 
-			if (viewerCheckboxData === 'shorts' && el.checked === false) {
+			if (viewerCheckboxData === 'shorts' && elShorts.checked === false) {
 				elTshirt.setAttribute('disabled', true);
 				elTshirt.classList.add('form-constructor__input--disabled');
-			} else {
+			} else if (viewerCheckboxData === 'shorts' && elShorts.checked === true) {
 				elTshirt.removeAttribute('disabled');
 				elTshirt.classList.remove('form-constructor__input--disabled');
 			}
