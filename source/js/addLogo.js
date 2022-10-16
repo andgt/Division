@@ -1,9 +1,9 @@
 'use strict'
 
 let addLogo = () => {
-	let shirt = document.querySelector('.viewer__shirt');
+	let shirt = document.querySelector('.js-shirt');
 	let imageEl = shirt.querySelector('.viewer__logo');
-	let wrapperShirts = shirt.getElementById('wrapper-shirts');
+	let wrapperShirts = shirt.getElementById('wrapper-logo');
 	let inputLogo = document.getElementById('logo-t-shirt');
 
 	let decoderFile = function() {
