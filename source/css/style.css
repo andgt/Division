@@ -2212,7 +2212,7 @@ a {
   line-height: 1.2;
   cursor: pointer;
 }
-.form-constructor__input--disabled {
+.form-constructor__disabled {
   cursor: auto;
   opacity: 0.3;
 }
@@ -2353,6 +2353,15 @@ a {
   border-color: #007aff;
   color: #ffffff;
 }
+.viewer__container {
+  display: grid;
+}
+.viewer__model {
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
 .viewer__svg-wrapper {
   display: flex;
   flex-direction: column;
@@ -2367,13 +2376,13 @@ a {
   width: 10px;
   height: 10px;
 }
-.viewer__elements {
+.viewer__inactive {
   visibility: hidden;
   height: 0;
   opacity: 0;
-  transition: 0.3s ease;
+  transition: opacity 0.5s ease;
 }
-.viewer__elements--active {
+.viewer__active {
   visibility: visible;
   height: 100%;
   opacity: 1;
