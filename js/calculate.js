@@ -11,3 +11,4 @@ import addPlayer from "./addPlayer.js";
 import deletePlayer from "./deletePlayer.js";
 import addLogo from "./addLogo.js";
 import viewerCheckbox from "./viewerCheckbox.js";
+import changeModel from "./changeModel.js";
