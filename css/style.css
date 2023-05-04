@@ -2353,6 +2353,8 @@ a {
   display: grid;
 }
 .viewer__model {
+  display: grid;
+  justify-content: center;
   grid-row-start: 1;
   grid-row-end: 1;
   grid-column-start: 1;
@@ -2382,6 +2384,33 @@ a {
   visibility: visible;
   height: 100%;
   opacity: 1;
+}
+.jersey--basic {
+  fill: #ffffff;
+}
+.jersey--arial {
+  fill: #ff3b30;
+}
+.jersey--delta {
+  fill: #ffffff;
+}
+.jersey__collar {
+  fill: #ffffff;
+}
+.jersey__collar--delta {
+  fill: #ff3b30;
+}
+.jersey__collar--alkor {
+  fill: #34c759;
+}
+.jersey__edging {
+  fill: #ffffff;
+}
+.jersey__insert {
+  fill: #ff3b30;
+}
+.jersey__sleeve {
+  fill: #34c759;
 }
 
 /*# sourceMappingURL=style.css.map */

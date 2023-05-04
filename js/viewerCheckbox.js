@@ -3,28 +3,30 @@
 let viewerCheckbox = () => {
 	let viewerElements = document.querySelectorAll('.viewer__block');
 	let viewerChecboxes = document.querySelectorAll('.form-constructor__input--checkbox');
-	
+
+	let kit = {
+		elShorts: "js-shorts",
+		elTshirt: "js-t-shirts",
+	};
 
 	viewerChecboxes.forEach(el => {
 
 		el.addEventListener('change', () => {
-			let elShorts = document.querySelector('.js-shorts');
-			let elTshirt = document.querySelector('.js-t-shirts');
 			let selectModel = document.querySelectorAll('.js-select-model');
 			let viewerCheckboxData = el.getAttribute('data-viewer');
 
-			if (viewerCheckboxData === 't-shirt' && elTshirt.checked === false) {
-				elShorts.setAttribute('disabled', true);
-				elShorts.classList.add('form-constructor__disabled');
+			if (viewerCheckboxData === kit.elTshirt && kit.elTshirt.checked === false) {
+				kit.elShorts.setAttribute('disabled', true);
+				kit.elShorts.classList.add('form-constructor__disabled');
 
 				selectModel.forEach(el => {
 					el.setAttribute('disabled', true);
 					el.classList.add('form-constructor__disabled');
 				});
 
-			} else if (viewerCheckboxData === 't-shirt' && elTshirt.checked === true) {
-				elShorts.removeAttribute('disabled');
-				elShorts.classList.remove('form-constructor__disabled');
+			} else if (viewerCheckboxData === kit.elTshirt && kit.elTshirt.checked === true) {
+				kit.elShorts.removeAttribute('disabled');
+				kit.elShorts.classList.remove('form-constructor__disabled');
 
 				selectModel.forEach(el => {
 					el.removeAttribute('disabled', true);
@@ -32,15 +34,15 @@ let viewerCheckbox = () => {
 				});
 			}
 
-			if (viewerCheckboxData === 'shorts' && elShorts.checked === false) {
-				elTshirt.setAttribute('disabled', true);
+			if (viewerCheckboxData === kit.elShorts && kit.elShorts.checked === false) {
+				kit.elTshirt.setAttribute('disabled', true);
 
-				elTshirt.classList.add('form-constructor__disabled');
+				kit.elTshirt.classList.add('form-constructor__disabled');
 
-			} else if (viewerCheckboxData === 'shorts' && elShorts.checked === true) {
-				elTshirt.removeAttribute('disabled');
+			} else if (viewerCheckboxData === kit.elShorts && kit.elShorts.checked === true) {
+				kit.elTshirt.removeAttribute('disabled');
 
-				elTshirt.classList.remove('form-constructor__disabled');
+				kit.elTshirt.classList.remove('form-constructor__disabled');
 			}
 
 			viewerElements.forEach(element => {

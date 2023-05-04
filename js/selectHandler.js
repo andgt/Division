@@ -16,13 +16,18 @@ let changeModel = () => {
 
 					currentParent = model.parentElement;
 					let removeActive = currentParent.children;
+					let modelChangeColor = model.children[0];
+					let removeChangeColor;
 
 
 					for (let elem of removeActive) {
-						elem.classList.remove('viewer__active')					
+						elem.classList.remove('viewer__active');
+						removeChangeColor = elem.children[0];
+						removeChangeColor.classList.remove('js-active-color');
 					};
 
 					model.classList.add('viewer__active');
+					modelChangeColor.classList.add('js-active-color');
 				}
 
 			});
