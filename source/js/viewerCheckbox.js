@@ -9,12 +9,6 @@ let viewerCheckbox = () => {
 		elTshirt: "js-t-shirts",
 	};
 
-	/*let menuTabs = {
-		tShirt: "js-t-shirt",
-		shorts: "js-shorts",
-		gaiters: "js-gaiters",
-	}*/
-
 	viewerChecboxes.forEach(el => {
 
 		el.addEventListener('change', () => {
