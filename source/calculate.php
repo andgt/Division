@@ -11,9 +11,9 @@ require 'phpmailer/src/Exception.php';
   $mail->IsHTML(true);
 
   //Отправитель
-  $mail->setFrom("main@divizionsport.ru", "Divizion sport");
+  $mail->setFrom("main@divizionsport.ru", "Impulse sport");
   //Получатель
-  $mail->addAddress("divizionsport@yandex.ru");
+  $mail->addAddress("forgotyourpassw0rd@gmail.com");
   //Тема письма
   $mail->Subject = "Расчет стоимости";
 
