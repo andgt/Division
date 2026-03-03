@@ -106,8 +106,9 @@ let modal = function () {
   });
 
   // Отправка формы
-
-  modalFormBack.addEventListener("submit", formSendCalc);
+  if (modalFormBack) {
+    modalFormBack.addEventListener("submit", formSendCalc);
+  }
 
   async function formSendCalc (evt) {
     evt.preventDefault();

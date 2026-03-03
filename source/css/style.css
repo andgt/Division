@@ -16,8 +16,7 @@
   margin-top: -35px;
   margin-left: -35px;
   text-align: center;
-  -webkit-animation: preloader-rotate 2s infinite linear;
-          animation: preloader-rotate 2s infinite linear;
+  animation: preloader-rotate 2s infinite linear;
 }
 .preloader__item {
   position: absolute;
@@ -27,14 +26,12 @@
   border-radius: 100%;
   width: 35px;
   height: 35px;
-  -webkit-animation: preloader-bounce 2s infinite ease-in-out;
-          animation: preloader-bounce 2s infinite ease-in-out;
+  animation: preloader-bounce 2s infinite ease-in-out;
 }
 .preloader__item:last-child {
   top: auto;
   bottom: 0;
-  -webkit-animation-delay: -1s;
-          animation-delay: -1s;
+  animation-delay: -1s;
 }
 .loaded_hiding .preloader {
   transition: 0.3s opacity;
@@ -105,26 +102,6 @@ a {
   font-style: normal;
   src: url("../fonts/PT-Root-UI_Bold.woff2") format("woff2"), url("../fonts/PT-Root-UI_Bold.woff") format("woff");
 }
-@-webkit-keyframes bounce {
-  0% {
-    transform: translateY(-2000px);
-  }
-  70% {
-    transform: translateY(30px);
-  }
-  90% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-  20%,
-  40%,
-  60%,
-  80% {
-    transform: translateX(10px);
-  }
-}
 @keyframes bounce {
   0% {
     transform: translateY(-2000px);
@@ -137,25 +114,6 @@ a {
   }
   100% {
     transform: translateY(0);
-  }
-  20%,
-  40%,
-  60%,
-  80% {
-    transform: translateX(10px);
-  }
-}
-@-webkit-keyframes shake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: translateX(-10px);
   }
   20%,
   40%,
@@ -183,14 +141,6 @@ a {
     transform: translateX(10px);
   }
 }
-@-webkit-keyframes btn-showing {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes btn-showing {
   0% {
     opacity: 0;
@@ -199,23 +149,9 @@ a {
     opacity: 1;
   }
 }
-@-webkit-keyframes preloader-rotate {
-  100% {
-    transform: rotate(360deg);
-  }
-}
 @keyframes preloader-rotate {
   100% {
     transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes preloader-bounce {
-  0%,
-  100% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1);
   }
 }
 @keyframes preloader-bounce {
@@ -312,8 +248,7 @@ a {
 }
 .button__scroll-up--showed {
   display: block;
-  -webkit-animation: 0.3s linear btn-showing;
-          animation: 0.3s linear btn-showing;
+  animation: 0.3s linear btn-showing;
 }
 .page-header__container {
   display: flex;
@@ -480,7 +415,6 @@ a {
 }
 .page-body {
   display: grid;
-  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
   max-width: 1440px;
@@ -623,7 +557,7 @@ a {
     background-image: url("../img/tablet-images/football-desktop-min.jpg");
   }
 }
-@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+@media (min-width: 768px) and (min-resolution: 2dppx) {
   .page-main__wrapper--football {
     background-image: url("../img/tablet-images/football-desktop@2x-min.jpg");
   }
@@ -633,7 +567,7 @@ a {
     background-image: url("../img/tablet-images/photo-cost-calculation-min.jpg");
   }
 }
-@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+@media (min-width: 768px) and (min-resolution: 2dppx) {
   .page-main__wrapper--calculate {
     background-image: url("../img/tablet-images/photo-cost-calculation@2x-min.jpg");
   }
@@ -643,7 +577,7 @@ a {
     background-image: url("../img/desktop-images/tracksuits-min.jpg");
   }
 }
-@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+@media (min-width: 768px) and (min-resolution: 2dppx) {
   .page-main__wrapper--tracksuits {
     background-image: url("../img/desktop-images/tracksuits@2x-min.jpg");
   }
@@ -857,8 +791,7 @@ a {
     width: 620px;
     height: 100%;
     background-color: rgba(16, 158, 230, 0.6);
-    -webkit-clip-path: ellipse(140px 140px at 10% 20%);
-            clip-path: ellipse(140px 140px at 10% 20%);
+    clip-path: ellipse(140px 140px at 10% 20%);
     z-index: -1;
     transition: 0.8s ease;
   }
@@ -871,8 +804,7 @@ a {
 @media (min-width: 768px) {
   .page-main__advantages:hover.page-main__advantages::before {
     width: 100%;
-    -webkit-clip-path: ellipse(88% 90% at 90% 20%);
-            clip-path: ellipse(88% 90% at 90% 20%);
+    clip-path: ellipse(88% 90% at 90% 20%);
   }
 }
 .page-main__advantages-list {
@@ -1583,8 +1515,7 @@ a {
 }
 .modal__show {
   display: block;
-  -webkit-animation: bounce 0.6s;
-          animation: bounce 0.6s;
+  animation: bounce 0.6s;
 }
 .modal__title {
   margin: 0;
@@ -1851,8 +1782,7 @@ a {
   }
 }
 .modal-error {
-  -webkit-animation: shake 0.6s;
-          animation: shake 0.6s;
+  animation: shake 0.6s;
 }
 .modal__button {
   width: 100%;
