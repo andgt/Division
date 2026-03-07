@@ -513,13 +513,11 @@ a {
 }
 @media (min-width: 1440px) {
   .page-main__promo-block:first-of-type {
-    /*width: 586px;*/
     width: 60%;
   }
 }
 @media (min-width: 1440px) {
   .page-main__promo-block:last-of-type {
-    /*width: 450px;*/
     width: 40%;
   }
 }
@@ -982,7 +980,7 @@ a {
   margin: 0 0 10px 0;
   padding: 10px 10px;
   border-radius: 10px;
-  background-color: #39454c;
+  background-color: #022867;
 }
 @media (min-width: 768px) {
   .page-main__description-item {
