@@ -118,6 +118,7 @@ let modal = function () {
       body: formData
     });
     if (response.ok) {
+      console.log(response);
       let result = await response.json();
       alert(result.message);
       modalFormBack.reset();

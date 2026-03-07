@@ -13,7 +13,7 @@ require 'phpmailer/src/Exception.php';
   //Отправитель
   $mail->setFrom("main@divizionsport.ru", "Impulse sport");
   //Получатель
-  $mail->addAddress("forgotyourpassw0rd@gmail.com");
+  $mail->addAddress("implulsesportpro@gmail.com");
   //Тема письма
   $mail->Subject = "Расчет стоимости";
 
