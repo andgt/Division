@@ -1751,6 +1751,13 @@ a {
     line-height: 23px;
   }
 }
+.modal__form-textarea {
+  width: 100%;
+  resize: none;
+}
+.modal__form-fieldset--textarea {
+  margin-bottom: 30px;
+}
 .modal__value {
   width: 40px;
   height: 28px;

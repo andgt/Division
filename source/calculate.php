@@ -41,6 +41,10 @@ require 'phpmailer/src/Exception.php';
     $body.="<p><strong>Количество комплектов:</strong> ".$_POST["numberofsetscalc"]."</p>";
   }
 
+  if (trim(!empty($_POST["messageCalc"]))) {
+    $body.="<p><strong>Сообщение от клиента:</strong> ".$_POST["messageCalc"]."</p>";
+  }
+
     //Прикрепление файла
   if (!empty($_FILES["file"]["tmp_name"])) {
       //путь загрузки

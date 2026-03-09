@@ -413,9 +413,9 @@
             <label class="modal__form-label modal__form-label--file" for="file">Отправить файлы<br> (.jpg, .png, .cdr, .ai, .svg, .psd)</label>
             <input class="visually-hidden" type="file" id="file" name="file[]" multiple accept="image/*, image/svg+xml, .cdr, .ai, .psd">
           </fieldset>
-          <fieldset class="modal__form-fieldset">
+          <fieldset class="modal__form-fieldset modal__form-fieldset--textarea">
             <legend class="modal__legend">Напишите комментарий</legend>
-            <textarea class="modal__form-input"></textarea>
+            <textarea class="modal__form-input modal__form-textarea" id="message-calculate" name="messageCalc" placeholder="Напишите комментарий"></textarea>
           </fieldset>
           <div class="modal__inner--policy">
             <label for="policy-check-calculate">
