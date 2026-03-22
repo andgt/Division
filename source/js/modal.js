@@ -106,8 +106,9 @@ let modal = function () {
   });
 
   // Отправка формы
-
-  modalFormBack.addEventListener("submit", formSendCalc);
+  if (modalFormBack) {
+    modalFormBack.addEventListener("submit", formSendCalc);
+  }
 
   async function formSendCalc (evt) {
     evt.preventDefault();
@@ -117,6 +118,7 @@ let modal = function () {
       body: formData
     });
     if (response.ok) {
+      console.log(response);
       let result = await response.json();
       alert(result.message);
       modalFormBack.reset();

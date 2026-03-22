@@ -11,9 +11,9 @@ require 'phpmailer/src/Exception.php';
   $mail->IsHTML(true);
 
   //Отправитель
-  $mail->setFrom("main@divizionsport.ru", "Divizion sport");
+  $mail->setFrom("main@divizionsport.ru", "Impulse sport");
   //Получатель
-  $mail->addAddress("divizionsport@yandex.ru");
+  $mail->addAddress("implulsesportpro@gmail.com");
   //Тема письма
   $mail->Subject = "Расчет стоимости";
 
@@ -39,6 +39,10 @@ require 'phpmailer/src/Exception.php';
 
   if (trim(!empty($_POST["numberofsetscalc"]))) {
     $body.="<p><strong>Количество комплектов:</strong> ".$_POST["numberofsetscalc"]."</p>";
+  }
+
+  if (trim(!empty($_POST["messageCalc"]))) {
+    $body.="<p><strong>Сообщение от клиента:</strong> ".$_POST["messageCalc"]."</p>";
   }
 
     //Прикрепление файла

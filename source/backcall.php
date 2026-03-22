@@ -11,9 +11,9 @@ require 'phpmailer/src/Exception.php';
   $mail->IsHTML(true);
 
   //Отправитель
-  $mail->setFrom("main@divizionsport.ru", "Divizion sport");
+  $mail->setFrom("info@impulse-sport.pro","Impulse sport");
   //Получатель
-  $mail->addAddress("divizionsport@yandex.ru");
+  $mail->addAddress("implulsesportpro@gmail.com");
   //Тема письма
   $mail->Subject = "Заказ обратного звонка";
 
@@ -45,5 +45,11 @@ require 'phpmailer/src/Exception.php';
   $response = ["message" => $message];
 
   header("Content-type: application/json");
+  header("Access-Control-Allow-Origin: *");
+  header("Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT");
+  header("Access-Control-Max-Age: 0");
+  header("Content-Security-Policy: default-src *; connect-src *; script-src *; object-src *;");
+  header("X-Content-Security-Policy: default-src *; connect-src *; script-src *; object-src *;");
+  header("X-Webkit-CSP: default-src *; connect-src *; script-src 'unsafe-inline' 'unsafe-eval' *; object-src *;");
   echo json_encode($response);
 ?>

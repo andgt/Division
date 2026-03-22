@@ -7,6 +7,8 @@ const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
+const jsMinify = require("gulp-terser");
+const babel = require('gulp-babel');
 
 // Styles
 
@@ -41,6 +43,18 @@ const server = (done) => {
 
 exports.server = server;
 
+const jsMini = (done) => {
+  return gulp.src("source/js/*.js")
+    .pipe(plumber())
+    .pipe(babel({
+      presets: ['@babel/preset-env']
+    }))
+    .pipe(jsMinify())
+    .pipe(gulp.dest("build/js"))
+}
+
+exports.jsMini = jsMini;
+
 // Reload
 
 const reload = done => {
@@ -56,7 +70,7 @@ const watcher = () => {
 }
 
 exports.default = gulp.series(
-  styles, server, watcher
+  styles, jsMini, server, watcher
 );
 
 //gh-pages
