@@ -17,12 +17,6 @@
     justify-content: space-between;
   }
 }
-.page-footer__logo-link {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 225px;
-  margin-bottom: 20px;
-}
 
 .page-footer__logo-inner {
   width: 80px;
@@ -38,6 +32,13 @@
     height: 40px;
     margin-bottom: 28px;
   }
+}
+
+.page-footer__logo-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 225px;
+  margin-bottom: 20px;
 }
 
 .page-footer__logo-wrapper-text {
@@ -78,6 +79,10 @@
 }
 
 .page-footer__copyright-text {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  row-gap: 10px;
   .offset(0 20px 10px 0; 0);
 
   &:last-child {
