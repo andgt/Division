@@ -422,7 +422,7 @@ a {
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
   max-width: 1440px;
-  min-height: 100%;
+  min-height: 100vh;
   margin: 0 auto;
   padding: 0;
   font-family: "PT Root UI", "Arial", sans-serif;
@@ -1835,19 +1835,60 @@ a {
   padding: 20px 0;
 }
 .policy__list {
+  counter-reset: item 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin: 0;
+  padding: 0 0 0 20px;
+  list-style-type: none;
+}
+.policy__list-item {
+  counter-increment: item 1;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.policy__list-item::before {
+  content: counter(item) ".";
+  position: absolute;
+  top: 0;
+  left: -17px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+}
+.policy__sublist {
+  display: flex;
+  flex-direction: column;
+  row-gap: 7px;
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
+}
+.policy__description {
+  margin: 0;
+  padding: 0;
 }
 .policy__title {
   margin: 0 0 20px 0;
   padding: 0;
+  font-size: 20px;
+  line-height: 28px;
 }
-@media (min-width: 768px) {
-  .policy__title {
-    font-size: 20px;
-    line-height: 28px;
-  }
+.policy__subtitle {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 28px;
+}
+.policy__block-title {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 24px;
 }
 @media (min-width: 768px) {
   .policy__text-block,
