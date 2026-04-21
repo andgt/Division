@@ -2,39 +2,61 @@
   padding: 20px 0;
 }
 
+.policy__main-block {
+  margin-bottom: 20px;
+}
+
 .policy__list {
-  counter-reset: item 0;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
-  .offset(0; 0 0 0 20px);
+  .offset(0; 0);
   list-style-type: none;
 }
 
-.policy__list-item {
-  counter-increment: item 1;
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  row-gap: 20px;
+.policy__counter {
+  counter-reset: item;
 }
 
-.policy__list-item::before {
-  content: counter(item) ".";
-  position: absolute;
+.policy__counter-item {
+  //counter-increment: item 1;
+}
+
+.policy__counter-item::before {
+  counter-increment: item;
+  content: counters(item, ".", decimal) ".";
+  position: relative;
   top: 0;
-  left: -17px;
+  left: -3px;
+  width: 22px;
   font-size: 18px;
   font-weight: 700;
   line-height: 28px;
+  text-align: right;
+}
+
+.policy__counter-subitem::before {
+  counter-increment: item;
+  content: counters(item, ".", decimal) ".";
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 30px;
+}
+
+.policy__list-item {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
 }
 
 .policy__sublist {
   display: flex;
   flex-direction: column;
   row-gap: 7px;
-  .offset(0; 0);
+  width: 100%;
+  .offset(0; 0 0 0 24px);
   list-style-type: none;
 }
 
@@ -43,21 +65,29 @@
 }
 
 .policy__title {
-  .offset(0 0 20px 0; 0);
+  .offset(0 0 10px 0; 0);
   font-size: 20px;
   line-height: 28px;
 }
 
 .policy__subtitle {
+  width: max-content;
   .offset(0; 0);
   font-size: 18px;
   line-height: 28px;
 }
 
 .policy__block-title {
+  display: flex;
+  column-gap: 5px;
   .offset(0; 0);
   font-size: 16px;
+  font-weight: 400;
   line-height: 24px;
+}
+
+.policy__text-block {
+  margin: 0;
 }
 
 .policy__text-block,
