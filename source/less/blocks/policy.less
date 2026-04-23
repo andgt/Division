@@ -2,6 +2,12 @@
   padding: 20px 0;
 }
 
+.policy__main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
 .policy__main-block {
   margin-bottom: 20px;
 }
@@ -16,10 +22,6 @@
 
 .policy__counter {
   counter-reset: item;
-}
-
-.policy__counter-item {
-  //counter-increment: item 1;
 }
 
 .policy__counter-item::before {
@@ -60,6 +62,19 @@
   list-style-type: none;
 }
 
+.policy__inner-list {
+  list-style-type: square;
+}
+
+.policy__site-link,
+.policy__email {
+  color: @black;
+
+  &:hover {
+    color: @blue6;
+  }
+}
+
 .policy__description {
   .offset(0; 0);
 }
@@ -80,6 +95,7 @@
 .policy__block-title {
   display: flex;
   column-gap: 5px;
+  width: 100%;
   .offset(0; 0);
   font-size: 16px;
   font-weight: 400;

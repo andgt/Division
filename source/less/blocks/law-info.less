@@ -1,0 +1,33 @@
+.law-info {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+  }
+}
+
+.law-info__text {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  row-gap: 10px;
+  .offset(0 20px 10px 0; 0);
+
+  &:last-child {
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 14px;
+  }
+}
+
+.law-info__link {
+  color: @black;
+
+  &:hover {
+    color: @blue6;
+  }
+}
