@@ -1451,15 +1451,11 @@ a {
 .social__footer {
   display: flex;
   flex-wrap: wrap;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   margin: 0;
   padding: 0;
   list-style: none;
-}
-.social__footer-item {
-  margin-right: 30px;
-}
-.social__footer-item:last-child {
-  margin-right: 0;
 }
 @media (min-width: 1440px) {
   .social__footer-img--vk {
