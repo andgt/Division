@@ -287,7 +287,8 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
   padding: 0;
   order: 2;
 }
@@ -321,8 +322,9 @@ a {
 .page-header__info-list {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  margin: 0;
+  justify-content: space-around;
+  gap: 20px;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
 }
@@ -335,7 +337,7 @@ a {
 }
 .page-header__info-item {
   display: flex;
-  margin: 0 20px 0 0;
+  margin: 0;
   padding: 10px 0;
 }
 @media (min-width: 768px) {
@@ -1351,30 +1353,6 @@ a {
     z-index: -1;
   }
 }
-/*.main-nav__link--football:hover::before,
-.main-nav__link--football:focus::before {
-  background-color: @blue;
-}
-
-.main-nav__link--basketball:hover::before,
-.main-nav__link--basketball:focus::before {
-  background-color: @orange;
-}
-
-.main-nav__link--tracksuit:hover::before,
-.main-nav__link--tracksuit:focus::before {
-  background-color: @green;
-}
-
-.main-nav__link--hockey:hover::before,
-.main-nav__link--hockey:focus::before {
-  background-color: @red;
-}
-
-.main-nav__link--volleyball:hover::before,
-.main-nav__link--volleyball:focus::before {
-  background-color: @purple;
-}*/
 @media (max-width: 767px) {
   .main-nav--closed .main-nav__item {
     opacity: 0;
@@ -1396,21 +1374,31 @@ a {
   }
 }
 .social {
-  display: none;
-  order: 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  order: 1;
+  width: 100%;
+  margin: 0 0 20px 0;
+  padding: 0;
+  list-style: none;
+}
+@media (min-width: 525px) {
+  .social {
+    gap: 30px;
+  }
 }
 @media (min-width: 768px) {
   .social {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: flex-end;
-    gap: 20px;
     align-items: center;
+    order: 3;
+    gap: 10px;
     width: 26%;
     max-width: 205px;
     margin: 0;
-    padding: 0;
-    list-style: none;
   }
 }
 @media (min-width: 1440px) {
@@ -1443,6 +1431,20 @@ a {
 .social__link {
   display: block;
 }
+.social__img {
+  height: 24px;
+}
+@media (min-width: 525px) {
+  .social__img {
+    height: 38px;
+  }
+}
+@media (min-width: 768px) {
+  .social__img {
+    width: 24px;
+    height: 24px;
+  }
+}
 .social__img:hover,
 .social__footer-img:hover {
   transform: scale(1.2);
@@ -1470,7 +1472,7 @@ a {
   }
 }
 @media (min-width: 1440px) {
-  .social__footer-img--whatsapp {
+  .social__footer-img--max {
     width: 105px;
     height: 28px;
   }

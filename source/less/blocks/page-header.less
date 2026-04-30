@@ -37,7 +37,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  .offset(0 auto; 0);
+  width: 100%;
+  .offset(0; 0);
   order: 2;
 
   @media (min-width: @tablet-width) {
@@ -72,8 +73,9 @@
 .page-header__info-list {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  .offset(0; 0);
+  justify-content: space-around;
+  gap: 20px;
+  .offset(0 auto; 0);
   list-style: none;
 
   @media (min-width: @tablet-width) {
@@ -85,7 +87,7 @@
 
 .page-header__info-item {
   display: flex;
-  .offset(0 20px 0 0; 10px 0);
+  .offset(0; 10px 0);
 
   @media (min-width: @tablet-width) {
     &:last-child {
